@@ -1,0 +1,87 @@
+# Python documentation generator
+# PYPI: https://pypi.org/project/Sphinx/
+# Docs: https://www.sphinx-doc.org/
+
+sphinx==7.3.7
+
+
+
+# A clean book theme for scientific explanations and documentation with Sphinx
+# PYPI: https://pypi.org/project/sphinx-book-theme/
+# Docs: https://sphinx-book-theme.readthedocs.io/
+
+sphinx-book-theme==1.1.2
+
+
+
+# Toggle page content and collapse admonitions in Sphinx
+# PYPI: https://pypi.org/project/sphinx-togglebutton/
+# Docs: https://sphinx-togglebutton.readthedocs.io/
+
+sphinx-togglebutton==0.3.2
+
+
+
+# Tabbed views for Sphinx
+# PYPI: https://pypi.org/project/sphinx-tabs/
+# Docs: https://sphinx-tabs.readthedocs.io/
+
+sphinx-tabs==3.4.5
+
+
+
+# A sphinx extension for designing beautiful, view size responsive web components
+# PYPI: https://pypi.org/project/sphinx_design/
+# Docs: https://sphinx-design.readthedocs.io/
+
+sphinx_design==0.6.0
+
+
+
+# Sitemap generator for Sphinx
+# PYPI: https://pypi.org/project/sphinx-sitemap/
+# Docs: https://sphinx-sitemap.readthedocs.io/
+
+sphinx-sitemap==2.6.0
+
+
+
+# Add a copy button to each of your code cells
+# PYPI: https://pypi.org/project/sphinx-copybutton/
+# Docs: https://sphinx-copybutton.readthedocs.io/
+
+sphinx-copybutton==0.5.2
+
+
+
+# Sphinx Extension adding support for custom favicons
+# PYPI: https://pypi.org/project/sphinx-favicon/
+# Docs: https://sphinx-favicon.readthedocs.io/
+
+sphinx-favicon==1.0.1
+
+
+
+# Sphinx extension for BibTeX style citations
+# PYPI: https://pypi.org/project/sphinxcontrib-bibtex/
+# Docs: https://sphinxcontrib-bibtex.readthedocs.io/
+
+sphinxcontrib-bibtex==2.6.2
+
+
+
+# Extension for embedding YouTube videos in Sphinx documentation
+# PYPI: https://pypi.org/project/sphinxcontrib-youtube/
+# Docs: https://sphinxcontrib-youtube.readthedocs.io/
+
+sphinxcontrib-youtube==1.4.1
+
+
+
+# Extension for integrating TikZ diagrams in Sphinx documentation
+# PYPI: https://pypi.org/project/sphinxcontrib-tikz/
+# Docs: https://sphinxcontrib-tikz.readthedocs.io/
+
+sphinxcontrib-tikz==0.4.19
+
+

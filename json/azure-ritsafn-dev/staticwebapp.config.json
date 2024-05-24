@@ -1,0 +1,25 @@
+{
+  "_comment": "This configuration ensures that all .txt files are served with UTF-8 encoding and sets the X-Robots-Tag header for all file types in the dev branch, including those without extensions.",
+  "globalHeaders": {
+    "Content-Type": "text/plain; charset=UTF-8"
+  },
+  "mimeTypes": {
+    ".txt": "text/plain; charset=UTF-8"
+  },
+  "routes": [
+    {
+      "route": "/",
+      "headers": {
+        "x-robots-tag": "noindex, nofollow"
+      },
+      "_comment": "This route applies the X-Robots-Tag header to the root URL, ensuring the root page is not indexed by search engines."
+    },
+    {
+      "route": "/*",
+      "headers": {
+        "x-robots-tag": "noindex, nofollow"
+      },
+      "_comment": "This route applies the X-Robots-Tag header to all files, ensuring they are not indexed by search engines."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "_comment": "This configuration ensures that all .txt files are served with UTF-8 encoding.",
+  "globalHeaders": {
+    "Content-Type": "text/plain; charset=UTF-8"
+  },
+  "mimeTypes": {
+    ".txt": "text/plain; charset=UTF-8"
+  }
+}
