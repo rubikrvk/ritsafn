@@ -1,7 +1,7 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
 *$py.class
+.DS_Store
 
 # C extensions
 *.so
@@ -46,14 +46,10 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *.cover
-*.py,cover
+cover
 .hypothesis/
 .pytest_cache/
 cover/
-
-# Translations
-*.mo
-*.pot
 
 # Django stuff:
 *.log
@@ -69,7 +65,9 @@ instance/
 .scrapy
 
 # Sphinx documentation
-docs/_build/
+rit/_build/
+.dirtree
+.doctrees
 
 # PyBuilder
 .pybuilder/
@@ -125,8 +123,11 @@ celerybeat.pid
 env/
 venv/
 ENV/
+VENV/
 env.bak/
 venv.bak/
+ENV.bak/
+VENV.bak/
 
 # Spyder project settings
 .spyderproject
