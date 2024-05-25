@@ -11,7 +11,6 @@ Welcome to Ritsafn RÚBIK Reykjavíkur's documentation!
    :caption: Contents:
 
 
-
 Indices and tables
 ==================
 
