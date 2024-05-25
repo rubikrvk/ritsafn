@@ -85,3 +85,11 @@ sphinxcontrib-youtube==1.4.1
 sphinxcontrib-tikz==0.4.19
 
 
+
+# A Language Server for Sphinx projects
+# PYPI: https://pypi.org/project/esbonio/
+# Docs: https://docs.esbon.io/
+
+esbonio==0.16.4
+
+
