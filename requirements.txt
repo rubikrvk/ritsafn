@@ -93,7 +93,3 @@ sphinxcontrib-tikz==0.4.19
 esbonio==0.16.4
 
 
-#smá test
-#smá annað test
-#enn annað testið
-#meira test
