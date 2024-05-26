@@ -112,15 +112,8 @@ Hér er texti undir subsubsection 2.2.1.1.1
 Paragraph 2.2.1.1.1.1
 """""""""""""""""""""""""
 
-Hér er texti undir paragraph 1.2.1.1.1.1
+Hér er texti undir paragraph 2.2.1.1.1.1
+
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 6
    :caption: Contents:
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
