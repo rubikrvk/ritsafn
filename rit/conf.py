@@ -27,4 +27,14 @@ language = 'is'
 html_theme = 'sphinx_book_theme'
 html_static_path = ['_static']
 
-
+# -- Options for LaTeX output ------------------------------------------------
+latex_engine = 'pdflatex'
+latex_elements = {
+    'papersize': 'a4paper',
+    'babel': '\\usepackage[icelandic]{babel}',
+    'fontpkg': '',
+    'fncychap': '\\usepackage[Sonny]{fncychap}',
+    'figure_align': 'htbp',
+}
+latex_use_xindy = True
+latex_theme = 'book'
