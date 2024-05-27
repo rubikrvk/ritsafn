@@ -20,4 +20,4 @@ Hér er texti undir paragraph 1.1.1.1.1.1
 
 .. toctree::
    :maxdepth: 6
-   :caption: Contents:
+   :caption: Efnisyfirlit:
