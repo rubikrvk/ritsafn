@@ -47,7 +47,7 @@ html_context = {
 
 # -- Options for LaTeX output ------------------------------------------------
 latex_engine = 'pdflatex'
-latex_theme = 'book'
+latex_theme = 'manual'
 latex_elements = {
     'babel': '\\usepackage[icelandic]{babel}',
     'papersize': 'a4paper',
