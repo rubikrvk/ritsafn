@@ -25,7 +25,6 @@ runs:
         cd rit
         make clean
         make html
-        make latex
         make latexpdf
         mv _build/latex/ritsafnrbikreykjavkur.pdf _build/html/
       shell: bash
