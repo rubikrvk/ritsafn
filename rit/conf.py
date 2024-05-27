@@ -30,8 +30,9 @@ html_static_path = ['_static']
 # -- Options for LaTeX output ------------------------------------------------
 latex_engine = 'pdflatex'
 latex_elements = {
-    'papersize': 'a4paper',
     'babel': '\\usepackage[icelandic]{babel}',
+    'papersize': 'a4paper',
+    'fontpkg': '',
 }
 
 latex_theme = 'book'
