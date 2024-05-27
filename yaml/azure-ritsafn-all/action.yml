@@ -17,7 +17,7 @@ runs:
     - name: ALL - Install LaTeX dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y texlive texlive-latex-extra latexmk texlive-fonts-recommended dvipng pdf2svg
+        sudo apt-get install -y texlive texlive-latex-extra latexmk texlive-fonts-recommended dvipng pdf2svg texlive-lang-european
       shell: bash
 
     - name: ALL - Build Sphinx documentation
