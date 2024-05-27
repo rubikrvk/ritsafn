@@ -1,10 +1,8 @@
-####################
 Part / Partur 1
 ####################
 
 Hér er texti undir Parti 1
 
-*********************
 Chapter / Kafli 1.1
 *********************
 
@@ -30,7 +28,6 @@ Paragraph 1.1.1.1.1.1
 
 Hér er texti undir paragraph 1.1.1.1.1.1
 
-*********************
 Chapter / Kafli 1.2
 *********************
 
@@ -56,13 +53,11 @@ Paragraph 1.2.1.1.1.1
 
 Hér er texti undir paragraph 1.2.1.1.1.1
 
-####################
 Part / Partur 2
 ####################
 
 Hér er texti undir Parti 2
 
-*********************
 Chapter / Kafli 2.1
 *********************
 
@@ -88,7 +83,6 @@ Paragraph 2.1.1.1.1.1
 
 Hér er texti undir paragraph 2.1.1.1.1.1
 
-*********************
 Chapter / Kafli 2.2
 *********************
 
@@ -114,13 +108,11 @@ Paragraph 2.2.1.1.1.1
 
 Hér er texti undir paragraph 2.2.1.1.1.1
 
-####################
 Part / Partur 3
 ####################
 
 Hér er texti undir Parti 3
 
-*********************
 Chapter / Kafli 3.1
 *********************
 
@@ -146,7 +138,6 @@ Paragraph 3.1.1.1.1.1
 
 Hér er texti undir paragraph 3.1.1.1.1.1
 
-*********************
 Chapter / Kafli 3.2
 *********************
 
