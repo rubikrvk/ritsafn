@@ -1,7 +1,7 @@
 Header one
 ==========
 
-Hér er smá texti.
+Hér er smá texti.asdf
 
 .. toctree::
    :maxdepth: 6

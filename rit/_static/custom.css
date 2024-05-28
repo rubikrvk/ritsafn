@@ -1,0 +1,27 @@
+/*
+Kóði til að láta transparent hluta af SVG eða PNG myndum í pydata theme-inu verða gegnsæann í dark-mode.
+Þetta er alltaf gegnsætt í light-mode, en í dark-mode þarf þessi kóði að vera til staðar
+*/
+
+html[data-theme='dark'] .bd-content img[src*=".svg"]:not(.only-dark):not(.dark-light) {
+    filter: invert(100%);
+    background: transparent;
+}
+
+/* Setur allar myndir o.fl sem eru merktar sem class="figure" í miðjuna */
+.figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*
+Gerir allar myndir o.fl. í 896px (passa að þær séu SVG), svo þær fylla alveg út í síðuna í desktop.
+Síðan er stærðin á myndunum skilgreint inn í tikz skránum.
+*/
+.figure img {
+    width: 896px
+}
+

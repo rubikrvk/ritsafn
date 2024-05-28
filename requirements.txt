@@ -6,11 +6,12 @@ sphinx==7.3.7
 
 
 
-# A clean book theme for scientific explanations and documentation with Sphinx
-# PYPI: https://pypi.org/project/sphinx-book-theme/
-# Docs: https://sphinx-book-theme.readthedocs.io/
+# Bootstrap-based Sphinx theme from the PyData community
+# PYPI: https://pypi.org/project/pydata-sphinx-theme/
+# Docs: https://pydata-sphinx-theme.readthedocs.io/
 
-sphinx-book-theme==1.1.2
+pydata-sphinx-theme==0.15.2
+
 
 
 
