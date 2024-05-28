@@ -103,7 +103,7 @@ html_show_sphinx = False
 
 
 
-# -- Options for LaTeX output -----------asasasdfdfdf-------------------------------------
+# -- Options for LaTeX output ------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-latex-output
 
 latex_engine = 'pdflatex'
