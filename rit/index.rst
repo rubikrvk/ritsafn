@@ -98,7 +98,7 @@ Ritsafn RÚBIK Reykjavíkur
 24 Hér er asdf smá texti frá rit/index.rst.
 
 .. toctree::
-   :maxdepth: 6
+   :maxdepth: 7
 
    fjarmal-einstaklinga/index
    fjarmal-fyrirtaekja/index

@@ -26,5 +26,5 @@ runs:
         make clean
         make html
         make latexpdf
-        mv _build/latex/ritsafnrbikreykjavkur.pdf _build/html/
+        mv _build/latex/Ritsafn-RÚBIK-Reykjavíkur--Öll-rit-sameinuð.pdf _build/html/
       shell: bash

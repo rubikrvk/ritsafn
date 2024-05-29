@@ -1,13 +1,63 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-projectid = 'ritsafn'
-project = 'Fjármál fyrirtækja'
-authors = [
-    {'name': 'Ritsafn RÚBIK Reykjavíkur', 'size': 'Large', 'rule': True},
-    {'name': 'RÚBIK Reykjavík ehf (rubik@rubik.is)', 'size': 'normalsize', 'rule': False},
-    {'name': 'Atli Bjarnason (a@rubik.is)', 'size': 'normalsize', 'rule': False},
+projectid = 'Ritsafn-RÚBIK-Reykjavíkur--Öll-rit-sameinuð'
+project = 'Ritsafn RÚBIK Reykjavíkur'
+subtitle = [
+    {
+        'name': '~',
+        'size': 'large',
+        'spacing': '2cm',
+        'textnormal': False
+    },
+    {
+        'name': 'Öll rit sameinuð (\href{https://rit.rubik.is}{rit.rubik.is})',
+        'size': 'Large',
+        'spacing': '0.6cm',
+        'textnormal': False
+    },
 ]
+authors = [
+    {
+        'name': 'Eigandi efnis og leyfisveitandi:',
+        'size': 'normalsize',
+        'spacing': '0cm',
+        'textnormal': False
+    },
+    {
+        'name': 'RÚBIK Reykjavík ehf. (\href{mailto:rubik@rubik.is}{rubik@rubik.is})',
+        'size': 'large',
+        'spacing': '0.5cm',
+        'textnormal': True
+    },
+    {
+        'name': 'Höfundur efnis:',
+        'size': 'normalsize',
+        'spacing': '0cm',
+        'textnormal': False
+    },
+    {
+        'name': 'Atli Bjarnason (\href{mailto:rubik@rubik.is}{a@rubik.is})',
+        'size': 'large',
+        'spacing': '7.5cm',
+        'textnormal': True
+    },
+]
+copyright = [
+    {
+        'name': 'Ritsafn RÚBIK Reykjavíkur © RÚBIK Reykjavík ehf.',
+        'size': 'normalsize',
+        'spacing': '0.2cm',
+        'textnormal': False
+    },
+    {
+        'name': 'Notkun efnis er heimil samkvæmt \href{https://github.com/rubikrvk/ritsafn/blob/main/LICENSE}{notkunarleyfi} Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (\href{https://creativecommons.org/licenses/by-nc-sa/4.0/deed.is}{CC BY-NC-SA 4.0}).',
+        'size': 'normalsize',
+        'spacing': '0.2cm',
+        'textnormal': True
+    },
+]
+
 
 
 
@@ -110,41 +160,70 @@ html_show_sphinx = False
 # -- Options for LaTeX output ------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-latex-output
 
-# Function to generate the LaTeX author string
-def generate_authors(authors):
-    author_lines = []
-    for author in authors:
-        if author['size'] == 'Large':
-            line = r'\{}{{{}}}'.format(author['size'], author['name'])
-            if author['rule']:
-                line += r'\\\rule{0pt}{1cm}'
+def generate_info(info_list):
+    info_lines = []
+    for info in info_list:
+        if info['textnormal']:
+            line = r'\{}{{\textnormal{{{}}}}}'.format(info['size'], info['name'])
         else:
-            line = r'\{}{{\textnormal{{{}}}}}'.format(author['size'], author['name'])
-        author_lines.append(line)
-    return r'\newlineauthors{{{}}}'.format(r'\\ '.join(author_lines))
+            line = r'\{}{{{}}}'.format(info['size'], info['name'])
+        if 'spacing' in info:
+            line += r'\\[{}]'.format(info['spacing'])
+        else:
+            line += r'\\'
+        info_lines.append(line)
+    return r'\newlineauthors{{{}}}'.format(r' '.join(info_lines))
 
-# Generate the LaTeX author string
-latex_authors = generate_authors(authors)
+latex_subtitle = generate_info(subtitle)
+latex_authors = generate_info(authors)
+latex_copyright = generate_info(copyright)
+info = f'{latex_subtitle}\\\\ {latex_authors}\\\\ {latex_copyright}'
 
 latex_engine = 'pdflatex'
 latex_documents = [
-    ('index', f'{projectid}.tex', project, latex_authors, 'manual'),
+    ('index', f'{projectid}.tex', project, info, 'manual'),
 ]
-latex_logo = '_static/rubik.png'
+latex_logo = '_static/rubik-cover.png'
 latex_toplevel_sectioning = 'part'
-latex_show_urls = 'footnote'
 latex_use_xindy = True
 latex_elements = {
-    'babel': '\\usepackage[icelandic]{babel}',
     'papersize': 'a4paper',
+    'babel': '\\usepackage[icelandic]{babel}',
     'fontpkg': '\\usepackage{lmodern}\n\\usepackage[T1]{fontenc}',
     'preamble': r'''
-    % Custom command to handle newlines in author field
-    \newcommand{\newlineauthors}[1]{\parbox{0.8\textwidth}{\raggedleft#1}}
-    % Remove date from Title page
-    \AtBeginDocument{\date{}}
+
     % Prevent chapters from starting on odd pages
-    \let\cleardoublepage\clearpage
+        \let\cleardoublepage\clearpage
+
+    % Custom command to handle newlines in author field
+        \newcommand{\newlineauthors}[1]{\parbox{0.8\textwidth}{\raggedleft#1}}
+
+    % Remove date from Title page
+        \AtBeginDocument{\date{}}
+
+    % Define the Blue Nova Deep color
+        \definecolor{bluenovadeep}{rgb}{0.192,0.255,0.604}
+
+    % Set hyperlink color to Blue Nova Deep
+        \hypersetup{
+            colorlinks=true,
+            linkcolor=black,        % Includes colors in TOC 
+            urlcolor=bluenovadeep,  % Includes colors in Title page and inline links 
+            citecolor=black,        % Probably includes links in genindex, etc.
+        }
+
+    % Set headings color to Black (also possible to use Blue Nova Deep)
+        \usepackage{titlesec}
+        \titleformat{\section}
+            {\normalfont\Large\bfseries\color{black}}{\thesection}{1em}{\bfseries}
+        \titleformat{\subsection}
+            {\normalfont\large\bfseries\color{black}}{\thesubsection}{1em}{}
+        \titleformat{\subsubsection}
+            {\normalfont\normalsize\bfseries\color{black}}{\thesubsubsection}{1em}{}
+        \titleformat{\paragraph}
+            {\normalfont\normalsize\bfseries\color{black}}{\theparagraph}{1em}{}
+        \titleformat{\subparagraph}
+            {\normalfont\normalsize\bfseries\color{black}}{\thesubparagraph}{1em}{}
     '''
 }
 
