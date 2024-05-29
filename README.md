@@ -8,8 +8,8 @@ https://rit.rubik.is/
 
 ### Notkun efnis úr Ritsafni RÚBIK Reykjavíkur er heimil samkvæmt [notkunarleyfi](LICENSE) Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International ([CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.is)).
 
-* **Höfundur efnis og leyfisveitandi** — RÚBIK Reykjavík ehf (rubik@rubik.is)
-* **Ábyrgðarmaður efnis** — Atli Bjarnason (a@rubik.is)
+* **Eigandi efnis og leyfisveitandi** — RÚBIK Reykjavík ehf (rubik@rubik.is)
+* **Höfundur efnis** — Atli Bjarnason (a@rubik.is)
 
 ### Þér er frjálst að:
 
