@@ -102,4 +102,4 @@ Velkomin
 
    fjarmal-einstaklinga/index
    fjarmal-fyrirtaekja/index
-   kitchen-sink/index
+   eldhusvaskur/index
