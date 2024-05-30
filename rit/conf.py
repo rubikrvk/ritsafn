@@ -208,8 +208,8 @@ html_short_title = 'Ritsafn'                    # Stuttur title notaður í teng
 # Skilgreiningar í HTML (t.d. fyrir tengil í "Edit on GitHub" takkanum)
 html_context = {
     "github_user": "rubikrvk",
-    "github_repo": "rubiktest",
-    "github_version": "main",
+    "github_repo": "ritsafn",
+    "github_version": "dev",
 }
 html_css_files = ['custom.css']                 # Slóð á CSS skrár
 html_static_path = ['_static']                  # Slóð á "static" skrár
