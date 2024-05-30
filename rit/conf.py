@@ -237,6 +237,7 @@ latex_elements = {
             bookmarksnumbered=true,     % Kaflanúmer koma fram í Bookmarks
             bookmarksopen=true,         % Bookmarks eru alltaf opin
             bookmarksopenlevel=0,       % Bookmarks eru alltaf opin upp til að sýna kafla (en ekki undirkafla)
+            pdfnewwindow=true,          % Tenglar opnast í nýjum glugga í vafra
             colorlinks=true,            % Tenglar birtast með litum
             linkcolor=black,            % "linkcolor" er svartur og inniheldur liti á tenglum í efnisyfirliti
             urlcolor=bluenovadeep,      % "urlcolor" er Blue Nova Deep og inniheldur liti á tenglum á forsíðu og inline tenglum
