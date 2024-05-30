@@ -31,13 +31,11 @@ runs:
         make clean
         make latexpdf
         mv _build/latex/*.pdf ../_build/html/fjarmal-einstaklinga/
-        cd ..
-        cd fjarmal-fyrirtaekja
+        cd ../fjarmal-fyrirtaekja
         make clean
         make latexpdf
         mv _build/latex/*.pdf ../_build/html/fjarmal-fyrirtaekja/
-        cd ..
-        cd kitchen-sink
+        cd ../kitchen-sink
         make clean
         make latexpdf
         mv _build/latex/*.pdf ../_build/html/kitchen-sink/

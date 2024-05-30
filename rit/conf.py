@@ -236,7 +236,7 @@ latex_elements = {
         \hypersetup{
             bookmarksnumbered=true,     % Kaflanúmer koma fram í Bookmarks
             bookmarksopen=true,         % Bookmarks eru alltaf opin
-            bookmarksopenlevel=0,       % Bookmarks eru alltaf opin upp að level 1
+            bookmarksopenlevel=0,       % Bookmarks eru alltaf opin upp til að sýna kafla (en ekki undirkafla)
             colorlinks=true,            % Tenglar birtast með litum
             linkcolor=black,            % "linkcolor" er svartur og inniheldur liti á tenglum í efnisyfirliti
             urlcolor=bluenovadeep,      % "urlcolor" er Blue Nova Deep og inniheldur liti á tenglum á forsíðu og inline tenglum
