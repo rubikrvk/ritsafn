@@ -26,17 +26,19 @@ runs:
         make clean
         make html
         make latexpdf
-        mv _build/latex/Ritsafn-RÚBIK-Reykjavíkur--Öll-rit-sameinuð.pdf _build/html/
-        cd rit/fjarmal-einstaklinga
+        mv _build/latex/*.pdf _build/html/
+        cd fjarmal-einstaklinga
         make clean
         make latexpdf
-        mv _build/latex/Ritsafn-RÚBIK-Reykjavíkur--Fjármál-einstaklinga.pdf ../_build/html/fjarmal-einstaklinga/
-        cd rit/fjarmal-fyrirtaekja
+        mv _build/latex/*.pdf ../_build/html/fjarmal-einstaklinga/
+        cd ..
+        cd fjarmal-fyrirtaekja
         make clean
         make latexpdf
-        mv _build/latex/Ritsafn-RÚBIK-Reykjavíkur--Fjármál-fyrirtækja.pdf ../_build/html/fjarmal-fyrirtaekja/
-        cd rit/kitchen-sink
+        mv _build/latex/*.pdf ../_build/html/fjarmal-fyrirtaekja/
+        cd ..
+        cd kitchen-sink
         make clean
         make latexpdf
-        mv _build/latex/Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.pdf ../_build/html/kitchen-sink/
+        mv _build/latex/*.pdf ../_build/html/kitchen-sink/
       shell: bash
