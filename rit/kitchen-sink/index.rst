@@ -1,4 +1,4 @@
-Kitchen sink
+Eldhúsvaskur
 ============
 
 .. toctree::
