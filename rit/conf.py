@@ -235,8 +235,8 @@ latex_elements = {
     % Skrá stillingar fyrir "hypersetup"
         \hypersetup{
             bookmarksnumbered=true,     % Kaflanúmer koma fram í Bookmarks
-            bookmarksopen=true,         % Bookmarks eru alltaf opin 
-            bookmarksopenlevel=1        % Bookmarks eru alltaf opin upp a level 1
+            bookmarksopen=true,         % Bookmarks eru alltaf opin
+            bookmarksopenlevel=0,       % Bookmarks eru alltaf opin upp að level 1
             colorlinks=true,            % Tenglar birtast með litum
             linkcolor=black,            % "linkcolor" er svartur og inniheldur liti á tenglum í efnisyfirliti
             urlcolor=bluenovadeep,      % "urlcolor" er Blue Nova Deep og inniheldur liti á tenglum á forsíðu og inline tenglum

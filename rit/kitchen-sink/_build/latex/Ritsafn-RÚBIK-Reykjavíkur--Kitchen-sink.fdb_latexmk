@@ -1,11 +1,11 @@
 # Fdb version 4
-["makeindex Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.idx"] 1717075387.61211 "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.idx" "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.ind" "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink" 1717075391.06007 0
-  "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.idx" 1717075390.35411 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.idx"] 1717077261.05881 "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.idx" "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.ind" "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink" 1717077264.35527 0
+  "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.idx" 1717077263.63754 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.ilg"
   "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.ind"
   (rewritten before read)
-["pdflatex"] 1717075389.40795 "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.tex" "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.pdf" "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink" 1717075391.06021 0
+["pdflatex"] 1717077262.70444 "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.tex" "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.pdf" "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink" 1717077264.35542 0
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc" 1254269338 3031 6c4d3515bf7115d8518af1c9ab97ca44 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -290,15 +290,15 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1715610869.65933 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1715610771 8221425 fc2f7c60b34b76ecf6facdc7fa161ce8 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.aux" 1717075390.87878 11605 936507dd184d76eb8043f6345e31faed "pdflatex"
-  "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.ind" 1717075387.61252 0 d41d8cd98f00b204e9800998ecf8427e "makeindex Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.idx"
-  "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.out" 1717075390.88838 7635 17b181d3d435fdcb8d9d1a86fdff6a19 "pdflatex"
-  "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.tex" 1717075385.6901 11357 1be2a1cb3d3583f940f001b83f14d67e ""
-  "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.toc" 1717075390.89023 3976 76c4c3fa343c8e262aea2d44663a0f2a "pdflatex"
+  "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.aux" 1717077264.1727 11605 936507dd184d76eb8043f6345e31faed "pdflatex"
+  "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.ind" 1717077261.06068 0 d41d8cd98f00b204e9800998ecf8427e "makeindex Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.idx"
+  "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.out" 1717077264.18197 7635 17b181d3d435fdcb8d9d1a86fdff6a19 "pdflatex"
+  "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.tex" 1717077259.26453 11509 3d0071cb9f23209955c17e236543bc9c ""
+  "Ritsafn-RÚBIK-Reykjavíkur--Kitchen-sink.toc" 1717077264.18691 3976 76c4c3fa343c8e262aea2d44663a0f2a "pdflatex"
   "rubik-cover.png" 1717066091.23729 74807 27385f53575191b302855b7d61c22ed4 ""
   "sphinx.sty" 1716566566.77778 44560 f9fbf51072c954d129c9bd5284cc4ccf ""
-  "sphinxcontribtikz.sty" 1717075385.60475 773 1e308d24d0f0d7630d9b36d0654c16f2 ""
-  "sphinxhighlight.sty" 1717075385.65714 7553 83fb52292c17957d9f4aadcb28c57a87 ""
+  "sphinxcontribtikz.sty" 1717077259.18311 773 1e308d24d0f0d7630d9b36d0654c16f2 ""
+  "sphinxhighlight.sty" 1717077259.23449 7553 83fb52292c17957d9f4aadcb28c57a87 ""
   "sphinxlatexadmonitions.sty" 1716566566.77815 10989 c38302e64c2bb47779f086869b246760 ""
   "sphinxlatexcontainers.sty" 1716566566.77826 901 d3a3a1b7b2547f47ade2499350b5c420 ""
   "sphinxlatexgraphics.sty" 1716566566.77838 4840 a9578332b6f3b35e198751fb632c9b79 ""
@@ -313,7 +313,7 @@
   "sphinxlatexstyletext.sty" 1716566566.77964 8589 a7e8f95eb4fef6c1cd2623cd417d6467 ""
   "sphinxlatextables.sty" 1716566566.77981 57829 997133f8082b07d1e9aafcd87331d9bf ""
   "sphinxmanual.cls" 1716566566.7799 4241 7b0d7a37df7b5715fb0dbd585c52ecdb ""
-  "sphinxmessages.sty" 1717075385.69285 755 42c4f27cae5c16bd3a0f96dcdc7189e7 ""
+  "sphinxmessages.sty" 1717077259.26742 755 42c4f27cae5c16bd3a0f96dcdc7189e7 ""
   "sphinxoptionsgeometry.sty" 1716566566.78001 2061 47bb34b8ed8a78823eb0c886abfb9f4d ""
   "sphinxoptionshyperref.sty" 1716566566.78011 1094 79beb8b8a3f10784f8cce804e0f9d3aa ""
   "sphinxpackageboxes.sty" 1716566566.78024 36615 1d74c63e665ede6c648fa08c42ea70fb ""
