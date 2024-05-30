@@ -27,16 +27,13 @@ runs:
         make html
         make latexpdf
         mv _build/latex/*.pdf _build/html/
-        cd fjarmal-einstaklinga
-        make clean
-        make latexpdf
-        mv _build/latex/*.pdf ../_build/html/fjarmal-einstaklinga/
-        cd ../fjarmal-fyrirtaekja
-        make clean
-        make latexpdf
-        mv _build/latex/*.pdf ../_build/html/fjarmal-fyrirtaekja/
-        cd ../kitchen-sink
-        make clean
-        make latexpdf
-        mv _build/latex/*.pdf ../_build/html/kitchen-sink/
+        for dir in */ ; do
+          if [[ -d "$dir" && "$dir" != _* ]]; then
+            cd "$dir"
+            make clean
+            make latexpdf
+            mv _build/latex/*.pdf "../_build/html/${dir%/}/"
+            cd ..
+          fi
+        done
       shell: bash
