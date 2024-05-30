@@ -1,5 +1,5 @@
-Ritsafn RÚBIK Reykjavíkur
-=========================
+Velkomin
+========
 
 1 Hér er asdf smá texti frá rit/index.rst.
 

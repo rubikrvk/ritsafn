@@ -1,0 +1,55 @@
+\babel@toc {icelandic}{}\relax 
+\contentsline {chapter}{\numberline {1}Fjármálastjórnun}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Header two}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Header three}{1}{subsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1.1}Header four}{1}{subsubsection.1.1.1.1}%
+\contentsline {paragraph}{\numberline {1.1.1.1.1}Header five}{1}{paragraph.1.1.1.1.1}%
+\contentsline {subparagraph}{\numberline {1.1.1.1.1.1}Header six}{1}{subparagraph.1.1.1.1.1.1}%
+\contentsline {chapter}{\numberline {2}Vextir}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Header two}{2}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Header three}{2}{subsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.1.1}Header four}{2}{subsubsection.2.1.1.1}%
+\contentsline {paragraph}{\numberline {2.1.1.1.1}Header five}{2}{paragraph.2.1.1.1.1}%
+\contentsline {subparagraph}{\numberline {2.1.1.1.1.1}Header six}{2}{subparagraph.2.1.1.1.1.1}%
+\contentsline {chapter}{\numberline {3}Tímavirði peninga}{3}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Header two}{3}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Header three}{3}{subsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.1.1}Header four}{3}{subsubsection.3.1.1.1}%
+\contentsline {paragraph}{\numberline {3.1.1.1.1}Header five}{3}{paragraph.3.1.1.1.1}%
+\contentsline {subparagraph}{\numberline {3.1.1.1.1.1}Header six}{3}{subparagraph.3.1.1.1.1.1}%
+\contentsline {chapter}{\numberline {4}Áhætta og ávöxtun}{4}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Header two}{4}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Header three}{4}{subsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}Header four}{4}{subsubsection.4.1.1.1}%
+\contentsline {paragraph}{\numberline {4.1.1.1.1}Header five}{4}{paragraph.4.1.1.1.1}%
+\contentsline {subparagraph}{\numberline {4.1.1.1.1.1}Header six}{4}{subparagraph.4.1.1.1.1.1}%
+\contentsline {chapter}{\numberline {5}Skuldabréf}{5}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Header two}{5}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Header three}{5}{subsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.1}Header four}{5}{subsubsection.5.1.1.1}%
+\contentsline {paragraph}{\numberline {5.1.1.1.1}Header five}{5}{paragraph.5.1.1.1.1}%
+\contentsline {subparagraph}{\numberline {5.1.1.1.1.1}Header six}{5}{subparagraph.5.1.1.1.1.1}%
+\contentsline {chapter}{\numberline {6}Ársreikningurinn}{6}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Header two}{6}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Header three}{6}{subsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.1}Header four}{6}{subsubsection.6.1.1.1}%
+\contentsline {paragraph}{\numberline {6.1.1.1.1}Header five}{6}{paragraph.6.1.1.1.1}%
+\contentsline {subparagraph}{\numberline {6.1.1.1.1.1}Header six}{6}{subparagraph.6.1.1.1.1.1}%
+\contentsline {chapter}{\numberline {7}Kennitölur í ársreikningum}{7}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Header two}{7}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Header three}{7}{subsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.1.1}Header four}{7}{subsubsection.7.1.1.1}%
+\contentsline {paragraph}{\numberline {7.1.1.1.1}Header five}{7}{paragraph.7.1.1.1.1}%
+\contentsline {subparagraph}{\numberline {7.1.1.1.1.1}Header six}{7}{subparagraph.7.1.1.1.1.1}%
+\contentsline {chapter}{\numberline {8}Fjármagnskostnaður}{8}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Header two}{8}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Header three}{8}{subsection.8.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.1.1}Header four}{8}{subsubsection.8.1.1.1}%
+\contentsline {paragraph}{\numberline {8.1.1.1.1}Header five}{8}{paragraph.8.1.1.1.1}%
+\contentsline {subparagraph}{\numberline {8.1.1.1.1.1}Header six}{8}{subparagraph.8.1.1.1.1.1}%
+\contentsline {chapter}{\numberline {9}Verðmat fyrirtækja}{9}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Header two}{9}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Header three}{9}{subsection.9.1.1}%
+\contentsline {subsubsection}{\numberline {9.1.1.1}Header four}{9}{subsubsection.9.1.1.1}%
+\contentsline {paragraph}{\numberline {9.1.1.1.1}Header five}{9}{paragraph.9.1.1.1.1}%
+\contentsline {subparagraph}{\numberline {9.1.1.1.1.1}Header six}{9}{subparagraph.9.1.1.1.1.1}%
