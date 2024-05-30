@@ -9,13 +9,13 @@ subtitle = [
     {
         'name': '~',
         'size': 'large',
-        'spacing': '2cm',
+        'spacing': '5em',
         'styles': []
     },
     {
         'name': 'Öll rit sameinuð (\href{https://rit.rubik.is}{rit.rubik.is})',
         'size': 'Large',
-        'spacing': '0.6cm',
+        'spacing': '1em',
         'styles': []
     },
 ]
@@ -26,25 +26,25 @@ authors = [
         'name': 'Eigandi efnis og leyfisveitandi:',
         'size': 'normalsize',
         'spacing': '0cm',
-        'styles': []
+        'styles': ['textsf', 'textmd']
     },
     {
         'name': 'RÚBIK Reykjavík ehf. (\href{mailto:rubik@rubik.is}{rubik@rubik.is})',
         'size': 'large',
-        'spacing': '0.5cm',
-        'styles': ['textnormal']
+        'spacing': '1em',
+        'styles': ['textsf', 'textmd']
     },
     {
         'name': 'Höfundur efnis:',
         'size': 'normalsize',
         'spacing': '0cm',
-        'styles': []
+        'styles': ['textsf', 'textmd']
     },
     {
         'name': 'Atli Bjarnason (\href{mailto:rubik@rubik.is}{a@rubik.is})',
         'size': 'large',
-        'spacing': '7.5cm',
-        'styles': ['texttt']
+        'spacing': '16em',
+        'styles': ['textsf', 'textmd']
     },
 ]
 
@@ -53,14 +53,14 @@ copyright = [
     {
         'name': 'Ritsafn RÚBIK Reykjavíkur © RÚBIK Reykjavík ehf.',
         'size': 'normalsize',
-        'spacing': '0.2cm',
+        'spacing': '0.3em',
         'styles': []
     },
     {
         'name': 'Notkun efnis er heimil samkvæmt \href{https://github.com/rubikrvk/ritsafn/blob/main/LICENSE}{notkunarleyfi} Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (\href{https://creativecommons.org/licenses/by-nc-sa/4.0/deed.is}{CC BY-NC-SA 4.0}).',
         'size': 'normalsize',
-        'spacing': '0.2cm',
-        'styles': ['textnormal']
+        'spacing': '0em',
+        'styles': ['textsf', 'textmd']
     },
 ]
 
@@ -99,26 +99,20 @@ copyright = [
 # Leiðbeiningar fyrir 'styles':
 # =============================
 #
-# \textnormal{}    % Normal (default) font style and weight (serif)
-# \textsf{}        % Sans serif font
-# \textmd{}        % Medium (normal) weight text
-# \textrm{}        % Roman (serif) font family
-# \textbf{}        % Boldface text
-# \textit{}        % Italic text
-# \texttt{}        % Typewriter (monospaced) font
-# \textup{}        % Upright text
-# \textsl{}        % Slanted text
-# \textsc{}        % Small caps text
-# \textbfseries{}  % Boldface font declaration
-# \itshape{}       % Italic font declaration
-# \ttfamily{}      % Typewriter font declaration
-# \textnormal{}    % Normal font declaration
+#  'styles': ['textnormal']						% serif normal
+#  'styles': ['textit', 'textnormal']			% serif normal italic
+#  'styles': ['textrm']							% serif normal bold
+#  'styles': ['textrm', 'textit']				% serif normal bold italic
 #
-# Ef það á að nota default style, þá er það skráð svona:
-# 'styles': []
+#  'styles': ['textsf', 'textmd']				% sans serif normal
+#  'styles': ['textsf', 'textmd', 'textit']		% serif normal italic
+#  'styles': ['textsf']							% serif normal bold
+#  'styles': ['textsf', 'textit']				% serif normal bold italic
 #
-# Ef það á að nota tvenns konar styles, þá er það skráð svona:
-# 'styles': ['textsf', 'textmd']
+#  'styles': ['texttt', 'textmd']				% mono normal
+#  'styles': ['texttt', 'textmd', 'textit']		% mono normal italic
+#  'styles': ['texttt']							% mono bold
+#  'styles': ['texttt', 'textit']				% mono bold italic
 
 
 
@@ -229,7 +223,7 @@ html_show_sphinx = False                        # Slökkt á "Created using Sphi
 # -- Options for LaTeX output ------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-latex-output
 
-# Fall til setja undirtitil, höfunda og höfundarrétt inn í "author" (birtast bara á forsíðu)
+# Föll til setja undirtitil, höfunda og höfundarrétt inn í "author" (birtast bara á forsíðu, og reyndar líka inn í "author description" inn í PDF properties)
 def generate_info(info_list):
     def apply_styles(text, styles):
         if not styles:
@@ -291,7 +285,7 @@ latex_elements = {
         \hypersetup{
             bookmarksnumbered=true,     % Kaflanúmer koma fram í Bookmarks
             bookmarksopen=true,         % Bookmarks eru alltaf opin
-            bookmarksopenlevel=0,       % Bookmarks eru alltaf opin upp til að sýna kafla (en ekki undirkafla)
+            bookmarksopenlevel=0,       % Bookmarks eru alltaf opin upp að kafla (en ekki undirkafla)
             pdfnewwindow=true,          % Tenglar opnast í nýjum glugga í vafra (virkar samt ekki í öllum vöfrum)
             colorlinks=true,            % Tenglar birtast með litum
             linkcolor=black,            % "linkcolor" er svartur og inniheldur liti á tenglum í efnisyfirliti
