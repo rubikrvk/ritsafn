@@ -207,7 +207,7 @@ html_short_title = 'Ritsafn'                    # Stuttur title notaður í teng
 
 # Skilgreiningar í HTML (t.d. fyrir tengil í "Edit on GitHub" takkanum)
 html_context = {
-    "github_version": "dev",
+    "github_version": "main",
     "github_user": "rubikrvk",
     "github_repo": "ritsafn",
     "doc_path": "rit",
