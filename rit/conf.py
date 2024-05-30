@@ -51,14 +51,14 @@ authors = [
 # Upplýsingar fyrir höfundarrétt í LaTeX
 copyright = [
     {
-        'name': 'Ritsafn RÚBIK Reykjavíkur © RÚBIK Reykjavík ehf.',
+        'name': 'Ritsafn RÚBIK Reykjavíkur © 2023--\currentyear\ RÚBIK Reykjavík ehf.',
         'size': 'normalsize',
         'spacing': '0.3em',
         'styles': []
     },
     {
-        'name': 'Notkun efnis er heimil samkvæmt \href{https://github.com/rubikrvk/ritsafn/blob/main/LICENSE}{notkunarleyfi} Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (\href{https://creativecommons.org/licenses/by-nc-sa/4.0/deed.is}{CC BY-NC-SA 4.0}).',
-        'size': 'normalsize',
+        'name': 'Notkun efnis úr Ritsafni RÚBIK Reykjavíkur er heimil samkvæmt \href{https://github.com/rubikrvk/ritsafn/blob/main/LICENSE}{notkunarleyfi} Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (\href{https://creativecommons.org/licenses/by-nc-sa/4.0/deed.is}{CC BY-NC-SA 4.0}).',
+        'size': 'small',
         'spacing': '0em',
         'styles': ['textsf', 'textmd']
     },
@@ -275,6 +275,9 @@ latex_elements = {
 
     % Sérsniðin skipun til að meðhöndla línubil í höfunda hlutanum á forsíðu
         \newcommand{\newlineauthors}[1]{\parbox{0.8\textwidth}{\raggedleft#1}}
+
+    % Skilgreina "currentyear" sem núverandi ár
+        \newcommand{\currentyear}{\the\year}
 
     % Fjarlægja dagsetningu af forsíðu
         \AtBeginDocument{\date{}}
