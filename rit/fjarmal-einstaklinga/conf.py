@@ -7,8 +7,8 @@ from conf import *
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-projectid = 'Ritsafn-RÚBIK-Reykjavíkur--Fjármál-einstaklinga'   # UPPFÆRT - Nafn á .tex og .pdf skrám í LaTeX
-project = 'Fjármál einstaklinga'                                # UPPFÆRT - Nafn á titli á forsíðu í LaTeX og í seinni hlutanum í <title> í HTML
+projectid = 'RUBIK-fjarmal-einstaklinga'    # UPPFÆRT - Nafn á .tex og .pdf skrám í LaTeX
+project = 'Fjármál einstaklinga'            # UPPFÆRT - Nafn á titli á forsíðu í LaTeX og í seinni hlutanum í <title> í HTML
 
 # UPPFÆRT - Upplýsingar fyrir undirtitil í LaTeX
 subtitle = [

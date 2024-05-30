@@ -1,8 +1,8 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-projectid = 'Ritsafn-RÚBIK-Reykjavíkur--Öll-rit-sameinuð'   # Nafn á .tex og .pdf skrám í LaTeX
-project = 'Ritsafn RÚBIK Reykjavíkur'                       # Nafn á titli á forsíðu í LaTeX og í seinni hlutanum í <title> í HTML
+projectid = 'RUBIK-oll-rit-sameinud'    # Nafn á .tex og .pdf skrám í LaTeX
+project = 'Ritsafn RÚBIK Reykjavíkur'   # Nafn á titli á forsíðu í LaTeX og í seinni hlutanum í <title> í HTML
 
 # Upplýsingar fyrir undirtitil í LaTeX
 subtitle = [
