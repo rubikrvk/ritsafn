@@ -10,13 +10,13 @@ subtitle = [
         'name': '~',
         'size': 'large',
         'spacing': '2cm',
-        'textnormal': False
+        'styles': []
     },
     {
         'name': 'Öll rit sameinuð (\href{https://rit.rubik.is}{rit.rubik.is})',
         'size': 'Large',
         'spacing': '0.6cm',
-        'textnormal': False
+        'styles': []
     },
 ]
 
@@ -26,25 +26,25 @@ authors = [
         'name': 'Eigandi efnis og leyfisveitandi:',
         'size': 'normalsize',
         'spacing': '0cm',
-        'textnormal': False
+        'styles': []
     },
     {
         'name': 'RÚBIK Reykjavík ehf. (\href{mailto:rubik@rubik.is}{rubik@rubik.is})',
         'size': 'large',
         'spacing': '0.5cm',
-        'textnormal': True
+        'styles': ['textnormal']
     },
     {
         'name': 'Höfundur efnis:',
         'size': 'normalsize',
         'spacing': '0cm',
-        'textnormal': False
+        'styles': []
     },
     {
         'name': 'Atli Bjarnason (\href{mailto:rubik@rubik.is}{a@rubik.is})',
         'size': 'large',
         'spacing': '7.5cm',
-        'textnormal': True
+        'styles': ['texttt']
     },
 ]
 
@@ -54,15 +54,71 @@ copyright = [
         'name': 'Ritsafn RÚBIK Reykjavíkur © RÚBIK Reykjavík ehf.',
         'size': 'normalsize',
         'spacing': '0.2cm',
-        'textnormal': False
+        'styles': []
     },
     {
         'name': 'Notkun efnis er heimil samkvæmt \href{https://github.com/rubikrvk/ritsafn/blob/main/LICENSE}{notkunarleyfi} Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (\href{https://creativecommons.org/licenses/by-nc-sa/4.0/deed.is}{CC BY-NC-SA 4.0}).',
         'size': 'normalsize',
         'spacing': '0.2cm',
-        'textnormal': True
+        'styles': ['textnormal']
     },
 ]
+
+# Leiðbeiningar fyrir 'size':
+# ===========================
+#
+# \tiny         % Smallest font size
+# \scriptsize   % Smaller than footnotesize
+# \footnotesize % Small font size for footnotes
+# \small        % Smaller than normalsize
+# \normalsize   % Standard font size (default)
+# \large        % Larger than normalsize
+# \Large        % Larger than \large
+# \LARGE        % Larger than \Large
+# \huge         % Larger than \LARGE
+# \Huge         % Largest font size
+#
+#
+# Leiðbeiningar fyrir 'spacing':
+# ==============================
+#
+# cm   % Centimeters
+# mm   % Millimeters
+# in   % Inches
+# pt   % Points (1/72.27 inch)
+# bp   % Big points (1/72 inch)
+# pc   % Picas (1 pc = 12 pt)
+# dd   % Didot points (1157 dd = 1238 pt)
+# cc   % Ciceros (1 cc = 12 dd)
+# sp   % Scaled points (65536 sp = 1 pt)
+# em   % Width of the letter 'M' in the current font
+# ex   % Height of the letter 'x' in the current font
+# mu   % Math units (1/18 em, for mathematical spacing)
+#
+#
+# Leiðbeiningar fyrir 'styles':
+# =============================
+#
+# \textnormal{}    % Normal (default) font style and weight (serif)
+# \textsf{}        % Sans serif font
+# \textmd{}        % Medium (normal) weight text
+# \textrm{}        % Roman (serif) font family
+# \textbf{}        % Boldface text
+# \textit{}        % Italic text
+# \texttt{}        % Typewriter (monospaced) font
+# \textup{}        % Upright text
+# \textsl{}        % Slanted text
+# \textsc{}        % Small caps text
+# \textbfseries{}  % Boldface font declaration
+# \itshape{}       % Italic font declaration
+# \ttfamily{}      % Typewriter font declaration
+# \textnormal{}    % Normal font declaration
+#
+# Ef það á að nota default style, þá er það skráð svona:
+# 'styles': []
+#
+# Ef það á að nota tvenns konar styles, þá er það skráð svona:
+# 'styles': ['textsf', 'textmd']
 
 
 
@@ -175,27 +231,26 @@ html_show_sphinx = False                        # Slökkt á "Created using Sphi
 
 # Fall til setja undirtitil, höfunda og höfundarrétt inn í "author" (birtast bara á forsíðu)
 def generate_info(info_list):
+    def apply_styles(text, styles):
+        if not styles:
+            return text
+        styled_text = text
+        for style in styles:
+            styled_text = r'\{}{{{}}}'.format(style, styled_text)
+        return styled_text
 
-    # Búa til lista til að geyma upplýsingar
     info_lines = []
     for info in info_list:
+        styled_name = apply_styles(info['name'], info.get('styles', []))
+        line = r'\{}{{{}}}'.format(info['size'], styled_name)
 
-        # Athuga hvort 'textnormal' sé til staðar og búa til línu í samræmi við það
-        if info['textnormal']:
-            line = r'\{}{{\textnormal{{{}}}}}'.format(info['size'], info['name'])
-        else:
-            line = r'\{}{{{}}}'.format(info['size'], info['name'])
-
-        # Athuga hvort 'spacing' sé til staðar og bæta við línubili í samræmi við það
         if 'spacing' in info:
             line += r'\\[{}]'.format(info['spacing'])
         else:
             line += r'\\'
 
-        # Bæta línunni við lista yfir upplýsingar
         info_lines.append(line)
 
-    # Skila upplýsingunum sem streng með \newlineauthors skipuninni
     return r'\newlineauthors{{{}}}'.format(r' '.join(info_lines))
 
 latex_subtitle = generate_info(subtitle)                                # Búa til LaTeX texta fyrir undirtitil
@@ -237,7 +292,7 @@ latex_elements = {
             bookmarksnumbered=true,     % Kaflanúmer koma fram í Bookmarks
             bookmarksopen=true,         % Bookmarks eru alltaf opin
             bookmarksopenlevel=0,       % Bookmarks eru alltaf opin upp til að sýna kafla (en ekki undirkafla)
-            pdfnewwindow=true,          % Tenglar opnast í nýjum glugga í vafra
+            pdfnewwindow=true,          % Tenglar opnast í nýjum glugga í vafra (virkar samt ekki í öllum vöfrum)
             colorlinks=true,            % Tenglar birtast með litum
             linkcolor=black,            % "linkcolor" er svartur og inniheldur liti á tenglum í efnisyfirliti
             urlcolor=bluenovadeep,      % "urlcolor" er Blue Nova Deep og inniheldur liti á tenglum á forsíðu og inline tenglum
