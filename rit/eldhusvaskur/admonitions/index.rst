@@ -1,6 +1,13 @@
 Admonitions
 ===========
 
+Hér er smá texti fyrir ofan yfirlit fyrirsafna.
+
+.. contents:: Yfirlit fyrirsagna í Admonitions
+    :depth: 4
+    :local:
+    :backlinks: none
+
 Text below header one
 
 Header two

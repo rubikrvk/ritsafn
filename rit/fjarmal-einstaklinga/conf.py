@@ -34,6 +34,15 @@ subtitle = [
 
 
 
+# -- Options for HTML output -------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
+
+html_static_path = ['../_static']               # UPPFÆRT - Slóð á "static" skrár
+
+
+
+
+
 # -- Options for LaTeX output ------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-latex-output
 
