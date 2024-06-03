@@ -1,11 +1,11 @@
 # Fdb version 4
-["makeindex RUBIK-eldhusvaskur.idx"] 1717447613.56235 "RUBIK-eldhusvaskur.idx" "RUBIK-eldhusvaskur.ind" "RUBIK-eldhusvaskur" 1717447617.20222 0
-  "RUBIK-eldhusvaskur.idx" 1717447616.42632 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex RUBIK-eldhusvaskur.idx"] 1717448526.27225 "RUBIK-eldhusvaskur.idx" "RUBIK-eldhusvaskur.ind" "RUBIK-eldhusvaskur" 1717448529.80869 0
+  "RUBIK-eldhusvaskur.idx" 1717448529.03582 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "RUBIK-eldhusvaskur.ilg"
   "RUBIK-eldhusvaskur.ind"
   (rewritten before read)
-["pdflatex"] 1717447615.39606 "RUBIK-eldhusvaskur.tex" "RUBIK-eldhusvaskur.pdf" "RUBIK-eldhusvaskur" 1717447617.20239 0
+["pdflatex"] 1717448528.03056 "RUBIK-eldhusvaskur.tex" "RUBIK-eldhusvaskur.pdf" "RUBIK-eldhusvaskur" 1717448529.80884 0
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc" 1254269338 3031 6c4d3515bf7115d8518af1c9ab97ca44 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -296,15 +296,15 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1715610869.65933 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1715610771 8221425 fc2f7c60b34b76ecf6facdc7fa161ce8 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "RUBIK-eldhusvaskur.aux" 1717447616.99472 11877 38df754a0faf33ba17ebac946195ad1b "pdflatex"
-  "RUBIK-eldhusvaskur.ind" 1717447613.56275 0 d41d8cd98f00b204e9800998ecf8427e "makeindex RUBIK-eldhusvaskur.idx"
-  "RUBIK-eldhusvaskur.out" 1717447617.01267 7635 17b181d3d435fdcb8d9d1a86fdff6a19 "pdflatex"
-  "RUBIK-eldhusvaskur.tex" 1717447611.59811 12820 303c713816ca3da4ccc2a7e372c02890 ""
-  "RUBIK-eldhusvaskur.toc" 1717447617.01555 3976 f0d743897bed141251d4af392a9e43f6 "pdflatex"
+  "RUBIK-eldhusvaskur.aux" 1717448529.60485 11877 38df754a0faf33ba17ebac946195ad1b "pdflatex"
+  "RUBIK-eldhusvaskur.ind" 1717448526.27263 0 d41d8cd98f00b204e9800998ecf8427e "makeindex RUBIK-eldhusvaskur.idx"
+  "RUBIK-eldhusvaskur.out" 1717448529.6169 7635 17b181d3d435fdcb8d9d1a86fdff6a19 "pdflatex"
+  "RUBIK-eldhusvaskur.tex" 1717448524.30737 12820 303c713816ca3da4ccc2a7e372c02890 ""
+  "RUBIK-eldhusvaskur.toc" 1717448529.6321 3976 f0d743897bed141251d4af392a9e43f6 "pdflatex"
   "rubik-cover.png" 1717078744.14304 74807 27385f53575191b302855b7d61c22ed4 ""
   "sphinx.sty" 1716566566.77778 44560 f9fbf51072c954d129c9bd5284cc4ccf ""
-  "sphinxcontribtikz.sty" 1717447611.48943 773 1e308d24d0f0d7630d9b36d0654c16f2 ""
-  "sphinxhighlight.sty" 1717447611.56084 7553 83fb52292c17957d9f4aadcb28c57a87 ""
+  "sphinxcontribtikz.sty" 1717448524.20067 773 1e308d24d0f0d7630d9b36d0654c16f2 ""
+  "sphinxhighlight.sty" 1717448524.27434 7553 83fb52292c17957d9f4aadcb28c57a87 ""
   "sphinxlatexadmonitions.sty" 1716566566.77815 10989 c38302e64c2bb47779f086869b246760 ""
   "sphinxlatexcontainers.sty" 1716566566.77826 901 d3a3a1b7b2547f47ade2499350b5c420 ""
   "sphinxlatexgraphics.sty" 1716566566.77838 4840 a9578332b6f3b35e198751fb632c9b79 ""
@@ -319,7 +319,7 @@
   "sphinxlatexstyletext.sty" 1716566566.77964 8589 a7e8f95eb4fef6c1cd2623cd417d6467 ""
   "sphinxlatextables.sty" 1716566566.77981 57829 997133f8082b07d1e9aafcd87331d9bf ""
   "sphinxmanual.cls" 1716566566.7799 4241 7b0d7a37df7b5715fb0dbd585c52ecdb ""
-  "sphinxmessages.sty" 1717447611.60304 755 42c4f27cae5c16bd3a0f96dcdc7189e7 ""
+  "sphinxmessages.sty" 1717448524.3103 755 42c4f27cae5c16bd3a0f96dcdc7189e7 ""
   "sphinxoptionsgeometry.sty" 1716566566.78001 2061 47bb34b8ed8a78823eb0c886abfb9f4d ""
   "sphinxoptionshyperref.sty" 1716566566.78011 1094 79beb8b8a3f10784f8cce804e0f9d3aa ""
   "sphinxpackageboxes.sty" 1716566566.78024 36615 1d74c63e665ede6c648fa08c42ea70fb ""
