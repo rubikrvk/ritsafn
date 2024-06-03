@@ -22,18 +22,5 @@ runs:
 
     - name: ALL - Build Sphinx documentation
       run: |
-        cd rit
-        make clean
-        make html
-        make latexpdf
-        mv _build/latex/*.pdf _build/html/
-        for dir in */ ; do
-          if [[ -d "$dir" && "$dir" != _* ]]; then
-            cd "$dir"
-            make clean
-            make latexpdf
-            mv _build/latex/*.pdf "../_build/html/${dir%/}/"
-            cd ..
-          fi
-        done
+        ./makesphinx.sh
       shell: bash
