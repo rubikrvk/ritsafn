@@ -34,6 +34,31 @@ subtitle = [
 
 
 
+# -- General configuration ---------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
+
+numfig = True
+numfig_secnum_depth = 0
+
+def setup(app):
+    # Add configuration values if they don't already exist
+    if 'numfig' not in app.config.values:
+        app.add_config_value('numfig', numfig, 'env')
+    if 'numfig_secnum_depth' not in app.config.values:
+        app.add_config_value('numfig_secnum_depth', numfig_secnum_depth, 'env')
+    
+    def update_config_values(app):
+        if app.builder.name in ['latex', 'latexpdf']:
+            app.config.numfig = True
+            app.config.numfig_secnum_depth = 2
+    
+    # Connect the update_config_values function to the 'builder-inited' event
+    app.connect('builder-inited', update_config_values)
+
+
+
+
+
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 

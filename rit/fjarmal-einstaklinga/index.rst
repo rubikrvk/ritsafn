@@ -1,6 +1,8 @@
 Fjármál einstaklinga
 ====================
 
+Og svo vil ég indexa þetta :index:`hugtak í fjarmal einstaklinga`.
+
 .. toctree::
    :numbered:
    :maxdepth: 6

@@ -590,6 +590,9 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 OUTPUT RUBIK-eldhusvaskur.toc
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmss17.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/lm/ts1lmr.fd
@@ -602,11 +605,17 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT ./RUBIK-eldhusvaskur.ind
 INPUT ./RUBIK-eldhusvaskur.ind
 INPUT RUBIK-eldhusvaskur.ind
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/lm/ts1lmtt.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/lm/ts1lmtt.fd
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/lm/ts1lmtt.fd
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/ts1-lmtt10.tfm
 INPUT RUBIK-eldhusvaskur.aux
 INPUT ./RUBIK-eldhusvaskur.out
 INPUT ./RUBIK-eldhusvaskur.out
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi7.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmss10.pfb
@@ -614,3 +623,5 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmss12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmss17.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmss9.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt10.pfb

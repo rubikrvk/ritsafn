@@ -129,7 +129,7 @@ extensions = [
 root_doc = 'index'                                          # Aðal skrá verkefnis
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']     # Útiloka þessar skrár
 templates_path = ['_templates']                             # Slóð á "templates" skrár
-numfig = True                                               # Virkja tölusetningu (todo numfig)
+numfig = True                                              # Virkja tölusetningu (todo numfig)
 
 # Snið fyrir tölusetningu (todo numfig)
 numfig_format = {
@@ -138,6 +138,23 @@ numfig_format = {
     'code-block': 'Kóða bálkur %s',
     'section': 'Grein %s'
 }
+
+numfig_secnum_depth = 0
+
+def setup(app):
+    # Add configuration values if they don't already exist
+    if 'numfig' not in app.config.values:
+        app.add_config_value('numfig', numfig, 'env')
+    if 'numfig_secnum_depth' not in app.config.values:
+        app.add_config_value('numfig_secnum_depth', numfig_secnum_depth, 'env')
+    
+    def update_config_values(app):
+        if app.builder.name in ['latex', 'latexpdf']:
+            app.config.numfig = True
+            app.config.numfig_secnum_depth = 2
+    
+    # Connect the update_config_values function to the 'builder-inited' event
+    app.connect('builder-inited', update_config_values)
 
 
 
@@ -155,9 +172,7 @@ language = 'is'     # Skráð <html lang="is" ...> í HTML og íslenska notuð �
 # -- Options for Math --------------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-math
 
-math_number_all = True                      # Tölusetning virkjuð fyrir allar jöfnur (todo numfig)
-math_eqref_format = 'Jafna.{number}'        # Snið fyrir tölusetningu fyrir jöfnur (todo numfig)
-math_numfig = True                          # Tölusetning virkjuð fyrir jöfnur (todo numfig)
+math_eqref_format = '({number})'                # Snið fyrir tölusetningu fyrir jöfnur
 
 
 
@@ -294,7 +309,7 @@ latex_elements = {
             colorlinks=true,            % Tenglar birtast með litum
             linkcolor=black,            % "linkcolor" er svartur og inniheldur liti á tenglum í efnisyfirliti
             urlcolor=bluenovadeep,      % "urlcolor" er Blue Nova Deep og inniheldur liti á tenglum á forsíðu og inline tenglum
-            citecolor=black,            % "citecolor" er svartur og inniheldur líklega liti á tenglum í genindex, o.fl. (todo)
+            citecolor=black,            % "citecolor" er svartur og inniheldur líklega liti á tilvísunum úr t.d. bibtex, o.fl. (todo)
         }
 
     % Skrá stillingar fyrir "titlesec" (notað hér til að velja liti á fyrirsögnum)
@@ -318,24 +333,24 @@ latex_elements = {
 
 # -- MathJax configuration ---------------------------------------------------
 
-mathjax_path = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+# mathjax_path = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
 
-mathjax3_config = {
-    "loader": {
-        "load": ["[tex]/noerrors", "[tex]/noundefined"]
-    },
-    "tex": {
-        "inlineMath": [["$", "$"], ["\\(", "\\)"]],
-        "displayMath": [["$$", "$$"], ["\\[", "\\]"]],
-        "packages": {"[+]": ["noerrors", "noundefined"]}
-    },
-    "svg": {
-        "fontCache": "global",
-        "matchVerticalAlign": False,
-        "mtextInheritFont": False,
-        "scale": 1,
-    }
-}
+# mathjax3_config = {
+#     "loader": {
+#         "load": ["[tex]/noerrors", "[tex]/noundefined"]
+#     },
+#     "tex": {
+#         "inlineMath": [["$", "$"], ["\\(", "\\)"]],
+#         "displayMath": [["$$", "$$"], ["\\[", "\\]"]],
+#         "packages": {"[+]": ["noerrors", "noundefined"]}
+#     },
+#     "svg": {
+#         "fontCache": "global",
+#         "matchVerticalAlign": False,
+#         "mtextInheritFont": False,
+#         "scale": 1,
+#     }
+# }
 
 
 

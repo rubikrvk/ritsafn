@@ -1,0 +1,18 @@
+\begin{sphinxtheindex}
+\let\lettergroup\sphinxstyleindexlettergroup
+\let\lettergroupDefault\sphinxstyleindexlettergroupDefault
+\let\spxpagem\sphinxstyleindexpagemain
+\let\spxentry\sphinxstyleindexentry
+\let\spxextra\sphinxstyleindexextra
+
+
+  \lettergroup{E}
+  \item \spxentry{Euler\textquotesingle{}s identity}, \hyperpage{1}
+
+  \indexspace
+
+  \lettergroup{I}
+  \item \spxentry{index hugtak í fjarmal fyrirtækja}, \hyperpage{1}, \see{inline hugtak í rót}{}
+  \item \spxentry{inline hugtak í fjarmal fyrirtækja}, \hyperpage{1}
+
+\end{sphinxtheindex}

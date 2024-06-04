@@ -10,7 +10,7 @@ sphinx==7.3.7
 # PYPI: https://pypi.org/project/pydata-sphinx-theme/
 # Docs: https://pydata-sphinx-theme.readthedocs.io/
 
-pydata-sphinx-theme==0.15.2
+pydata-sphinx-theme==0.15.3
 
 
 
