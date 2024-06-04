@@ -20,6 +20,10 @@ Smá annað test:
 Euler's identity, equation :eq:`euler6`, was elected one of the most
 beautiful mathematical formulas.
 
+This is a test. Here is an equation:
+:math:`X_{0:5} = (X_0, X_1, X_2, X_3, X_4)`.
+Here is another:
+
 .. toctree::
    :numbered:
    :maxdepth: 6

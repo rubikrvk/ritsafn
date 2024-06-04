@@ -333,24 +333,24 @@ latex_elements = {
 
 # -- MathJax configuration ---------------------------------------------------
 
-# mathjax_path = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+mathjax_path = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
 
-# mathjax3_config = {
-#     "loader": {
-#         "load": ["[tex]/noerrors", "[tex]/noundefined"]
-#     },
-#     "tex": {
-#         "inlineMath": [["$", "$"], ["\\(", "\\)"]],
-#         "displayMath": [["$$", "$$"], ["\\[", "\\]"]],
-#         "packages": {"[+]": ["noerrors", "noundefined"]}
-#     },
-#     "svg": {
-#         "fontCache": "global",
-#         "matchVerticalAlign": False,
-#         "mtextInheritFont": False,
-#         "scale": 1,
-#     }
-# }
+mathjax3_config = {
+    "tex": {
+        "inlineMath": [["$", "$"], ["\\(", "\\)"]],
+        "processEscapes": True,
+    },
+    "options": {
+        "ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document",
+        "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area",
+    },
+    "svg": {
+    "fontCache": "global",
+    "matchVerticalAlign": True,
+    "mtextInheritFont": True,
+    "scale": 1,
+    },
+}
 
 
 
