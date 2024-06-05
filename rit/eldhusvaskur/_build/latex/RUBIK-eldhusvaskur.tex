@@ -48,7 +48,7 @@
 \usepackage[Sonny]{fncychap}
 \ChNameVar{\Large\normalfont\sffamily}
 \ChTitleVar{\Large\normalfont\sffamily}
-\usepackage[,numfigreset=2,mathnumfig]{sphinx}
+\usepackage[,numfigreset=1,mathnumfig]{sphinx}
 
 \fvset{fontsize=auto}
 \usepackage{geometry}
@@ -62,6 +62,7 @@
 % Set up styles of URL: it should be placed after hyperref.
 \urlstyle{same}
 
+\addto\captionsicelandic{\renewcommand{\contentsname}{Eldhúsvaskur}}
 
 \usepackage{sphinxmessages}
 \setcounter{tocdepth}{5}
@@ -107,10 +108,14 @@
             {\normalfont\normalsize\bfseries\color{black}}{\theparagraph}{1em}{}
         \titleformat{\subparagraph}
             {\normalfont\normalsize\bfseries\color{black}}{\thesubparagraph}{1em}{}
+
+    % Skrá " endash " í staðinn fyrir ": " á milli numfig_format og caption, og gera numfig_format italic
+        \usepackage{caption}
+        \captionsetup{labelsep=endash, labelfont={bf}}
     
 
 \title{Eldhúsvaskur}
-\date{jún. 04, 2024}
+\date{jún. 05, 2024}
 \release{}
 \author{\newlineauthors{\large{~}\\[5em] \Large{Ritsafn RÚBIK Reykjavíkur (\href{https://rit.rubik.is}{rit.rubik.is})}\\[1em]}\\ \newlineauthors{\normalsize{\textmd{\textsf{Eigandi efnis og leyfisveitandi:}}}\\[0cm] \large{\textmd{\textsf{RÚBIK Reykjavík ehf. (\href{mailto:rubik@rubik.is}{rubik@rubik.is})}}}\\[1em] \normalsize{\textmd{\textsf{Höfundur efnis:}}}\\[0cm] \large{\textmd{\textsf{Atli Bjarnason (\href{mailto:rubik@rubik.is}{a@rubik.is})}}}\\[16em]}\\ \newlineauthors{\normalsize{Ritsafn RÚBIK Reykjavíkur © 2023--\currentyear\ RÚBIK Reykjavík ehf.}\\[0.3em] \small{\textmd{\textsf{Notkun efnis úr Ritsafni RÚBIK Reykjavíkur er heimil samkvæmt \href{https://github.com/rubikrvk/ritsafn/blob/main/LICENSE}{notkunarleyfi} Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (\href{https://creativecommons.org/licenses/by-nc-sa/4.0/deed.is}{CC BY-NC-SA 4.0}).}}}\\[0em]}}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{rubik-cover.png}\par}
@@ -155,6 +160,82 @@ beautiful mathematical formulas.
 This is a test. Here is an equation:
 \(X_{0:5} = (X_0, X_1, X_2, X_3, X_4)\).
 Here is another:
+
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics[width=200\sphinxpxdimen,height=200\sphinxpxdimen]{{daily}.jpg}
+\caption{Þetta er caption fyrir litla mynd.}\label{\detokenize{index:litilmynd3}}\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics[width=400\sphinxpxdimen,height=400\sphinxpxdimen]{{daily}.jpg}
+\caption{Þetta er caption fyrir stóra mynd.}\label{\detokenize{index:stormynd3}}\end{figure}
+
+\sphinxAtStartPar
+Samanber \hyperref[\detokenize{index:stormynd3}]{Mynd \ref{\detokenize{index:stormynd3}}}, þá er þetta mjög flott.
+
+
+\begin{savenotes}\sphinxattablestart
+\sphinxthistablewithglobalstyle
+\centering
+\sphinxcapstartof{table}
+\sphinxthecaptionisattop
+\sphinxcaption{Sample Table}\label{\detokenize{index:prufutafla3}}
+\sphinxaftertopcaption
+\begin{tabulary}{\linewidth}[t]{TTT}
+\sphinxtoprule
+\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Header 1
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Header 2
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Header 3
+\\
+\sphinxmidrule
+\sphinxtableatstartofbodyhook
+\sphinxAtStartPar
+Row 1, Column 1
+&
+\sphinxAtStartPar
+Row 1, Column 2
+&
+\sphinxAtStartPar
+Row 1, Column 3
+\\
+\sphinxhline
+\sphinxAtStartPar
+Row 2, Column 1
+&
+\sphinxAtStartPar
+Row 2, Column 2
+&
+\sphinxAtStartPar
+Row 2, Column 3
+\\
+\sphinxhline
+\sphinxAtStartPar
+Row 3, Column 1
+&
+\sphinxAtStartPar
+Row 3, Column 2
+&
+\sphinxAtStartPar
+Row 3, Column 3
+\\
+\sphinxbottomrule
+\end{tabulary}
+\sphinxtableafterendhook\par
+\sphinxattableend\end{savenotes}
+
+\sphinxAtStartPar
+Samanber \hyperref[\detokenize{index:prufutafla3}]{Tafla \ref{\detokenize{index:prufutafla3}}}, þá er þetta mjög flott tafla.
 
 \sphinxstepscope
 
@@ -209,14 +290,184 @@ Smá annað test:
 Euler’s identity, equation (\ref{equation:admonitions/index:euler8}), was elected one of the most
 beautiful mathematical formulas.
 
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics[width=200\sphinxpxdimen,height=200\sphinxpxdimen]{{daily}.jpg}
+\caption{Þetta er caption fyrir litla mynd.}\label{\detokenize{admonitions/index:litilmynd4}}\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics[width=400\sphinxpxdimen,height=400\sphinxpxdimen]{{daily}.jpg}
+\caption{Þetta er caption fyrir stóra mynd.}\label{\detokenize{admonitions/index:stormynd4}}\end{figure}
+
+\sphinxAtStartPar
+Samanber \hyperref[\detokenize{admonitions/index:stormynd4}]{Mynd \ref{\detokenize{admonitions/index:stormynd4}}}, þá er þetta mjög flott.
+
+
+\begin{savenotes}\sphinxattablestart
+\sphinxthistablewithglobalstyle
+\centering
+\sphinxcapstartof{table}
+\sphinxthecaptionisattop
+\sphinxcaption{Sample Table}\label{\detokenize{admonitions/index:prufutafla4}}
+\sphinxaftertopcaption
+\begin{tabulary}{\linewidth}[t]{TTT}
+\sphinxtoprule
+\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Header 1
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Header 2
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Header 3
+\\
+\sphinxmidrule
+\sphinxtableatstartofbodyhook
+\sphinxAtStartPar
+Row 1, Column 1
+&
+\sphinxAtStartPar
+Row 1, Column 2
+&
+\sphinxAtStartPar
+Row 1, Column 3
+\\
+\sphinxhline
+\sphinxAtStartPar
+Row 2, Column 1
+&
+\sphinxAtStartPar
+Row 2, Column 2
+&
+\sphinxAtStartPar
+Row 2, Column 3
+\\
+\sphinxhline
+\sphinxAtStartPar
+Row 3, Column 1
+&
+\sphinxAtStartPar
+Row 3, Column 2
+&
+\sphinxAtStartPar
+Row 3, Column 3
+\\
+\sphinxbottomrule
+\end{tabulary}
+\sphinxtableafterendhook\par
+\sphinxattableend\end{savenotes}
+
+\sphinxAtStartPar
+Samanber \hyperref[\detokenize{admonitions/index:prufutafla4}]{Tafla \ref{\detokenize{admonitions/index:prufutafla4}}}, þá er þetta mjög flott tafla.
+
 \sphinxAtStartPar
 Text below header one
+\sphinxSetupCaptionForVerbatim{This is the code block caption}
+\def\sphinxLiteralBlockLabel{\label{\detokenize{admonitions/index:kodabalkur1}}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{hello\PYGZus{}world}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Hello, world!}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\sphinxAtStartPar
+Samanber \hyperref[\detokenize{admonitions/index:kodabalkur1}]{Kóðablokk \ref{\detokenize{admonitions/index:kodabalkur1}}}, þá er þetta mjög flottur kóði.
 
 
 \section{Header two}
 \label{\detokenize{admonitions/index:header-two}}
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics[width=200\sphinxpxdimen,height=200\sphinxpxdimen]{{daily}.jpg}
+\caption{Þetta er caption fyrir litla mynd.}\label{\detokenize{admonitions/index:litilmynd5}}\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics[width=400\sphinxpxdimen,height=400\sphinxpxdimen]{{daily}.jpg}
+\caption{Þetta er caption fyrir stóra mynd.}\label{\detokenize{admonitions/index:stormynd5}}\end{figure}
+
 \sphinxAtStartPar
-Text below header two
+Samanber \hyperref[\detokenize{admonitions/index:stormynd5}]{Mynd \ref{\detokenize{admonitions/index:stormynd5}}}, þá er þetta mjög flott.
+
+
+\begin{savenotes}\sphinxattablestart
+\sphinxthistablewithglobalstyle
+\centering
+\sphinxcapstartof{table}
+\sphinxthecaptionisattop
+\sphinxcaption{Sample Table}\label{\detokenize{admonitions/index:prufutafla5}}
+\sphinxaftertopcaption
+\begin{tabulary}{\linewidth}[t]{TTT}
+\sphinxtoprule
+\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Header 1
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Header 2
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Header 3
+\\
+\sphinxmidrule
+\sphinxtableatstartofbodyhook
+\sphinxAtStartPar
+Row 1, Column 1
+&
+\sphinxAtStartPar
+Row 1, Column 2
+&
+\sphinxAtStartPar
+Row 1, Column 3
+\\
+\sphinxhline
+\sphinxAtStartPar
+Row 2, Column 1
+&
+\sphinxAtStartPar
+Row 2, Column 2
+&
+\sphinxAtStartPar
+Row 2, Column 3
+\\
+\sphinxhline
+\sphinxAtStartPar
+Row 3, Column 1
+&
+\sphinxAtStartPar
+Row 3, Column 2
+&
+\sphinxAtStartPar
+Row 3, Column 3
+\\
+\sphinxbottomrule
+\end{tabulary}
+\sphinxtableafterendhook\par
+\sphinxattableend\end{savenotes}
+
+\sphinxAtStartPar
+Samanber \hyperref[\detokenize{admonitions/index:prufutafla5}]{Tafla \ref{\detokenize{admonitions/index:prufutafla5}}}, þá er þetta mjög flott tafla.
+\sphinxSetupCaptionForVerbatim{This is the code block caption}
+\def\sphinxLiteralBlockLabel{\label{\detokenize{admonitions/index:kodabalkur2}}\label{\detokenize{admonitions/index:kodanafn}}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{hello\PYGZus{}world}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Hello, world!}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\sphinxAtStartPar
+Samanber \hyperref[\detokenize{admonitions/index:kodabalkur2}]{Kóðablokk \ref{\detokenize{admonitions/index:kodabalkur2}}}, þá er þetta mjög flottur kóði.
+
+\sphinxAtStartPar
+Og aftur, samanber {\hyperref[\detokenize{admonitions/index:kodanafn}]{\sphinxcrossref{\DUrole{std,std-ref}{þennan geggjaða kóða}}}}, þá er þetta mjög flottur kóði.
 
 
 \subsection{Header three}

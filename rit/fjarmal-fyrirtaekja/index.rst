@@ -24,7 +24,39 @@ Smá annað test:
 Euler's identity, equation :eq:`euler3`, was elected one of the most
 beautiful mathematical formulas.
 
+.. figure:: https://source.unsplash.com/200x200/daily?cute+puppy
+   :name: litilmynd2
+   :height: 200
+   :width: 200
+
+   Þetta er caption fyrir litla mynd.
+
+.. figure:: https://source.unsplash.com/200x200/daily?cute+puppy
+   :name: stormynd2
+   :height: 400
+   :width: 400
+
+   Þetta er caption fyrir stóra mynd.
+
+Samanber :numref:`stormynd2`, þá er þetta mjög flott.
+
+.. table:: Sample Table
+   :name: prufutafla2
+
+   +--------------------+---------------------+---------------------+
+   | Header 1           | Header 2            | Header 3            |
+   +====================+=====================+=====================+
+   | Row 1, Column 1    | Row 1, Column 2     | Row 1, Column 3     |
+   +--------------------+---------------------+---------------------+
+   | Row 2, Column 1    | Row 2, Column 2     | Row 2, Column 3     |
+   +--------------------+---------------------+---------------------+
+   | Row 3, Column 1    | Row 3, Column 2     | Row 3, Column 3     |
+   +--------------------+---------------------+---------------------+
+
+Samanber :numref:`prufutafla2`, þá er þetta mjög flott tafla.
+
 .. toctree::
+   :caption: Fjármál fyrirtækja
    :numbered:
    :maxdepth: 6
 

@@ -1,0 +1,39 @@
+<div class="tocsection sourcelink">
+  <a id="pdf-link" href="#" style="display: inline-block; padding: 0; margin: 0; line-height: 1.5; vertical-align: middle;">
+    <i class="fa-solid fa-file-pdf" style="margin-left: 0px; margin-right: 6px; margin-bottom: 3px; font-size: inherit; line-height: inherit; vertical-align: middle; display: inline-block; width: 1em; height: 1em;"></i>{{ ("Sækja PDF") }}</a>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Get the current URL path
+    var path = window.location.pathname;
+    
+    // Find the position of the <html> folder in the path
+    var htmlFolderIndex = path.indexOf('/html/');
+    if (htmlFolderIndex === -1) {
+      console.error("The 'html' folder was not found in the path.");
+      return;
+    }
+    
+    // Trim the path to start from the <html> folder
+    var relativePath = path.substring(htmlFolderIndex + 6);
+    
+    // Split the relative path into parts
+    var parts = relativePath.split('/').filter(function(part) {
+      return part.length > 0;
+    });
+    
+    // Determine the PDF link based on the path parts
+    var pdfLink = "";
+    if (parts.length === 0 || (parts.length === 1 && parts[0].endsWith('.html'))) {
+      // If the path has no parts or only one part that ends with .html, it is in the root folder
+      pdfLink = "RUBIK-oll-rit-sameinud.pdf";
+    } else {
+      // If the path has more than one part, the first part is the subfolder
+      pdfLink = parts[0] + "/RUBIK-" + parts[0] + ".pdf";
+    }
+    
+    // Set the href attribute of the PDF link
+    document.getElementById("pdf-link").href = pdfLink;
+  });
+</script>

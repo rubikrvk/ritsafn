@@ -32,3 +32,38 @@ Kemur í veg fyrir að primary sidebar sé horizontally scrollable á mobile
     overflow-x: hidden; /* Disable horizontal scrolling */
     overflow-y: auto;   /* Enable vertical scrolling */
 }
+
+/*
+Skrá " endash " í staðinn fyrir " " á milli numfig_format og caption
+*/
+span.caption-number {
+    font-style: normal !important;
+    font-weight: bold;
+}
+
+.caption-number::after {
+    content: "– ";
+    font-weight: normal !important;
+}
+
+/*
+Fjalægja padding-right í kóðablokk til að gera ekki of stórt bil á milli numfig_format og caption
+*/
+div.code-block-caption span.caption-number {
+    padding-right: 0
+}
+
+/*
+Setja margin: 0 á tóman rtd-footer-container inn í primary sidebar, sjá: https://github.com/pydata/pydata-sphinx-theme/issues/1794
+*/
+#rtd-footer-container {
+    margin: 0 !important;
+}
+
+/*
+Setja sama style á textann "Kaflayfirlit" eins og er í toctree caption
+*/
+.page-toc.tocsection.onthispage {
+    font-weight: var(--pst-sidebar-header-font-weight);
+    margin-bottom: .5rem;
+  }

@@ -129,20 +129,21 @@ extensions = [
 root_doc = 'index'                                          # Aðal skrá verkefnis
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']     # Útiloka þessar skrár
 templates_path = ['_templates']                             # Slóð á "templates" skrár
-numfig = True                                              # Virkja tölusetningu (todo numfig)
+numfig = True                                               # Sjálfvirk tölusetning í HTML á figures, tables og code-blocks
 
 # Snið fyrir tölusetningu (todo numfig)
 numfig_format = {
     'figure': 'Mynd %s',
     'table': 'Tafla %s',
-    'code-block': 'Kóða bálkur %s',
+    'code-block': 'Kóðablokk %s',
     'section': 'Grein %s'
 }
 
-numfig_secnum_depth = 0
+numfig_secnum_depth = 1                                     # Dýpt á sjálfvirkri tölusetningu í HTML // 0 = tölusetning er frá 1 upp í n // 1 = tölusetning er frá x.1 upp í x.n // 2 = tölusetning er frá x.y.1 upp í x.y.n // o.s.frv.
 
+# Föll til að bæta við mismunandi numfig og numfig_secnum_depth í HTML annars vegar og í LaTeX hins vegar
 def setup(app):
-    # Add configuration values if they don't already exist
+    # Bæta við numfig og numfig_secnum_depth í HTML sem default
     if 'numfig' not in app.config.values:
         app.add_config_value('numfig', numfig, 'env')
     if 'numfig_secnum_depth' not in app.config.values:
@@ -150,10 +151,10 @@ def setup(app):
     
     def update_config_values(app):
         if app.builder.name in ['latex', 'latexpdf']:
-            app.config.numfig = True
-            app.config.numfig_secnum_depth = 2
+            app.config.numfig = True                        # Sjálfvirk tölusetning í LaTeX á figures, tables og code-blocks
+            app.config.numfig_secnum_depth = 2              # Dýpt á sjálfvirkri tölusetning í LaTeX // 0 = tölusetning er frá 1 upp í n // 1 = tölusetning er frá x.1 upp í x.n // 2 = tölusetning er frá x.y.1 upp í x.y.n // o.s.frv.
     
-    # Connect the update_config_values function to the 'builder-inited' event
+    # Bæta við numfig og numfig_secnum_depth í LaTeX
     app.connect('builder-inited', update_config_values)
 
 
@@ -183,10 +184,17 @@ math_eqref_format = '({number})'                # Snið fyrir tölusetningu fyri
 
 html_theme = 'pydata_sphinx_theme'              # Setur <html lang="is" ...> í HTML og notar íslensku þar sem það á við
 html_theme_options = {
+    "logo": {
+        "alt_text": "Ritsafn RÚBIK Reykjavíkur",
+        "text": "Ritsafn RÚBIK Reykjavíkur",
+        "image_light": "_static/rubik-logo.svg",
+        "image_dark": "_static/rubik-logo.svg",
+    },
     "use_edit_page_button": True,               # "Edit on GitHub" takkinn virkjaður
     "search_bar_text": "Leita...",              # Þegar smellt er á "Leit", þá kemur upp gluggi með þessum texta
     "navbar_align": "content",                  # "navbar" er left-aligned frá þeim stað sem "content" byrjar
-#    "header_links_before_dropdown": 1,          # Ákveða hversu margar síður birtast í header áður en að "More" takkinn kemur í staðinn
+    "header_links_before_dropdown": 3,          # Ákveða hversu margar síður birtast í header áður en að "More" takkinn kemur í staðinn
+    "header_dropdown_text": "Meira",            # Íslenskur texti fyrir "More" takkann
 #    "announcement": "My announcement!",         # Tilkynning efst á síðunni
 
     # Icon og tenglar inn á samfélagsmiðla
@@ -196,26 +204,28 @@ html_theme_options = {
             "url": "https://facebook.com/rubikrvk",
             "icon": "fa-brands fa-facebook",
         },
-        {
-            "name": "Instagram",
-            "url": "https://instagram.com/rubikrvk",
-            "icon": "fa-brands fa-instagram",
-        },
-        {
-            "name": "X.com",
-            "url": "https://x.com/rubikrvk",
-            "icon": "fa-brands fa-x-twitter",
-        },
-        {
-            "name": "YouTube",
-            "url": "https://www.youtube.com/@rubikrvk",
-            "icon": "fa-brands fa-youtube",
-        },
-        {
-            "name": "LinkedIn",
-            "url": "https://www.linkedin.com/company/rubikrvk",
-            "icon": "fa-brands fa-linkedin",
-        },    ]
+#        {
+#            "name": "Instagram",
+#            "url": "https://instagram.com/rubikrvk",
+#            "icon": "fa-brands fa-instagram",
+#        },
+#        {
+#            "name": "X.com",
+#            "url": "https://x.com/rubikrvk",
+#            "icon": "fa-brands fa-x-twitter",
+#        },
+#        {
+#            "name": "YouTube",
+#            "url": "https://www.youtube.com/@rubikrvk",
+#            "icon": "fa-brands fa-youtube",
+#        },
+#        {
+#            "name": "LinkedIn",
+#            "url": "https://www.linkedin.com/company/rubikrvk",
+#            "icon": "fa-brands fa-linkedin",
+#        },
+    ],
+    "secondary_sidebar_items": ["rubik-page-toc", "rubik-pdf", "rubik-sourcelink", "rubik-edit-this-page"],
 }
 html_title = project                            # Seinni hlutinn í <title> í HTML sóttur úr "project"
 html_short_title = 'Ritsafn'                    # Stuttur title notaður í tenglum í "header" og í HTML Help Docs
@@ -226,9 +236,14 @@ html_context = {
     "github_user": "rubikrvk",
     "github_repo": "ritsafn",
     "doc_path": "rit",
+    "on_this_page_title": "Á þessari síðu"
 }
 html_css_files = ['custom.css']                 # Slóð á CSS skrár
 html_static_path = ['_static']                  # Slóð á "static" skrár
+html_sidebars = {
+    "*/**": ["rubik-sidebar-nav-bs"],
+    "genindex": [],
+}
 html_show_copyright = False                     # Slökkt á default texta um höfundarrétt í HTML
 html_show_sphinx = False                        # Slökkt á "Created using Sphinx" texta í HTML
 
@@ -239,7 +254,7 @@ html_show_sphinx = False                        # Slökkt á "Created using Sphi
 # -- Options for LaTeX output ------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-latex-output
 
-# Föll til setja undirtitil, höfunda og höfundarrétt inn í "author" (birtast bara á forsíðu, og reyndar líka inn í "author description" inn í PDF properties)
+# Föll til að setja undirtitil, höfunda og höfundarrétt inn í "author" (birtast bara á forsíðu, og reyndar líka inn í "author description" inn í PDF properties)
 def generate_info(info_list):
     def apply_styles(text, styles):
         if not styles:
@@ -324,6 +339,10 @@ latex_elements = {
             {\normalfont\normalsize\bfseries\color{black}}{\theparagraph}{1em}{}
         \titleformat{\subparagraph}
             {\normalfont\normalsize\bfseries\color{black}}{\thesubparagraph}{1em}{}
+
+    % Skrá " endash " í staðinn fyrir ": " á milli numfig_format og caption, og gera numfig_format italic
+        \usepackage{caption}
+        \captionsetup{labelsep=endash, labelfont={bf}}
     '''
 }
 
@@ -345,10 +364,10 @@ mathjax3_config = {
         "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area",
     },
     "svg": {
-    "fontCache": "global",
-    "matchVerticalAlign": True,
-    "mtextInheritFont": True,
-    "scale": 1,
+        "fontCache": "global",
+        "matchVerticalAlign": True,
+        "mtextInheritFont": True,
+        "scale": 1,
     },
 }
 

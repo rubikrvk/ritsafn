@@ -4,6 +4,7 @@ Fjármál einstaklinga
 Og svo vil ég indexa þetta :index:`hugtak í fjarmal einstaklinga`.
 
 .. toctree::
+   :caption: Fjármál einstaklinga
    :numbered:
    :maxdepth: 6
 

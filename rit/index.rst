@@ -43,9 +43,49 @@ beautiful mathematical formulas.
 
 2 Hér er asdf smá texti frá rit/index.rst.
 
+.. figure:: https://source.unsplash.com/200x200/daily?cute+puppy
+   :name: litilmynd1
+   :height: 200
+   :width: 200
+
+   Þetta er caption fyrir litla mynd.
+
+.. figure:: https://source.unsplash.com/200x200/daily?cute+puppy
+   :name: stormynd1
+   :height: 400
+   :width: 400
+
+   Þetta er caption fyrir stóra mynd.
+
+Samanber :numref:`stormynd1`, þá er þetta mjög flott.
+
 3 Hér er asdf smá texti frá rit/index.rst.
 
 4 Hér er asdf smá texti frá rit/index.rst.
+
+.. table:: Sample Table
+   :name: prufutafla1
+
+   +--------------------+---------------------+---------------------+
+   | Header 1           | Header 2            | Header 3            |
+   +====================+=====================+=====================+
+   | Row 1, Column 1    | Row 1, Column 2     | Row 1, Column 3     |
+   +--------------------+---------------------+---------------------+
+   | Row 2, Column 1    | Row 2, Column 2     | Row 2, Column 3     |
+   +--------------------+---------------------+---------------------+
+   | Row 3, Column 1    | Row 3, Column 2     | Row 3, Column 3     |
+   +--------------------+---------------------+---------------------+
+
+Samanber :numref:`prufutafla1`, þá er þetta mjög flott tafla.
+
+.. code-block:: python
+   :caption: This is the code block caption
+   :name: kodabalkur
+
+   def hello_world():
+       print("Hello, world!")
+
+Samanber :numref:`kodabalkur`, þá er þetta mjög flottur kóði.
 
 5 Hér er asdf smá texti frá rit/index.rst.
 
@@ -69,10 +109,14 @@ beautiful mathematical formulas.
    fjarmal-einstaklinga/index
    fjarmal-fyrirtaekja/index
    eldhusvaskur/index
-   genindex
 
 .. toctree::
    :numbered:
    :maxdepth: 7
 
    testing
+
+.. toctree::
+   :maxdepth: 7
+
+   genindex

@@ -37,11 +37,12 @@ subtitle = [
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-numfig = True
-numfig_secnum_depth = 0
+numfig = True                                               # ÓBREYTT - Þarf samt að endurtaka hér fyrir föll
+numfig_secnum_depth = 1                                     # ÓBREYTT - Þarf samt að endurtaka hér fyrir föll
 
+# ÓBREYTT - Þarf samt að endurtaka hér fyrir föll
 def setup(app):
-    # Add configuration values if they don't already exist
+    # ÓBREYTT - Þarf samt að endurtaka hér fyrir föll
     if 'numfig' not in app.config.values:
         app.add_config_value('numfig', numfig, 'env')
     if 'numfig_secnum_depth' not in app.config.values:
@@ -49,10 +50,10 @@ def setup(app):
     
     def update_config_values(app):
         if app.builder.name in ['latex', 'latexpdf']:
-            app.config.numfig = True
-            app.config.numfig_secnum_depth = 2
+            app.config.numfig = True                        # UPPFÆRT - Sjálfvirk tölusetning í LaTeX á figures, tables og code-blocks
+            app.config.numfig_secnum_depth = 1              # UPPFÆRT - Dýpt á sjálfvirkri tölusetning í LaTeX // 0 = tölusetning er frá 1 upp í n // 1 = tölusetning er frá x.1 upp í x.n // 2 = tölusetning er frá x.y.1 upp í x.y.n // o.s.frv.
     
-    # Connect the update_config_values function to the 'builder-inited' event
+    # ÓBREYTT - Þarf samt að endurtaka hér fyrir föll
     app.connect('builder-inited', update_config_values)
 
 

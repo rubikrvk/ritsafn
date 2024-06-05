@@ -25,12 +25,95 @@ Smá annað test:
 Euler's identity, equation :eq:`euler8`, was elected one of the most
 beautiful mathematical formulas.
 
+.. figure:: https://source.unsplash.com/200x200/daily?cute+puppy
+   :name: litilmynd4
+   :height: 200
+   :width: 200
+
+   Þetta er caption fyrir litla mynd.
+
+.. figure:: https://source.unsplash.com/200x200/daily?cute+puppy
+   :name: stormynd4
+   :height: 400
+   :width: 400
+
+   Þetta er caption fyrir stóra mynd.
+
+Samanber :numref:`stormynd4`, þá er þetta mjög flott.
+
+.. table:: Sample Table
+   :name: prufutafla4
+
+   +--------------------+---------------------+---------------------+
+   | Header 1           | Header 2            | Header 3            |
+   +====================+=====================+=====================+
+   | Row 1, Column 1    | Row 1, Column 2     | Row 1, Column 3     |
+   +--------------------+---------------------+---------------------+
+   | Row 2, Column 1    | Row 2, Column 2     | Row 2, Column 3     |
+   +--------------------+---------------------+---------------------+
+   | Row 3, Column 1    | Row 3, Column 2     | Row 3, Column 3     |
+   +--------------------+---------------------+---------------------+
+
+Samanber :numref:`prufutafla4`, þá er þetta mjög flott tafla.
+
 Text below header one
+
+.. code-block:: python
+   :caption: This is the code block caption
+   :name: kodabalkur1
+
+   def hello_world():
+       print("Hello, world!")
+
+Samanber :numref:`kodabalkur1`, þá er þetta mjög flottur kóði.
+
 
 Header two
 ----------
 
-Text below header two
+.. figure:: https://source.unsplash.com/200x200/daily?cute+puppy
+   :name: litilmynd5
+   :height: 200
+   :width: 200
+
+   Þetta er caption fyrir litla mynd.
+
+.. figure:: https://source.unsplash.com/200x200/daily?cute+puppy
+   :name: stormynd5
+   :height: 400
+   :width: 400
+
+   Þetta er caption fyrir stóra mynd.
+
+Samanber :numref:`stormynd5`, þá er þetta mjög flott.
+
+.. table:: Sample Table
+   :name: prufutafla5
+
+   +--------------------+---------------------+---------------------+
+   | Header 1           | Header 2            | Header 3            |
+   +====================+=====================+=====================+
+   | Row 1, Column 1    | Row 1, Column 2     | Row 1, Column 3     |
+   +--------------------+---------------------+---------------------+
+   | Row 2, Column 1    | Row 2, Column 2     | Row 2, Column 3     |
+   +--------------------+---------------------+---------------------+
+   | Row 3, Column 1    | Row 3, Column 2     | Row 3, Column 3     |
+   +--------------------+---------------------+---------------------+
+
+Samanber :numref:`prufutafla5`, þá er þetta mjög flott tafla.
+
+.. _kodanafn:
+
+.. code-block:: python
+   :caption: This is the code block caption
+   :name: kodabalkur2
+
+   def hello_world():
+       print("Hello, world!")
+
+Samanber :numref:`kodabalkur2`, þá er þetta mjög flottur kóði.
+
+Og aftur, samanber :ref:`þennan geggjaða kóða <kodanafn>`, þá er þetta mjög flottur kóði.
 
 Header three
 ^^^^^^^^^^^^

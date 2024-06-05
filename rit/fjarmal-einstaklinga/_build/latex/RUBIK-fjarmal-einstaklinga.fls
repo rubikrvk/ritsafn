@@ -471,6 +471,12 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
 INPUT ./sphinxmessages.sty
 INPUT sphinxmessages.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/caption/ltcaption.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/caption/ltcaption.sty
 OUTPUT RUBIK-fjarmal-einstaklinga.idx
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def

@@ -24,7 +24,39 @@ This is a test. Here is an equation:
 :math:`X_{0:5} = (X_0, X_1, X_2, X_3, X_4)`.
 Here is another:
 
+.. figure:: https://source.unsplash.com/200x200/daily?cute+puppy
+   :name: litilmynd3
+   :height: 200
+   :width: 200
+
+   Þetta er caption fyrir litla mynd.
+
+.. figure:: https://source.unsplash.com/200x200/daily?cute+puppy
+   :name: stormynd3
+   :height: 400
+   :width: 400
+
+   Þetta er caption fyrir stóra mynd.
+
+Samanber :numref:`stormynd3`, þá er þetta mjög flott.
+
+.. table:: Sample Table
+   :name: prufutafla3
+
+   +--------------------+---------------------+---------------------+
+   | Header 1           | Header 2            | Header 3            |
+   +====================+=====================+=====================+
+   | Row 1, Column 1    | Row 1, Column 2     | Row 1, Column 3     |
+   +--------------------+---------------------+---------------------+
+   | Row 2, Column 1    | Row 2, Column 2     | Row 2, Column 3     |
+   +--------------------+---------------------+---------------------+
+   | Row 3, Column 1    | Row 3, Column 2     | Row 3, Column 3     |
+   +--------------------+---------------------+---------------------+
+
+Samanber :numref:`prufutafla3`, þá er þetta mjög flott tafla.
+
 .. toctree::
+   :caption: Eldhúsvaskur
    :numbered:
    :maxdepth: 6
 
