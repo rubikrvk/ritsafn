@@ -67,3 +67,28 @@ Setja sama style á textann "Kaflayfirlit" eins og er í toctree caption
     font-weight: var(--pst-sidebar-header-font-weight);
     margin-bottom: .5rem;
   }
+
+/*
+Lengir "Leit" gluggan, svo hann passi við byrjunina á Secondary sidebar
+*/
+.search-button__default-text {
+    margin-right: 75px !important;
+}
+
+/*
+Kemur í veg fyrir að langur texti í navbar-nav noti tvær eða fleiri línu
+*/
+.navbar-nav {
+    white-space: nowrap;
+}
+
+/*
+Kemur í veg fyrir að item í navbar-header-items__end noti tvær (eða fleiri) línu
+*/
+.navbar-header-items__end {
+    flex-flow: nowrap !important;
+}
+
+.title.logo__title {
+    font-size: 16px !important;
+}

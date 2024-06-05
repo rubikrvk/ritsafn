@@ -1,7 +1,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-projectid = 'RUBIK-oll-rit-sameinud'    # Nafn á .tex og .pdf skrám í LaTeX
+projectid = 'RUBIK-oll-rit-sameinud'    # Nafn á .tex og .pdf skrám í LaTeX (verður að vera 'RUBIK-oll-rit-sameinud' fyrir "Sækja PDF" takkann)
 project = 'Ritsafn RÚBIK Reykjavíkur'   # Nafn á titli á forsíðu í LaTeX og í seinni hlutanum í <title> í HTML
 
 # Upplýsingar fyrir undirtitil í LaTeX
@@ -195,7 +195,7 @@ html_theme_options = {
     "use_edit_page_button": True,               # "Edit on GitHub" takkinn virkjaður
     "search_bar_text": "Leita...",              # Þegar smellt er á "Leit", þá kemur upp gluggi með þessum texta
     "navbar_align": "content",                  # "navbar" er left-aligned frá þeim stað sem "content" byrjar
-    "header_links_before_dropdown": 3,          # Ákveða hversu margar síður birtast í header áður en að "More" takkinn kemur í staðinn
+    "header_links_before_dropdown": 2,          # Ákveða hversu margar síður birtast í header áður en að "More" takkinn kemur í staðinn
     "header_dropdown_text": "Meira",            # Íslenskur texti fyrir "More" takkann
 #    "announcement": "My announcement!",         # Tilkynning efst á síðunni
 
@@ -206,46 +206,50 @@ html_theme_options = {
             "url": "https://facebook.com/rubikrvk",
             "icon": "fa-brands fa-facebook",
         },
-#        {
-#            "name": "Instagram",
-#            "url": "https://instagram.com/rubikrvk",
-#            "icon": "fa-brands fa-instagram",
-#        },
-#        {
-#            "name": "X.com",
-#            "url": "https://x.com/rubikrvk",
-#            "icon": "fa-brands fa-x-twitter",
-#        },
-#        {
-#            "name": "YouTube",
-#            "url": "https://www.youtube.com/@rubikrvk",
-#            "icon": "fa-brands fa-youtube",
-#        },
-#        {
-#            "name": "LinkedIn",
-#            "url": "https://www.linkedin.com/company/rubikrvk",
-#            "icon": "fa-brands fa-linkedin",
-#        },
+        {
+            "name": "Instagram",
+            "url": "https://instagram.com/rubikrvk",
+            "icon": "fa-brands fa-instagram",
+        },
+        {
+            "name": "X.com",
+            "url": "https://x.com/rubikrvk",
+            "icon": "fa-brands fa-x-twitter",
+        },
+        {
+            "name": "YouTube",
+            "url": "https://www.youtube.com/@rubikrvk",
+            "icon": "fa-brands fa-youtube",
+        },
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/company/rubikrvk",
+            "icon": "fa-brands fa-linkedin",
+        },
     ],
     "secondary_sidebar_items": ["rubik-page-toc", "rubik-pdf", "rubik-sourcelink", "rubik-edit-this-page"],
+    "show_prev_next": False,
+    "article_header_start": [],
+    "footer_end": [],
+    "navbar_end": ["search-button-field", "theme-switcher"],
+    "navbar_persistent": [],
 }
 html_title = project                            # Seinni hlutinn í <title> í HTML sóttur úr "project"
 html_short_title = 'Ritsafn'                    # Stuttur title notaður í tenglum í "header" og í HTML Help Docs
 html_baseurl = 'https://rit.rubik.is/'          # Notað í URLs í sitemap.xml
 
-# Skilgreiningar í HTML (t.d. fyrir tengil í "Edit on GitHub" takkanum)
 html_context = {
-    "github_version": "main",
-    "github_user": "rubikrvk",
-    "github_repo": "ritsafn",
-    "doc_path": "rit",
-    "on_this_page_title": "Á þessari síðu"
+    "github_version": "main",                   # Skilgreining fyrir tengil í "Edit on GitHub" takkanum
+    "github_user": "rubikrvk",                  # Skilgreining fyrir tengil í "Edit on GitHub" takkanum
+    "github_repo": "ritsafn",                   # Skilgreining fyrir tengil í "Edit on GitHub" takkanum
+    "doc_path": "rit",                          # Skilgreining fyrir tengil í "Edit on GitHub" takkanum
 }
 html_css_files = ['custom.css']                 # Slóð á CSS skrár
 html_static_path = ['_static']                  # Slóð á "static" skrár
 html_sidebars = {
-    "*/**": ["rubik-sidebar-nav-bs"],
-    "genindex": [],
+    "*/**": ["rubik-sidebar-nav-bs", "navbar-icon-links"],
+    "genindex": ["navbar-icon-links"],
+    "index": ["navbar-icon-links"],
 }
 html_show_copyright = False                     # Slökkt á default texta um höfundarrétt í HTML
 html_show_sphinx = False                        # Slökkt á "Created using Sphinx" texta í HTML
@@ -407,24 +411,37 @@ tikz_externalize = True
 tikz_latex_args = [r"-shell-escape"]
 
 
-import os
 
+
+# -- sphinxcontrib-tikz configuration ----------------------------------------
+
+
+
+
+
+
+# -- Sækja PDF configuration -------------------------------------------------
+
+# Föll fyrir "Sækja PDF" takkann
 def add_data_attributes(app, pagename, templatename, context, doctree):
-    # Determine the depth of the file
+
+    # Reikna fjölda skráarstiga í slóðinni
     depth = pagename.count('/')
     
-    # Extract subfolder name if applicable
+    # Ákvarða nafn undirmöppu ef hún er til staðar
     if depth >= 1:
         subfolder = pagename.split('/')[0]
     else:
         subfolder = ''
-
-    # Debug print
+    
+    # Prenta upplýsingar um núverandi síðu, dýpt og undirmöppu (fyrir villuleit)
     print(f"Processing page: {pagename}, Depth: {depth}, Subfolder: {subfolder}")
     
-    # Add the depth and subfolder as context variables
+    # Bæta dýpt og nafni undirmöppu við samhengi (context) sem breytur
     context['html_page_depth'] = depth
     context['html_subfolder'] = subfolder
 
 def setup(app):
+
+    # Tengja add_data_attributes fallið við 'html-page-context' atburðinn í Sphinx
     app.connect('html-page-context', add_data_attributes)

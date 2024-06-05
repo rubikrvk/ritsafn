@@ -7,7 +7,7 @@ from conf import *
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-projectid = 'RUBIK-fjarmal-einstaklinga'    # UPPFÆRT - Nafn á .tex og .pdf skrám í LaTeX
+projectid = 'RUBIK-fjarmal-einstaklinga'    # UPPFÆRT - Nafn á .tex og .pdf skrám í LaTeX (verður að vera 'RUBIK-<nafn á undirmöppu>' fyrir "Sækja PDF" takkann)
 project = 'Fjármál einstaklinga'            # UPPFÆRT - Nafn á titli á forsíðu í LaTeX og í seinni hlutanum í <title> í HTML
 
 # UPPFÆRT - Upplýsingar fyrir undirtitil í LaTeX
