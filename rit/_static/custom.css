@@ -89,6 +89,18 @@ Kemur í veg fyrir að item í navbar-header-items__end noti tvær (eða fleiri)
     flex-flow: nowrap !important;
 }
 
+/*
+Setur texta í logo__title í sömu stærð og texti í navbar-nav
+*/
 .title.logo__title {
     font-size: 16px !important;
+}
+
+/*
+Setur padding
+*/
+.sidebar-toggle.secondary-toggle,
+.sidebar-toggle.primary-toggle {
+    padding-left: 6px;
+    padding-right: 6px;
 }
