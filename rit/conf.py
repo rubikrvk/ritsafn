@@ -125,7 +125,9 @@ copyright = [
 extensions = [
     'sphinx_togglebutton',
     'sphinxcontrib.tikz',
+    'sphinx_sitemap',                                       # Býr til sitemap.xml skrá
 ]
+sitemap_url_scheme = "{link}"                               # Fjarlægir "/is/" hlutann úr URLs í sitemap.xml
 root_doc = 'index'                                          # Aðal skrá verkefnis
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']     # Útiloka þessar skrár
 templates_path = ['_templates']                             # Slóð á "templates" skrár
@@ -229,6 +231,7 @@ html_theme_options = {
 }
 html_title = project                            # Seinni hlutinn í <title> í HTML sóttur úr "project"
 html_short_title = 'Ritsafn'                    # Stuttur title notaður í tenglum í "header" og í HTML Help Docs
+html_baseurl = 'https://rit.rubik.is/'          # Notað í URLs í sitemap.xml
 
 # Skilgreiningar í HTML (t.d. fyrir tengil í "Edit on GitHub" takkanum)
 html_context = {
@@ -402,3 +405,26 @@ tikz_output_format = 'svg'
 tikz_tikzlibraries = 'pgfplots.groupplots'
 tikz_externalize = True
 tikz_latex_args = [r"-shell-escape"]
+
+
+import os
+
+def add_data_attributes(app, pagename, templatename, context, doctree):
+    # Determine the depth of the file
+    depth = pagename.count('/')
+    
+    # Extract subfolder name if applicable
+    if depth >= 1:
+        subfolder = pagename.split('/')[0]
+    else:
+        subfolder = ''
+
+    # Debug print
+    print(f"Processing page: {pagename}, Depth: {depth}, Subfolder: {subfolder}")
+    
+    # Add the depth and subfolder as context variables
+    context['html_page_depth'] = depth
+    context['html_subfolder'] = subfolder
+
+def setup(app):
+    app.connect('html-page-context', add_data_attributes)
