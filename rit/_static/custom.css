@@ -34,26 +34,6 @@ Kemur í veg fyrir að primary sidebar sé horizontally scrollable á mobile
 }
 
 /*
-Skrá " endash " í staðinn fyrir " " á milli numfig_format og caption
-*/
-span.caption-number {
-    font-style: normal !important;
-    font-weight: bold;
-}
-
-.caption-number::after {
-    content: "– ";
-    font-weight: normal !important;
-}
-
-/*
-Fjalægja padding-right í kóðablokk til að gera ekki of stórt bil á milli numfig_format og caption
-*/
-div.code-block-caption span.caption-number {
-    padding-right: 0
-}
-
-/*
 Setja margin: 0 á tóman rtd-footer-container inn í primary sidebar, sjá: https://github.com/pydata/pydata-sphinx-theme/issues/1794
 */
 #rtd-footer-container {
@@ -69,10 +49,25 @@ Setja sama style á textann "Kaflayfirlit" eins og er í toctree caption
   }
 
 /*
+Setja sama style á "social-media-text" eins og er í toctree caption
+*/
+.social-media-text {
+    font-weight: var(--pst-sidebar-header-font-weight);
+    margin-bottom: .5rem;
+  }
+
+/*
+Tryggja icon-links séu left-aligned og byrja á sama stað og logo og annar texti í sidebar
+*/
+.navbar-icon-links {
+    justify-content: normal;
+}
+
+/*
 Lengir "Leit" gluggan, svo hann passi við byrjunina á Secondary sidebar
 */
 .search-button__default-text {
-    margin-right: 75px !important;
+    margin-right: 111px !important;
 }
 
 /*
@@ -106,10 +101,48 @@ Lagar padding á mobile eftir PyData Sphinx Theme update 0.15.3 á secondary-tog
 }
 
 
+/*
+Tryggja að "logo og texti" séu alltaf jafn breið og "sidebar"
+*/
 .bd-header .navbar-header-items__start {
     min-width: 267px;
 }
-
 .bd-sidebar-primary {
     min-width: 275px;
+}
+
+/*
+Samræma útlit á numfig_format og caption fyrir myndir, töflur og kóðablokkir, án þess þó að hafa áhrif á allt .caption-text,
+því það er líka notað í t.d. fyrirsögnum í toctree í sidebar (todo - mögulega þarf að samræmi líka við caption fyrir tikz myndir o.fl.)
+*/
+.caption-number {
+    color: var(--pst-color-text-muted);
+    font-weight: var(--pst-sidebar-header-font-weight);
+    font-style: normal !important;
+}
+.caption-number::after {
+    content: "– ";
+    color: var(--pst-color-text-muted);
+    font-weight: var(--pst-font-weight-caption);
+    font-style: normal !important;
+}
+figcaption .caption-text,
+caption .caption-text,
+.code-block-caption .caption-text {
+    color: var(--pst-color-text-muted);
+    font-weight: var(--pst-font-weight-caption);
+}
+
+/*
+Fjalægja padding-right í kóðablokk til að gera ekki of stórt bil á milli numfig_format og caption
+*/
+div.code-block-caption span.caption-number {
+    padding-right: 0
+}
+
+/*
+Setja bil á milli items í navbar_persistent í 1rem, en ekki auto
+*/
+.navbar-persistent--mobile {
+    margin-left: 1rem;
 }

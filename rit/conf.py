@@ -191,7 +191,7 @@ html_theme_options = {
     "use_edit_page_button": True,                           # "Edit on GitHub" takkinn virkjaður
     "search_bar_text": "Sláðu inn leitarorð...",            # Þegar smellt er á "Leit", þá kemur upp gluggi með þessum texta
     "navbar_align": "content",                              # "navbar" er left-aligned frá þeim stað sem "content" byrjar
-    "header_links_before_dropdown": 2,                      # Ákveða hversu margar síður birtast í header áður en að "More" takkinn kemur í staðinn
+    "header_links_before_dropdown": 3,                      # Ákveða hversu margar síður birtast í header áður en að "More" takkinn kemur í staðinn
     "header_dropdown_text": "Meira",                        # Íslenskur texti fyrir "More" takkann
 #    "announcement": "My announcement!",                     # Tilkynning efst á síðunni
 
@@ -213,22 +213,32 @@ html_theme_options = {
             "icon": "fa-brands fa-x-twitter",
         },
         {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/company/rubikrvk",
+            "icon": "fa-brands fa-linkedin",
+        },
+        {
+            "name": "TikTok",
+            "url": "https://tiktok.com/@rubikrvk",
+            "icon": "fa-brands fa-tiktok",
+        },
+        {
             "name": "YouTube",
             "url": "https://www.youtube.com/@rubikrvk",
             "icon": "fa-brands fa-youtube",
         },
         {
-            "name": "LinkedIn",
-            "url": "https://www.linkedin.com/company/rubikrvk",
-            "icon": "fa-brands fa-linkedin",
+            "name": "Threads",
+            "url": "https://www.threads.net/@rubikrvk",
+            "icon": "fa-brands fa-threads",
         },
     ],
     "secondary_sidebar_items": ["rubik-page-toc", "rubik-pdf", "rubik-sourcelink", "rubik-edit-this-page"],
     "show_prev_next": False,
     "article_header_start": [],
     "footer_end": [],
-    "navbar_end": ["theme-switcher"],
-    "navbar_persistent": ["search-button-field"],
+    "navbar_end": [],
+    "navbar_persistent": ["theme-switcher", "search-button-field"],
 }
 html_title = project                            # Seinni hlutinn í <title> í HTML sóttur úr "project"
 html_short_title = 'Ritsafn'                    # Stuttur title notaður í tenglum í "header" og í HTML Help Docs
@@ -243,9 +253,9 @@ html_context = {
 html_css_files = ['custom.css']                 # Slóð á CSS skrár
 html_static_path = ['_static']                  # Slóð á "static" skrár
 html_sidebars = {
-    "*/**": ["rubik-sidebar-nav-bs", "navbar-icon-links"],
-    "genindex": ["navbar-icon-links"],
-    "index": ["navbar-icon-links"],
+    "*/**": ["rubik-sidebar-nav-bs", "rubik-icon-links"],
+    "genindex": ["rubik-icon-links"],
+    "index": ["rubik-icon-links"],
 }
 html_show_copyright = False                     # Slökkt á default texta um höfundarrétt í HTML
 html_show_sphinx = False                        # Slökkt á "Created using Sphinx" texta í HTML
