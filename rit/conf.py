@@ -127,18 +127,14 @@ extensions = [
     'sphinxcontrib.tikz',
     'sphinx_sitemap',                                       # Býr til sitemap.xml skrá
 ]
-sitemap_url_scheme = "{link}"                               # Fjarlægir "/is/" hlutann úr URLs í sitemap.xml
 root_doc = 'index'                                          # Aðal skrá verkefnis
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']     # Útiloka þessar skrár
 templates_path = ['_templates']                             # Slóð á "templates" skrár
 numfig = True                                               # Sjálfvirk tölusetning í HTML á figures, tables og code-blocks
-
-# Snið fyrir tölusetningu (todo numfig)
 numfig_format = {
-    'figure': 'Mynd %s',
-    'table': 'Tafla %s',
-    'code-block': 'Kóðablokk %s',
-    'section': 'Grein %s'
+    'figure': 'Mynd %s',                                    # Snið fyrir tölusetningu mynda
+    'table': 'Tafla %s',                                    # Snið fyrir tölusetningu taflna
+    'code-block': 'Kóðablokk %s',                           # Snið fyrir tölusetningu kóðablokka
 }
 
 numfig_secnum_depth = 1                                     # Dýpt á sjálfvirkri tölusetningu í HTML // 0 = tölusetning er frá 1 upp í n // 1 = tölusetning er frá x.1 upp í x.n // 2 = tölusetning er frá x.y.1 upp í x.y.n // o.s.frv.
@@ -184,20 +180,20 @@ math_eqref_format = '({number})'                # Snið fyrir tölusetningu fyri
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'pydata_sphinx_theme'              # Setur <html lang="is" ...> í HTML og notar íslensku þar sem það á við
+html_theme = 'pydata_sphinx_theme'                          # Setur <html lang="is" ...> í HTML og notar íslensku þar sem það á við
 html_theme_options = {
     "logo": {
-        "alt_text": "Ritsafn RÚBIK Reykjavíkur",
-        "text": "Ritsafn RÚBIK Reykjavíkur",
-        "image_light": "_static/rubik-logo.svg",
-        "image_dark": "_static/rubik-logo.svg",
+        "alt_text": "Ritsafn RÚBIK Reykjavíkur",            # Alt texti fyrir logo
+        "text": "Ritsafn RÚBIK Reykjavíkur",                # Texti við hliðina á logo
+        "image_light": "_static/rubik-logo-light.svg",      # Logo fyrir light-mode
+        "image_dark": "_static/rubik-logo-dark.svg",        # Logo fyrir dark-mode
     },
-    "use_edit_page_button": True,               # "Edit on GitHub" takkinn virkjaður
-    "search_bar_text": "Leita...",              # Þegar smellt er á "Leit", þá kemur upp gluggi með þessum texta
-    "navbar_align": "content",                  # "navbar" er left-aligned frá þeim stað sem "content" byrjar
-    "header_links_before_dropdown": 2,          # Ákveða hversu margar síður birtast í header áður en að "More" takkinn kemur í staðinn
-    "header_dropdown_text": "Meira",            # Íslenskur texti fyrir "More" takkann
-#    "announcement": "My announcement!",         # Tilkynning efst á síðunni
+    "use_edit_page_button": True,                           # "Edit on GitHub" takkinn virkjaður
+    "search_bar_text": "Sláðu inn leitarorð...",            # Þegar smellt er á "Leit", þá kemur upp gluggi með þessum texta
+    "navbar_align": "content",                              # "navbar" er left-aligned frá þeim stað sem "content" byrjar
+    "header_links_before_dropdown": 2,                      # Ákveða hversu margar síður birtast í header áður en að "More" takkinn kemur í staðinn
+    "header_dropdown_text": "Meira",                        # Íslenskur texti fyrir "More" takkann
+#    "announcement": "My announcement!",                     # Tilkynning efst á síðunni
 
     # Icon og tenglar inn á samfélagsmiðla
     "icon_links": [
@@ -231,8 +227,8 @@ html_theme_options = {
     "show_prev_next": False,
     "article_header_start": [],
     "footer_end": [],
-    "navbar_end": ["search-button-field", "theme-switcher"],
-    "navbar_persistent": [],
+    "navbar_end": ["theme-switcher"],
+    "navbar_persistent": ["search-button-field"],
 }
 html_title = project                            # Seinni hlutinn í <title> í HTML sóttur úr "project"
 html_short_title = 'Ritsafn'                    # Stuttur title notaður í tenglum í "header" og í HTML Help Docs
@@ -300,7 +296,7 @@ latex_documents = [
 ]
 latex_logo = '_static/rubik-cover.png'                              # Mynd á forsíðu
 latex_toplevel_sectioning = 'part'                                  # toplevel_sectioning skráð sem Hluti (part)
-latex_use_xindy = True                                              # Nota xindy í staðinn fyrir makeindex til að gera index fyrir general terms (from index usage) (todo)
+latex_use_xindy = False                                             # Nota xindy í staðinn fyrir makeindex til að gera index fyrir general terms (from index usage) (todo)
 latex_elements = {
     'papersize': 'a4paper',                                         # Nota A4 í staðinn fyrir default Letter
     'babel': '\\usepackage[icelandic]{babel}',                      # Nota íslensku fyrir hluta, kafla, efnisyfirlit, o.s.frv.
@@ -413,8 +409,10 @@ tikz_latex_args = [r"-shell-escape"]
 
 
 
-# -- sphinxcontrib-tikz configuration ----------------------------------------
 
+# -- sphinx_sitemap configuration --------------------------------------------
+
+sitemap_url_scheme = "{link}"                               # Fjarlægir "/is" hlutann úr URLs í sitemap.xml
 
 
 

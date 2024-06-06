@@ -12,8 +12,6 @@ ARCHIVEPREFIX =
 export LATEXOPTS ?=
 # Additional latexmk options
 LATEXMKOPTS ?=
-export XINDYOPTS = -L icelandic -C utf8  -M sphinx.xdy
-XINDYOPTS += -M LICRlatin2utf8.xdy
 # format: pdf or dvi (used only by archive targets)
 FMT = pdf
 

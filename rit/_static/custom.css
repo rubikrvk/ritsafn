@@ -78,7 +78,7 @@ Lengir "Leit" gluggan, svo hann passi við byrjunina á Secondary sidebar
 /*
 Kemur í veg fyrir að langur texti í navbar-nav noti tvær eða fleiri línu
 */
-.navbar-nav {
+.navbar-item > .navbar-nav {
     white-space: nowrap;
 }
 
@@ -97,10 +97,19 @@ Setur texta í logo__title í sömu stærð og texti í navbar-nav
 }
 
 /*
-Setur padding
+Lagar padding á mobile eftir PyData Sphinx Theme update 0.15.3 á secondary-toggle og primary-toggle tökkum
 */
 .sidebar-toggle.secondary-toggle,
 .sidebar-toggle.primary-toggle {
     padding-left: 6px;
     padding-right: 6px;
+}
+
+
+.bd-header .navbar-header-items__start {
+    min-width: 267px;
+}
+
+.bd-sidebar-primary {
+    min-width: 275px;
 }

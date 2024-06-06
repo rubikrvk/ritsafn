@@ -1,0 +1,10 @@
+This is makeindex, version 2.17 [TeX Live 2024] (kpathsea + Thai support).
+Scanning style file ./python.ist.......done (7 attributes redefined, 0 ignored).
+Scanning input file RUBIK-fjarmal-fyrirtaekja.idx....done (4 entries accepted, 0 rejected).
+Sorting entries....done (9 comparisons).
+Generating output file RUBIK-fjarmal-fyrirtaekja.ind....
+## Warning (input = RUBIK-fjarmal-fyrirtaekja.idx, line = 1; output = RUBIK-fjarmal-fyrirtaekja.ind, line = 13):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+done (16 lines written, 1 warning).
+Output written in RUBIK-fjarmal-fyrirtaekja.ind.
+Transcript written in RUBIK-fjarmal-fyrirtaekja.ilg.

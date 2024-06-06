@@ -1,12 +1,10 @@
 \begin{sphinxtheindex}
-\let\lettergroup\sphinxstyleindexlettergroup
-\let\lettergroupDefault\sphinxstyleindexlettergroupDefault
-\let\spxpagem\sphinxstyleindexpagemain
-\let\spxentry\sphinxstyleindexentry
-\let\spxextra\sphinxstyleindexextra
+\let\bigletter\sphinxstyleindexlettergroup
+\let\spxpagem \sphinxstyleindexpagemain
+\let\spxentry \sphinxstyleindexentry
+\let\spxextra \sphinxstyleindexextra
 
-
-  \lettergroup{H}
+  \bigletter H
   \item \spxentry{hugtak í fjarmal einstaklinga}, \hyperpage{1}
 
 \end{sphinxtheindex}

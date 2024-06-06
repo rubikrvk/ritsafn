@@ -1,17 +1,14 @@
 \begin{sphinxtheindex}
-\let\lettergroup\sphinxstyleindexlettergroup
-\let\lettergroupDefault\sphinxstyleindexlettergroupDefault
-\let\spxpagem\sphinxstyleindexpagemain
-\let\spxentry\sphinxstyleindexentry
-\let\spxextra\sphinxstyleindexextra
+\let\bigletter\sphinxstyleindexlettergroup
+\let\spxpagem \sphinxstyleindexpagemain
+\let\spxentry \sphinxstyleindexentry
+\let\spxextra \sphinxstyleindexextra
 
-
-  \lettergroup{E}
+  \bigletter E
   \item \spxentry{Euler\textquotesingle{}s identity}, \hyperpage{1}, \hyperpage{3}
 
   \indexspace
-
-  \lettergroup{H}
+  \bigletter H
   \item \spxentry{hugtak í eldhúsvaski}, \hyperpage{1}
 
 \end{sphinxtheindex}
