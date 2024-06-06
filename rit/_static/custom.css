@@ -98,10 +98,10 @@ Lagar padding á mobile eftir PyData Sphinx Theme update 0.15.3 á secondary-tog
 Tryggja að "logo og texti" séu alltaf jafn breið og "sidebar"
 */
 .bd-header .navbar-header-items__start {
-    min-width: 262px;
+    min-width: 267px;
 }
 .bd-sidebar-primary {
-    min-width: 270px;
+    min-width: 275px;
 }
 
 /*
@@ -145,7 +145,7 @@ Tryggja að <header> líti vel út á mjög litlum mobile skjáum
 */
 @media (max-width: 960px) {
     .navbar-brand img {
-        height: 80%;
+        height: 100%;
     }
     .svg-inline--fa {
         height: 0.8em;
