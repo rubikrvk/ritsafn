@@ -85,16 +85,6 @@ Setur texta í logo__title í sömu stærð og texti í navbar-nav
 }
 
 /*
-Lagar padding á mobile eftir PyData Sphinx Theme update 0.15.3 á secondary-toggle og primary-toggle tökkum
-*/
-.sidebar-toggle.secondary-toggle,
-.sidebar-toggle.primary-toggle {
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-
-/*
 Tryggja að "logo og texti" séu alltaf jafn breið og "sidebar"
 */
 .bd-header .navbar-header-items__start {
@@ -141,23 +131,31 @@ Setja bil á milli items í navbar_persistent í 1rem, en ekki auto
 }
 
 /*
-Tryggja að <header> líti vel út á mjög litlum mobile skjáum
+Tryggja að <header> líti vel út á mjög litlum mobile skjáum (undir 960px)
 */
 @media (max-width: 960px) {
     .navbar-brand img {
-        height: 100%;
-    }
-    .svg-inline--fa {
-        height: 0.8em;
+        height: 90%;
     }
     .bd-header .navbar-header-items__start {
         min-width: 220px;
     }
 }
-.svg-inline--fa.fa-outdent {
+
+/*
+Minnka SVG mynd í 80% og bæta við margin-top á bæði secondary-toggle og primary-toggle tökkum
+*/
+.svg-inline--fa.fa-outdent,
+.svg-inline--fa.fa-bars {
     height: 0.8em;
     margin-top: 3px;
 }
-.svg-inline--fa.fa-bars {
-    margin-top: 3px;
+
+/*
+Laga padding á mobile eftir PyData Sphinx Theme update 0.15.3 á secondary-toggle og primary-toggle tökkum
+*/
+.sidebar-toggle.secondary-toggle,
+.sidebar-toggle.primary-toggle {
+    padding-left: 0px;
+    padding-right: 0px;
 }
