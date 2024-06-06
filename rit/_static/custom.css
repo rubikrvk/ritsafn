@@ -135,7 +135,10 @@ Tryggja að <header> líti vel út á mjög litlum mobile skjáum (undir 960px)
 */
 @media (max-width: 960px) {
     .navbar-brand img {
-        height: 90%;
+        height: 95%;
+    }
+    .svg-inline--fa {
+        height: 0.8em;
     }
     .bd-header .navbar-header-items__start {
         min-width: 220px;
