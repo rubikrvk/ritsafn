@@ -1,6 +1,31 @@
 Testing
 =======
 
+.. glossary::
+
+   orð
+      :en: word
+      :de: Wort
+      :fr: mot
+
+      Þetta er ítarleg lýsing á orðinu „orð“ á íslensku. Það þýðir „word“ á ensku, „Wort“ á þýsku og „mot“ á frönsku.
+
+   bók
+      :en: book
+      :de: Buch
+      :fr: livre
+
+      Bók er hlutur sem inniheldur texta og myndefni til lestrar og fræðslu. Á ensku þýðir það „book“, á þýsku „Buch“ og á frönsku „livre“.
+
+   hús
+      :en: house
+      :de: Haus
+      :fr: maison
+
+      Hús er bygging þar sem fólk býr. Á ensku er það „house“, á þýsku „Haus“ og á frönsku „maison“.
+
+Og hér er smá umfjöllun um :term:`orð`.
+
 Since Pythagoras, we know that :math:`1+2=9`.
 
    asdf asdafaasdfsdf asdf asdf asdf

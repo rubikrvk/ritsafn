@@ -137,9 +137,6 @@ Tryggja að <header> líti vel út á mjög litlum mobile skjáum (undir 960px)
     .navbar-brand img {
         height: 95%;
     }
-    .svg-inline--fa {
-        height: 0.8em;
-    }
     .bd-header .navbar-header-items__start {
         min-width: 220px;
     }
@@ -161,4 +158,9 @@ Laga padding á mobile eftir PyData Sphinx Theme update 0.15.3 á secondary-togg
 .sidebar-toggle.primary-toggle {
     padding-left: 0px;
     padding-right: 0px;
+}
+
+mjx-container[jax="SVG"] path[data-c],
+mjx-container[jax="SVG"] use[data-c] {
+    stroke-width: 5px !important;
 }
