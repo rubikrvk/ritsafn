@@ -64,13 +64,6 @@ Tryggja icon-links séu left-aligned og byrja á sama stað og logo og annar tex
 }
 
 /*
-Lengir "Leit" gluggan, svo hann passi við byrjunina á Secondary sidebar
-*/
-.search-button__default-text {
-    margin-right: 111px !important;
-}
-
-/*
 Kemur í veg fyrir að langur texti í navbar-nav noti tvær eða fleiri línu
 */
 .navbar-item > .navbar-nav {
@@ -105,10 +98,10 @@ Lagar padding á mobile eftir PyData Sphinx Theme update 0.15.3 á secondary-tog
 Tryggja að "logo og texti" séu alltaf jafn breið og "sidebar"
 */
 .bd-header .navbar-header-items__start {
-    min-width: 267px;
+    min-width: 262px;
 }
 .bd-sidebar-primary {
-    min-width: 275px;
+    min-width: 270px;
 }
 
 /*
@@ -145,4 +138,19 @@ Setja bil á milli items í navbar_persistent í 1rem, en ekki auto
 */
 .navbar-persistent--mobile {
     margin-left: 1rem;
+}
+
+/*
+Tryggja að <header> líti vel út á mjög litlum mobile skjáum
+*/
+@media (max-width: 960px) {
+    .navbar-brand img {
+        height: 80%;
+    }
+    .svg-inline--fa {
+        height: 0.8em;
+    }
+    .bd-header .navbar-header-items__start {
+        min-width: 220px;
+    }
 }

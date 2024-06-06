@@ -237,8 +237,8 @@ html_theme_options = {
     "show_prev_next": False,
     "article_header_start": [],
     "footer_end": [],
-    "navbar_end": [],
-    "navbar_persistent": ["theme-switcher", "search-button-field"],
+    "navbar_end": ["theme-switcher"],
+    "navbar_persistent": ["search-button-field"],
 }
 html_title = project                            # Seinni hlutinn í <title> í HTML sóttur úr "project"
 html_short_title = 'Ritsafn'                    # Stuttur title notaður í tenglum í "header" og í HTML Help Docs
