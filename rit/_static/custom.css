@@ -160,6 +160,9 @@ Laga padding á mobile eftir PyData Sphinx Theme update 0.15.3 á secondary-togg
     padding-right: 0px;
 }
 
+/*
+Gera SVG myndir úr MathJAX aðeins meira bold
+*/
 mjx-container[jax="SVG"] path[data-c],
 mjx-container[jax="SVG"] use[data-c] {
     stroke-width: 5px !important;
