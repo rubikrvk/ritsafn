@@ -154,3 +154,10 @@ Tryggja að <header> líti vel út á mjög litlum mobile skjáum
         min-width: 220px;
     }
 }
+.svg-inline--fa.fa-outdent {
+    height: 0.8em;
+    margin-top: 3px;
+}
+.svg-inline--fa.fa-bars {
+    margin-top: 3px;
+}
