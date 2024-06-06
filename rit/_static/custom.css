@@ -83,7 +83,7 @@ Kemur í veg fyrir að langur texti í navbar-nav noti tvær eða fleiri línu
 }
 
 /*
-Kemur í veg fyrir að item í navbar-header-items__end noti tvær (eða fleiri) línu
+Kemur í veg fyrir að item í navbar-header-items__end (eins og t.d. theme-switcher og search-button-field) noti tvær (eða fleiri) línu
 */
 .navbar-header-items__end {
     flex-flow: nowrap !important;
@@ -101,8 +101,8 @@ Lagar padding á mobile eftir PyData Sphinx Theme update 0.15.3 á secondary-tog
 */
 .sidebar-toggle.secondary-toggle,
 .sidebar-toggle.primary-toggle {
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 
