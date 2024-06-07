@@ -24,14 +24,14 @@ This is a test. Here is an equation:
 :math:`X_{0:5} = (X_0, X_1, X_2, X_3, X_4)`.
 Here is another:
 
-.. figure:: https://source.unsplash.com/200x200/daily?cute+puppy
+.. figure:: https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg
    :name: litilmynd3
    :height: 200
    :width: 200
 
    Þetta er caption fyrir litla mynd.
 
-.. figure:: https://source.unsplash.com/200x200/daily?cute+puppy
+.. figure:: https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg
    :name: stormynd3
    :height: 400
    :width: 400
