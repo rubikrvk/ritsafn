@@ -139,12 +139,13 @@ mjx-container[jax="SVG"] use[data-c] {
 
 /* Fjarlægja fókus hringi og fleiri style sem þurfa ekki að birtast */
 :focus-visible {
-    box-shadow: none !important;
     outline: none !important;
 }
-.nav-link:focus,
-.nav-link:hover {
-    color: var(--pst-color-text-muted)
+.nav-link.nav-internal:focus {
+    color: var(--pst-color-text-muted);
+}
+.nav-link.nav-internal:hover {
+    color: var(--pst-color-link-hover);
 }
 
 
