@@ -1,14 +1,12 @@
-# Icelandic translations for Ritsafn RÚBIK Reykjavíkur.
+# Íslenskar þýðingar fyrir Ritsafn RÚBIK Reykjavíkur.
 # Ritsafn RÚBIK Reykjavíkur © 2024 RÚBIK Reykjavík ehf. Notkun efnis úr Ritsafni RÚBIK Reykjavíkur er heimil samkvæmt notkunarleyfi (https://github.com/rubikrvk/ritsafn/blob/main/LICENSE) Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed.is).
-# This file is distributed under the same license as the Ritsafn RÚBIK Reykjavíkur.
 # Atli Bjarnason <a@rubik.is>, 2024.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Ritsafn RÚBIK Reykjavíkur \n"
-"Report-Msgid-Bugs-To: Atli Bjarnason <a@rubik.is>\n"
+"Project-Id-Version: Ritsafn RÚBIK Reykjavíkur\n"
+"Report-Msgid-Bugs-To: a@rubik.is\n"
 "Last-Translator: Atli Bjarnason <a@rubik.is>\n"
-"Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -156,8 +154,3 @@ msgstr "Tilkynning"
 #: src/pydata_sphinx_theme/theme/pydata_sphinx_theme/sections/header.html:3
 msgid "Site navigation"
 msgstr ""
-
-
-
-
-
