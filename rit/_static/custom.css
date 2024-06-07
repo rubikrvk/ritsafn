@@ -148,6 +148,19 @@ mjx-container[jax="SVG"] use[data-c] {
 }
 
 
+/* Laga þetta vandamál hér:  */
+table.indextable.genindextable {
+    border: none !important;
+}
+
+table.indextable.genindextable td {
+    border-left: none !important;
+}
+
+table.indextable.genindextable tr {
+    background-color: inherit !important;
+}
+
 
 
 
