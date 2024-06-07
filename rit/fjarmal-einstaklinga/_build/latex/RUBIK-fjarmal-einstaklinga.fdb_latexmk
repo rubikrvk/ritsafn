@@ -1,11 +1,11 @@
 # Fdb version 4
-["makeindex RUBIK-fjarmal-einstaklinga.idx"] 1717767670.0631 "RUBIK-fjarmal-einstaklinga.idx" "RUBIK-fjarmal-einstaklinga.ind" "RUBIK-fjarmal-einstaklinga" 1717767673.67116 0
-  "RUBIK-fjarmal-einstaklinga.idx" 1717767673.49399 99 5f3b2cc1ae0fc09344b935231b43e1c0 "pdflatex"
+["makeindex RUBIK-fjarmal-einstaklinga.idx"] 1717773169.66059 "RUBIK-fjarmal-einstaklinga.idx" "RUBIK-fjarmal-einstaklinga.ind" "RUBIK-fjarmal-einstaklinga" 1717773173.29574 0
+  "RUBIK-fjarmal-einstaklinga.idx" 1717773173.12561 99 5f3b2cc1ae0fc09344b935231b43e1c0 "pdflatex"
   (generated)
   "RUBIK-fjarmal-einstaklinga.ilg"
   "RUBIK-fjarmal-einstaklinga.ind"
   (rewritten before read)
-["pdflatex"] 1717767671.92169 "RUBIK-fjarmal-einstaklinga.tex" "RUBIK-fjarmal-einstaklinga.pdf" "RUBIK-fjarmal-einstaklinga" 1717767673.67166 0
+["pdflatex"] 1717773171.50778 "RUBIK-fjarmal-einstaklinga.tex" "RUBIK-fjarmal-einstaklinga.pdf" "RUBIK-fjarmal-einstaklinga" 1717773173.29608 0
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc" 1254269338 3031 6c4d3515bf7115d8518af1c9ab97ca44 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -296,15 +296,15 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1715610869.65933 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1715610771 8221425 fc2f7c60b34b76ecf6facdc7fa161ce8 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "RUBIK-fjarmal-einstaklinga.aux" 1717767673.47092 23836 64cd6ae22662b61e4b53b1bb0ace7588 "pdflatex"
-  "RUBIK-fjarmal-einstaklinga.ind" 1717767670.14717 283 d2adc6499ea91ad3f3140a403a06dab8 "makeindex RUBIK-fjarmal-einstaklinga.idx"
-  "RUBIK-fjarmal-einstaklinga.out" 1717767673.48292 16031 7e9ab09ad77ab7279bc73800ced5e636 "pdflatex"
-  "RUBIK-fjarmal-einstaklinga.tex" 1717767667.89136 18977 66905a08e91add1948ab1f143b743f93 ""
-  "RUBIK-fjarmal-einstaklinga.toc" 1717767673.49407 7939 6d43c959d1418b59b4f8ae7b4522b0a9 "pdflatex"
+  "RUBIK-fjarmal-einstaklinga.aux" 1717773173.1183 23836 64cd6ae22662b61e4b53b1bb0ace7588 "pdflatex"
+  "RUBIK-fjarmal-einstaklinga.ind" 1717773169.74715 283 d2adc6499ea91ad3f3140a403a06dab8 "makeindex RUBIK-fjarmal-einstaklinga.idx"
+  "RUBIK-fjarmal-einstaklinga.out" 1717773173.12325 16031 7e9ab09ad77ab7279bc73800ced5e636 "pdflatex"
+  "RUBIK-fjarmal-einstaklinga.tex" 1717773167.59091 18977 66905a08e91add1948ab1f143b743f93 ""
+  "RUBIK-fjarmal-einstaklinga.toc" 1717773173.12569 7939 6d43c959d1418b59b4f8ae7b4522b0a9 "pdflatex"
   "rubik-cover.png" 1717078744.14304 74807 27385f53575191b302855b7d61c22ed4 ""
   "sphinx.sty" 1716566566.77778 44560 f9fbf51072c954d129c9bd5284cc4ccf ""
-  "sphinxcontribtikz.sty" 1717767667.54817 773 1e308d24d0f0d7630d9b36d0654c16f2 ""
-  "sphinxhighlight.sty" 1717767667.85523 7553 83fb52292c17957d9f4aadcb28c57a87 ""
+  "sphinxcontribtikz.sty" 1717773167.25378 773 1e308d24d0f0d7630d9b36d0654c16f2 ""
+  "sphinxhighlight.sty" 1717773167.54639 7553 83fb52292c17957d9f4aadcb28c57a87 ""
   "sphinxlatexadmonitions.sty" 1716566566.77815 10989 c38302e64c2bb47779f086869b246760 ""
   "sphinxlatexcontainers.sty" 1716566566.77826 901 d3a3a1b7b2547f47ade2499350b5c420 ""
   "sphinxlatexgraphics.sty" 1716566566.77838 4840 a9578332b6f3b35e198751fb632c9b79 ""
@@ -319,7 +319,7 @@
   "sphinxlatexstyletext.sty" 1716566566.77964 8589 a7e8f95eb4fef6c1cd2623cd417d6467 ""
   "sphinxlatextables.sty" 1716566566.77981 57829 997133f8082b07d1e9aafcd87331d9bf ""
   "sphinxmanual.cls" 1716566566.7799 4241 7b0d7a37df7b5715fb0dbd585c52ecdb ""
-  "sphinxmessages.sty" 1717767667.89469 752 7544e9e595ce430d35f172b972289843 ""
+  "sphinxmessages.sty" 1717773167.59392 752 7544e9e595ce430d35f172b972289843 ""
   "sphinxoptionsgeometry.sty" 1716566566.78001 2061 47bb34b8ed8a78823eb0c886abfb9f4d ""
   "sphinxoptionshyperref.sty" 1716566566.78011 1094 79beb8b8a3f10784f8cce804e0f9d3aa ""
   "sphinxpackageboxes.sty" 1716566566.78024 36615 1d74c63e665ede6c648fa08c42ea70fb ""

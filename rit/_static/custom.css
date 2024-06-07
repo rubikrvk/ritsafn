@@ -137,8 +137,29 @@ mjx-container[jax="SVG"] use[data-c] {
     display: none !important;
 }
 
+/* Fjarlægja fókus hringi sem þurfa ekki að birtast */
+:focus-visible {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Tryggja að first-child í t.d. <nav class="navbar-nav"> noti ekki ljósari liti en aðrir */
+:not(li) > ol > li:first-child > :first-child,
+:not(li) > ul > li:first-child > :first-child {
+    color: var(--pst-color-text-muted)
+}
+
+
 
 /* Smá lita-test
+
+
+var(--pst-color-link)
+:root, [data-bs-theme=light]
+--pst-color-link: #3fb1c5;
+--pst-color-link-hover: #9c5ffd;
+
+
 
 :root {
     --pst-color-secondary: #d5e3e6 !important;

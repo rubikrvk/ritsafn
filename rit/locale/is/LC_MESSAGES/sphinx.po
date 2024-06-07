@@ -118,7 +118,7 @@ msgstr "næsta"
 #: src/pydata_sphinx_theme/theme/pydata_sphinx_theme/components/sidebar-nav-bs.html:3
 #: src/pydata_sphinx_theme/theme/pydata_sphinx_theme/components/sidebar-nav-bs.html:4
 msgid "Section Navigation"
-msgstr ""
+msgstr "Yfirlit"
 
 #: src/pydata_sphinx_theme/theme/pydata_sphinx_theme/components/sourcelink.html:5
 msgid "Show Source"
