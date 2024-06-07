@@ -1,8 +1,5 @@
-/*
-Kóði til að láta transparent hluta af SVG eða PNG myndum í pydata theme-inu verða gegnsæann í dark-mode.
-Þetta er alltaf gegnsætt í light-mode, en í dark-mode þarf þessi kóði að vera til staðar
-*/
-
+/* Kóði til að láta transparent hluta af SVG eða PNG myndum í pydata theme-inu verða gegnsæann í dark-mode.
+Þetta er alltaf gegnsætt í light-mode, en í dark-mode þarf þessi kóði að vera til staðar */
 html[data-theme='dark'] .bd-content img[src*=".svg"]:not(.only-dark):not(.dark-light) {
     filter: invert(100%);
     background: transparent;
@@ -17,76 +14,56 @@ html[data-theme='dark'] .bd-content img[src*=".svg"]:not(.only-dark):not(.dark-l
     text-align: center;
 }
 
-/*
-Gerir allar myndir o.fl. í 896px (passa að þær séu SVG), svo þær fylla alveg út í síðuna í desktop.
-Síðan er stærðin á myndunum skilgreint inn í tikz skránum.
-*/
+/* Gerir allar myndir o.fl. í 896px (passa að þær séu SVG), svo þær fylla alveg út í síðuna í desktop.
+Síðan er stærðin á myndunum skilgreint inn í tikz skránum. */
 .figure img {
     width: 896px
 }
 
-/*
-Kemur í veg fyrir að primary sidebar sé horizontally scrollable á mobile
-*/
+/* Kemur í veg fyrir að primary sidebar sé horizontally scrollable á mobile */
 .bd-sidebar-primary.bd-sidebar {
     overflow-x: hidden; /* Disable horizontal scrolling */
     overflow-y: auto;   /* Enable vertical scrolling */
 }
 
-/*
-Setja margin: 0 á tóman rtd-footer-container inn í primary sidebar, sjá: https://github.com/pydata/pydata-sphinx-theme/issues/1794
-*/
+/* Setja margin: 0 á tóman rtd-footer-container inn í primary sidebar, sjá: https://github.com/pydata/pydata-sphinx-theme/issues/1794 */
 #rtd-footer-container {
     margin: 0 !important;
 }
 
-/*
-Setja sama style á textann "Kaflayfirlit" eins og er í toctree caption
-*/
+/* Setja sama style á textann "Kaflayfirlit" eins og er í toctree caption */
 .page-toc.tocsection.onthispage {
     font-weight: var(--pst-sidebar-header-font-weight);
     margin-bottom: .5rem;
   }
 
-/*
-Setja sama style á "social-media-text" eins og er í toctree caption
-*/
+/* Setja sama style á "social-media-text" eins og er í toctree caption */
 .social-media-text {
     font-weight: var(--pst-sidebar-header-font-weight);
     margin-bottom: .5rem;
   }
 
-/*
-Tryggja icon-links séu left-aligned og byrja á sama stað og logo og annar texti í sidebar
-*/
+/* Tryggja icon-links séu left-aligned og byrja á sama stað og logo og annar texti í sidebar */
 .navbar-icon-links {
     justify-content: normal;
 }
 
-/*
-Kemur í veg fyrir að langur texti í navbar-nav noti tvær eða fleiri línu
-*/
+/* Kemur í veg fyrir að langur texti í navbar-nav noti tvær eða fleiri línu */
 .navbar-item > .navbar-nav {
     white-space: nowrap;
 }
 
-/*
-Kemur í veg fyrir að item í navbar-header-items__end (eins og t.d. theme-switcher og search-button-field) noti tvær (eða fleiri) línu
-*/
+/* Kemur í veg fyrir að item í navbar-header-items__end (eins og t.d. theme-switcher og search-button-field) noti tvær (eða fleiri) línu */
 .navbar-header-items__end {
     flex-flow: nowrap !important;
 }
 
-/*
-Setur texta í logo__title í sömu stærð og texti í navbar-nav
-*/
+/* Setur texta í logo__title í sömu stærð og texti í navbar-nav */
 .title.logo__title {
     font-size: 16px !important;
 }
 
-/*
-Tryggja að "logo og texti" séu alltaf jafn breið og "sidebar"
-*/
+/* Tryggja að "logo og texti" séu alltaf jafn breið og "sidebar" */
 .bd-header .navbar-header-items__start {
     min-width: 267px;
 }
@@ -94,10 +71,8 @@ Tryggja að "logo og texti" séu alltaf jafn breið og "sidebar"
     min-width: 275px;
 }
 
-/*
-Samræma útlit á numfig_format og caption fyrir myndir, töflur og kóðablokkir, án þess þó að hafa áhrif á allt .caption-text,
-því það er líka notað í t.d. fyrirsögnum í toctree í sidebar (todo - mögulega þarf að samræmi líka við caption fyrir tikz myndir o.fl.)
-*/
+/* Samræma útlit á numfig_format og caption fyrir myndir, töflur og kóðablokkir, án þess þó að hafa áhrif á allt .caption-text,
+því það er líka notað í t.d. fyrirsögnum í toctree í sidebar (todo - mögulega þarf að samræmi líka við caption fyrir tikz myndir o.fl.) */
 .caption-number {
     color: var(--pst-color-text-muted);
     font-weight: var(--pst-sidebar-header-font-weight);
@@ -116,23 +91,17 @@ caption .caption-text,
     font-weight: var(--pst-font-weight-caption);
 }
 
-/*
-Fjalægja padding-right í kóðablokk til að gera ekki of stórt bil á milli numfig_format og caption
-*/
+/* Fjalægja padding-right í kóðablokk til að gera ekki of stórt bil á milli numfig_format og caption */
 div.code-block-caption span.caption-number {
     padding-right: 0
 }
 
-/*
-Setja bil á milli items í navbar_persistent í 1rem, en ekki auto
-*/
+/* Setja bil á milli items í navbar_persistent í 1rem, en ekki auto */
 .navbar-persistent--mobile {
     margin-left: 1rem;
 }
 
-/*
-Tryggja að <header> líti vel út á mjög litlum mobile skjáum (undir 960px)
-*/
+/* Tryggja að <header> líti vel út á mjög litlum mobile skjáum (undir 960px) */
 @media (max-width: 960px) {
     .navbar-brand img {
         height: 95%;
@@ -142,28 +111,42 @@ Tryggja að <header> líti vel út á mjög litlum mobile skjáum (undir 960px)
     }
 }
 
-/*
-Minnka SVG mynd í 80% og bæta við margin-top á bæði secondary-toggle og primary-toggle tökkum
-*/
+/* Minnka SVG mynd í 80% og bæta við margin-top á bæði secondary-toggle og primary-toggle tökkum */
 .svg-inline--fa.fa-outdent,
 .svg-inline--fa.fa-bars {
     height: 0.8em;
     margin-top: 3px;
 }
 
-/*
-Laga padding á mobile eftir PyData Sphinx Theme update 0.15.3 á secondary-toggle og primary-toggle tökkum
-*/
+/* Laga padding á mobile eftir PyData Sphinx Theme update 0.15.3 á secondary-toggle og primary-toggle tökkum */
 .sidebar-toggle.secondary-toggle,
 .sidebar-toggle.primary-toggle {
     padding-left: 0px;
     padding-right: 0px;
 }
 
-/*
-Gera SVG myndir úr MathJAX aðeins meira bold
-*/
+/* Gera SVG myndir úr MathJAX aðeins meira bold */
 mjx-container[jax="SVG"] path[data-c],
 mjx-container[jax="SVG"] use[data-c] {
-    stroke-width: 5px !important;
+    stroke-width: 3px !important;
 }
+
+/* Fjarlægja "back to top" takkann og "Skip to main content" container-inn sem birtist stundum efst á síðu í Safari */
+#pst-back-to-top,
+#pst-skip-link {
+    display: none !important;
+}
+
+
+/* Smá lita-test
+
+:root {
+    --pst-color-secondary: #d5e3e6 !important;
+}
+
+::selection {
+    background: #32419a;
+    color: #d5e3e6;
+}
+
+ */

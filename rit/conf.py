@@ -163,6 +163,7 @@ def setup(app):
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-internationalization
 
 language = 'is'     # Skráð <html lang="is" ...> í HTML og íslenska notuð þar sem það á við
+locale_dirs = ['locale/']
 
 
 
@@ -378,7 +379,6 @@ mathjax3_config = {
     },
     "svg": {
         "fontCache": "global",
-        "matchVerticalAlign": True,
         "mtextInheritFont": True,
         "scale": 1,
     },
