@@ -148,7 +148,7 @@ mjx-container[jax="SVG"] use[data-c] {
 }
 
 
-/* Laga þetta vandamál hér:  */
+/* Laga þetta vandamál hér: https://github.com/pydata/pydata-sphinx-theme/issues/1855 */
 table.indextable.genindextable {
     border: none !important;
 }
