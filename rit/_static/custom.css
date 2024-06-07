@@ -137,17 +137,17 @@ mjx-container[jax="SVG"] use[data-c] {
     display: none !important;
 }
 
-/* Fjarlægja fókus hringi sem þurfa ekki að birtast */
+/* Fjarlægja fókus hringi og fleiri style sem þurfa ekki að birtast */
 :focus-visible {
     box-shadow: none !important;
     outline: none !important;
 }
-
-/* Tryggja að first-child í t.d. <nav class="navbar-nav"> noti ekki ljósari liti en aðrir */
-:not(li) > ol > li:first-child > :first-child,
-:not(li) > ul > li:first-child > :first-child {
+.nav-link:focus,
+.nav-link:hover {
     color: var(--pst-color-text-muted)
 }
+
+
 
 
 
