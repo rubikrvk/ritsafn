@@ -192,6 +192,8 @@ html_theme_options = {
     "use_edit_page_button": True,                           # "Edit on GitHub" takkinn virkjaður
     "search_bar_text": "Sláðu inn leitarorð...",            # Þegar smellt er á "Leit", þá kemur upp gluggi með þessum texta
     "navbar_align": "content",                              # "navbar" er left-aligned frá þeim stað sem "content" byrjar
+    "navigation_depth": 7,
+    "collapse_navigation": True,
     "header_links_before_dropdown": 3,                      # Ákveða hversu margar síður birtast í header áður en að "More" takkinn kemur í staðinn
     "header_dropdown_text": "Meira",                        # Íslenskur texti fyrir "More" takkann
 #    "announcement": "My announcement!",                     # Tilkynning efst á síðunni
@@ -255,8 +257,8 @@ html_css_files = ['custom.css']                 # Slóð á CSS skrár
 html_static_path = ['_static']                  # Slóð á "static" skrár
 html_sidebars = {
     "*/**": ["rubik-sidebar-nav-bs", "rubik-icon-links"],
-    "genindex": ["rubik-icon-links"],
-    "index": ["rubik-icon-links"],
+    "genindex": ["sidebar-nav-bs.html", "rubik-icon-links"],
+    "index": ["sidebar-nav-bs.html", "rubik-icon-links"],
 }
 html_show_copyright = False                     # Slökkt á default texta um höfundarrétt í HTML
 html_show_sphinx = False                        # Slökkt á "Created using Sphinx" texta í HTML
