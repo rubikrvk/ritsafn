@@ -1,6 +1,14 @@
 Admonitions
 ===========
 
+.. toctree::
+   :caption: Admonitions kaflar
+   :maxdepth: 6
+
+   admonitions-1/index
+   admonitions-2/index
+   admonitions-3/index
+
 Hér er smá texti fyrir ofan yfirlit fyrirsafna.
 
 .. contents:: Yfirlit fyrirsagna í Admonitions
@@ -134,3 +142,4 @@ Header six
 ++++++++++
 
 Text below header six
+

@@ -31,17 +31,13 @@ Síðan er stærðin á myndunum skilgreint inn í tikz skránum. */
     margin: 0 !important;
 }
 
-/* Setja sama style á textann "Kaflayfirlit" eins og er í toctree caption */
-.page-toc.tocsection.onthispage {
+/* Setja sama style og er í toctree caption á eftirfarandi fyrirsagnir */
+.page-toc.tocsection.onthispage,
+.rubik-social-media-text,
+.rubik-sidebar-nav-section-top {
     font-weight: var(--pst-sidebar-header-font-weight);
     margin-bottom: .5rem;
-  }
-
-/* Setja sama style á "social-media-text" eins og er í toctree caption */
-.social-media-text {
-    font-weight: var(--pst-sidebar-header-font-weight);
-    margin-bottom: .5rem;
-  }
+}
 
 /* Tryggja icon-links séu left-aligned og byrja á sama stað og logo og annar texti í sidebar */
 .navbar-icon-links {
@@ -131,8 +127,7 @@ mjx-container[jax="SVG"] use[data-c] {
     stroke-width: 3px !important;
 }
 
-/* Fjarlægja "back to top" takkann og "Skip to main content" container-inn sem birtist stundum efst á síðu í Safari */
-#pst-back-to-top,
+/* Fjarlægja "Skip to main content" container-inn sem birtist stundum efst á síðu í Safari */
 #pst-skip-link {
     display: none !important;
 }
@@ -141,13 +136,15 @@ mjx-container[jax="SVG"] use[data-c] {
 :focus-visible {
     outline: none !important;
 }
+a.nav-link:focus-visible {
+    box-shadow: none !important;
+}
 .nav-link.nav-internal:focus {
     color: var(--pst-color-text-muted);
 }
 .nav-link.nav-internal:hover {
     color: var(--pst-color-link-hover);
 }
-
 
 /* Laga þetta vandamál hér: https://github.com/pydata/pydata-sphinx-theme/issues/1855 */
 table.indextable.genindextable {
@@ -160,11 +157,24 @@ table.indextable.genindextable tr {
     background-color: inherit !important;
 }
 
-/* Gera línu fyrir ofan social-media-text */
-.social-media-text {
+/* Setja hover lit á toggle takkann í toctree */
+.toctree-toggle:hover {
+    color: var(--pst-color-link-hover);
+}
+
+
+
+
+
+/* Gera línu fyrir ofan rubik-social-media-text -- GERA ÞETTA FREKAR FYRIR NEÐAN OF SAMRÆMA VIÐ AÐRA CONTAINER-A */
+.rubik-social-media-text {
     padding: .5rem 0;
     border-top: 1px solid var(--pst-color-border);
 }
+
+
+
+
 
 
 

@@ -109,14 +109,4 @@ Samanber :numref:`kodabalkur`, þá er þetta mjög flottur kóði.
    fjarmal-einstaklinga/index
    fjarmal-fyrirtaekja/index
    eldhusvaskur/index
-
-.. toctree::
-   :numbered:
-   :maxdepth: 7
-
-   testing
-
-.. toctree::
-   :maxdepth: 7
-
    genindex

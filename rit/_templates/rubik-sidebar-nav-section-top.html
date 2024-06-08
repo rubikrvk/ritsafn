@@ -1,0 +1,20 @@
+{%- set sidebar_nav_html = generate_toctree_html(
+  "sidebar",
+  startdepth=0,
+  show_nav_level=theme_show_nav_level | int,
+  maxdepth=1,
+  collapse=theme_collapse_navigation | tobool,
+  includehidden=theme_sidebar_includehidden | tobool,
+  titles_only=True
+) -%}
+
+<div class="bd-links test" id="bd-docs-nav" aria-label="{{ _('Section navigation') }}">
+  <p class="bd-links__title rubik-sidebar-nav-section-top" role="heading" aria-level="1">Allar síður</p>
+  <div class="bd-toc-item navbar-nav test2">
+    {{ sidebar_nav_html }}
+  </div>
+</div>
+
+
+
+
