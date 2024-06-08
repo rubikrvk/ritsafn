@@ -72,7 +72,7 @@ Síðan er stærðin á myndunum skilgreint inn í tikz skránum. */
 }
 
 /* Samræma útlit á numfig_format og caption fyrir myndir, töflur og kóðablokkir, án þess þó að hafa áhrif á allt .caption-text,
-því það er líka notað í t.d. fyrirsögnum í toctree í sidebar (todo - mögulega þarf að samræmi líka við caption fyrir tikz myndir o.fl.) */
+því það er líka notað í t.d. fyrirsögnum í toctree í sidebar (todo - mögulega þarf að samræma líka við caption fyrir tikz myndir o.fl.) */
 .caption-number {
     color: var(--pst-color-text-muted);
     font-weight: var(--pst-sidebar-header-font-weight);
@@ -96,7 +96,7 @@ div.code-block-caption span.caption-number {
     padding-right: 0
 }
 
-/* Setja bil á milli items í navbar_persistent í 1rem, en ekki auto */
+/* Setja horizontal bil á milli items í navbar_persistent í 1rem, en ekki auto */
 .navbar-persistent--mobile {
     margin-left: 1rem;
 }
@@ -153,15 +153,18 @@ mjx-container[jax="SVG"] use[data-c] {
 table.indextable.genindextable {
     border: none !important;
 }
-
 table.indextable.genindextable td {
     border-left: none !important;
 }
-
 table.indextable.genindextable tr {
     background-color: inherit !important;
 }
 
+/* Gera línu fyrir ofan social-media-text */
+.social-media-text {
+    padding: .5rem 0;
+    border-top: 1px solid var(--pst-color-border);
+}
 
 
 
