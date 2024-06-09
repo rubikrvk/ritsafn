@@ -69,23 +69,45 @@ Síðan er stærðin á myndunum skilgreint inn í tikz skránum. */
 
 /* Samræma útlit á numfig_format og caption fyrir myndir, töflur og kóðablokkir, án þess þó að hafa áhrif á allt .caption-text,
 því það er líka notað í t.d. fyrirsögnum í toctree í sidebar (todo - mögulega þarf að samræma líka við caption fyrir tikz myndir o.fl.) */
-.caption-number {
+
+/* .caption-number */
+figcaption .caption-number,
+caption .caption-number,
+.code-block-caption .caption-number {
     color: var(--pst-color-text-muted);
     font-weight: var(--pst-sidebar-header-font-weight);
     font-style: normal !important;
 }
-.caption-number::after {
+
+/* .caption-number::after */
+figcaption .caption-number::after,
+caption .caption-number::after {
     content: "– ";
     color: var(--pst-color-text-muted);
     font-weight: var(--pst-font-weight-caption);
     font-style: normal !important;
 }
+.code-block-caption .caption-number::after {
+    content: "– ";
+    color: var(--pst-color-text-muted);
+    font-weight: var(--bs-body-font-weight);
+    font-style: normal !important;
+}
+
+/* .caption-text */
 figcaption .caption-text,
-caption .caption-text,
-.code-block-caption .caption-text {
+caption .caption-text {
     color: var(--pst-color-text-muted);
     font-weight: var(--pst-font-weight-caption);
 }
+.code-block-caption .caption-text {
+    color: var(--pst-color-text-muted);
+    font-weight: var(--bs-body-font-weight);
+}
+
+
+
+
 
 /* Fjalægja padding-right í kóðablokk til að gera ekki of stórt bil á milli numfig_format og caption */
 div.code-block-caption span.caption-number {
@@ -124,7 +146,7 @@ div.code-block-caption span.caption-number {
 /* Gera SVG myndir úr MathJAX aðeins meira bold */
 mjx-container[jax="SVG"] path[data-c],
 mjx-container[jax="SVG"] use[data-c] {
-    stroke-width: 3px !important;
+    stroke-width: 1px !important;
 }
 
 /* Fjarlægja "Skip to main content" container-inn sem birtist stundum efst á síðu í Safari */
@@ -162,6 +184,23 @@ table.indextable.genindextable tr {
     color: var(--pst-color-link-hover);
 }
 
+/* Láta toggle takkann í toctree hafa sama margin-right on önnur item í primary sidebar */
+nav.bd-links {
+    margin-right: 0;
+}
+
+/* Láta link í current.active síðu hverfa í _templates/rubik-sidebar-nav-section-top.html */
+.rubik-sidebar-nav-top li.current.active {
+    display: none;
+  }
+
+
+
+
+
+
+
+
 
 
 
@@ -171,6 +210,20 @@ table.indextable.genindextable tr {
     padding: .5rem 0;
     border-top: 1px solid var(--pst-color-border);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -195,6 +248,24 @@ var(--pst-color-link)
 ::selection {
     background: #32419a;
     color: #d5e3e6;
+}
+
+ */
+
+
+
+
+
+/* Reyna að láta text-decoration-thickness vera jafnt og 3px í Safari (virkar ekki)
+
+.navbar-nav li>a:hover {
+	color: var(--pst-color-link-hover);
+    background-color: transparent;
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+	text-decoration-thickness: auto;
+	text-underline-offset: .1578em;
+	text-decoration-color: var(--pst-color-link-hover);
 }
 
  */

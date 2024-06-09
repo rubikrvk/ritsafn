@@ -2,15 +2,15 @@
   "sidebar",
   startdepth=0,
   show_nav_level=theme_show_nav_level | int,
-  maxdepth=1,
+  maxdepth=theme_navigation_depth | int,
   collapse=theme_collapse_navigation | tobool,
   includehidden=theme_sidebar_includehidden | tobool,
   titles_only=True
 ) -%}
 
-<div class="bd-links test" id="bd-docs-nav" aria-label="{{ _('Section navigation') }}">
-  <p class="bd-links__title rubik-sidebar-nav-section-top" role="heading" aria-level="1">Allar síður</p>
-  <div class="bd-toc-item navbar-nav test2">
+<div class="bd-links" id="bd-docs-nav" aria-label="{{ _('Section navigation') }}">
+  <p class="bd-links__title rubik-sidebar-nav-section-top" role="heading" aria-level="1">Ritsafn RÚBIK Reykjavíkur</p>
+  <div class="bd-toc-item navbar-nav rubik-sidebar-nav-top">
     {{ sidebar_nav_html }}
   </div>
 </div>
