@@ -41,7 +41,7 @@ Síðan er stærðin á myndunum skilgreint inn í tikz skránum. */
 
 /* Tryggja icon-links séu left-aligned og byrja á sama stað og logo og annar texti í sidebar */
 .navbar-icon-links {
-    justify-content: normal;
+    justify-content: space-around;
 }
 
 /* Kemur í veg fyrir að langur texti í navbar-nav noti tvær eða fleiri línu */
@@ -194,29 +194,22 @@ nav.bd-links {
     display: none;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-/* Gera línu fyrir ofan rubik-social-media-text -- GERA ÞETTA FREKAR FYRIR NEÐAN OF SAMRÆMA VIÐ AÐRA CONTAINER-A */
-.rubik-social-media-text {
-    padding: .5rem 0;
-    border-top: 1px solid var(--pst-color-border);
+/* Gera línu fyrir neðan hvert sidebar-primary-item, nema það neðsta */
+.sidebar-primary-item:not(:last-child) {
+    border-bottom: 1px solid var(--pst-color-border);
 }
 
+/* Slökkva á navbar-nav undir 960px, þar sem rubik-sidebar-nav-section-top.html kemur í staðinn */
+@media (max-width: 960px) {
+    .bd-navbar-elements.navbar-nav {
+        display: none;
+    }
+}
 
-
-
-
-
-
+/* Laga bil á milli theme-switcher takkans undir 960px og fyrstu línu */
+.bd-sidebar-primary .sidebar-header-items {
+    margin-bottom: -.5rem;
+}
 
 
 
