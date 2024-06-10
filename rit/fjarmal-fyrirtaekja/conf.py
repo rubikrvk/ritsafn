@@ -60,6 +60,16 @@ def setup(app):
 
 
 
+# -- Options for internationalization ----------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-internationalization
+
+language = 'is'     # Skráð <html lang="is" ...> í HTML og íslenska notuð þar sem það á við
+locale_dirs = ['../locale']
+
+
+
+
+
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 

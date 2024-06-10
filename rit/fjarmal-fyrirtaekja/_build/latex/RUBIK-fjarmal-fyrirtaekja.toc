@@ -53,4 +53,4 @@
 \contentsline {subsubsection}{\numberline {9.1.1.1}Header four}{11}{subsubsection.9.1.1.1}%
 \contentsline {paragraph}{\numberline {9.1.1.1.1}Header five}{11}{paragraph.9.1.1.1.1}%
 \contentsline {subparagraph}{\numberline {9.1.1.1.1.1}Header six}{11}{subparagraph.9.1.1.1.1.1}%
-\contentsline {chapter}{Yfirlit}{12}{section*.6}%
+\contentsline {chapter}{Atriðaskrá}{12}{section*.6}%
