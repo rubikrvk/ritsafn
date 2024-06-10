@@ -194,7 +194,7 @@ html_theme_options = {
     "navbar_align": "content",                              # "navbar" er left-aligned frá þeim stað sem "content" byrjar
     "navigation_depth": 5,                                  # Toc dýpt í left sidebar
     "show_toc_level": 5,                                    # Toc dýpt í right sidebar
-    "header_links_before_dropdown": 3,                      # Hversu margar síður birtast í header áður en að "More" takkinn tekur við
+    "header_links_before_dropdown": 2,                      # Hversu margar síður birtast í header áður en að "More" takkinn tekur við
     "header_dropdown_text": "Meira",                        # Íslenskur texti fyrir "More" takkann
     "back_to_top_button": False,                            # Fjarlægja "Efst á síðu" takkann
 #    "announcement": "My announcement!",                     # Tilkynning efst á síðunni
@@ -261,10 +261,9 @@ html_context = {
 html_css_files = ['custom.css']                 # Slóð á CSS skrár
 html_static_path = ['_static']                  # Slóð á "static" skrár
 html_sidebars = {
-    "**": ["rubik-sidebar-nav-section", "rubik-sidebar-nav-section-top", "rubik-icon-links"],
-    "index": ["rubik-sidebar-nav-root-top", "rubik-icon-links"],
-    "genindex": ["rubik-sidebar-nav-root-top", "rubik-icon-links"],
-    "search": ["rubik-sidebar-nav-root-top", "rubik-icon-links"],
+    "**": ["rubik-sidebar-nav-section", "rubik-icon-links"],
+    "index": ["rubik-sidebar-nav-root", "rubik-icon-links"],
+    "search": ["rubik-sidebar-nav-root", "rubik-icon-links"],
 }
 html_show_copyright = False                     # Slökkt á default texta um höfundarrétt í HTML
 html_show_sphinx = False                        # Slökkt á "Created using Sphinx" texta í HTML

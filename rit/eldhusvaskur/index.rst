@@ -56,7 +56,6 @@ Samanber :numref:`stormynd3`, þá er þetta mjög flott.
 Samanber :numref:`prufutafla3`, þá er þetta mjög flott tafla.
 
 .. toctree::
-   :caption: Eldhúsvaskur
    :numbered:
    :maxdepth: 6
 

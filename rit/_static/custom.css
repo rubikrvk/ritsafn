@@ -227,6 +227,32 @@ nav.bd-links li>a {
     padding: .25rem 1rem;
 }
 
+/* Setja sama style og er í toctree caption á link í rubik-sidebar-nav-section-top.html s*/
+.rubik-sidebar-nav-section-top a {
+    color: var(--pst-color-text-base);
+    text-decoration: none;
+}
+.rubik-sidebar-nav-section-top a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: max(3px,.1875rem,.12em);
+}
+
+
+
+
+
+
+ul.current.nav.bd-sidenav {
+    display: flex;
+    flex-direction: column;
+}
+li.toctree-l1.current.active {
+    order: -1; /* Moves this item to the top */
+    border-bottom: 1px solid var(--pst-color-border);
+    padding-bottom: .5rem;
+    margin-bottom: .5rem;
+}
+
 
 
 
