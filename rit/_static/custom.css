@@ -237,6 +237,15 @@ nav.bd-links li>a {
     text-decoration-thickness: max(3px,.1875rem,.12em);
 }
 
+/* Breyta font-size á external link icon í primary sidebar */
+nav.bd-links li>a.reference.external:after {
+    font-size: calc(var(--pst-sidebar-font-size) * 1);
+}
+
+/* Breyta font-size á external link icon í navbar */
+.nav-link.nav-external:after {
+    font-size: inherit;
+}
 
 
 
@@ -252,7 +261,6 @@ li.toctree-l1.current.active {
     padding-bottom: .5rem;
     margin-bottom: .5rem;
 }
-
 
 
 

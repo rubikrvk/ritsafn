@@ -110,3 +110,4 @@ Samanber :numref:`kodabalkur`, þá er þetta mjög flottur kóði.
    fjarmal-fyrirtaekja/index
    eldhusvaskur/index
    genindex
+   Rubik.is <https://www.rubik.is>
