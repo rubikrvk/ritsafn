@@ -1,7 +1,10 @@
-<div class="copyright">
-    <div class="text-container">
-        <p class="copyright-text">Ritsafn RÚBIK Reykjavíkur © 2023–2024 RÚBIK Reykjavík ehf.</p>
-        <p class="copyright-subtext">Notkun efnis úr Ritsafni RÚBIK Reykjavíkur er heimil samkvæmt <a href="https://github.com/rubikrvk/ritsafn/blob/main/LICENSE" target="_blank">notkunarleyfi</a> Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.is" target="_blank">CC BY-NC-SA 4.0</a>).</p>
+<div class="rubik-copyright">
+    <div class="copyright-text">
+        <span class="copyright-header">
+            <span class="licensed">Ritsafn RÚBIK Reykjavíkur </span>
+            <span class="licensor">© 2023–<span id="current-year"></span> RÚBIK Reykjavík ehf.</span>
+        </span>
+        <span class="copyright-subtext">Notkun efnis úr Ritsafni RÚBIK Reykjavíkur er heimil samkvæmt <a href="https://github.com/rubikrvk/ritsafn/blob/main/LICENSE" target="_blank">notkunarleyfi</a> Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.is" target="_blank">CC BY-NC-SA 4.0</a>).</span>
     </div>
     <div class="license-badge">
         <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.is" target="_blank">
@@ -9,3 +12,6 @@
         </a>
     </div>
 </div>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
