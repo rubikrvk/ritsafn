@@ -205,6 +205,11 @@ nav.bd-links {
     border-bottom: 1px solid var(--pst-color-border);
 }
 
+/* Setja auka margin-bottum á neðsta sidebar-primary-item, svo það sjáist vel á mobile */
+.sidebar-primary-item:last-child {
+    margin-bottom: 3em;
+}
+
 /* Slökkva á navbar-nav undir 960px, þar sem rubik-sidebar-nav-section-top.html kemur í staðinn */
 @media (max-width: 960px) {
     .bd-navbar-elements.navbar-nav {
