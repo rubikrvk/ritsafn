@@ -30,7 +30,7 @@ Smá annað test:
 .. math:: e^{i\pi} + 2 = 0
    :label: euler8
 
-Euler's identity, equation :eq:`euler8`, was elected one of the most
+Euler's **identity**, equation :eq:`euler8`, was elected one of the most
 beautiful mathematical formulas.
 
 .. figure:: https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg
