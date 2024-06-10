@@ -247,6 +247,7 @@ html_theme_options = {
     "footer_end": [],
     "navbar_end": ["theme-switcher"],
     "navbar_persistent": ["search-button-field"],
+    "footer_start": ["rubik-copyright.html"],
 }
 html_title = project                            # Seinni hlutinn í <title> í HTML sóttur úr "project"
 html_short_title = 'Ritsafn'                    # Stuttur title notaður í tenglum í "header" og í HTML Help Docs

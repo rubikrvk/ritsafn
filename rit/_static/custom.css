@@ -191,7 +191,7 @@ nav.bd-links {
 
 /* Setja auka margin-bottum á neðsta sidebar-primary-item, svo það sjáist vel á mobile */
 .sidebar-primary-item:last-child {
-    margin-bottom: 3em;
+    margin-bottom: 4rem;
 }
 
 /* Slökkva á navbar-nav undir 960px, þar sem rubik-sidebar-nav-section-top.html kemur í staðinn */
@@ -235,6 +235,41 @@ li.toctree-l1.current.active {
     margin-bottom: .5rem;
 }
 
+
+
+
+
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.copyright-text {
+    color: var(--pst-color-text-muted);
+    font-size: var(--pst-sidebar-font-size);
+    font-weight: 700;
+    padding-bottom: 0rem;
+}
+
+.copyright-subtext {
+    color: var(--pst-color-text-muted);
+    font-size: calc(var(--pst-sidebar-font-size) * 0.8);
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
+}
+
+.license-badge {
+    padding-top: 0px;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+}
 
 
 
