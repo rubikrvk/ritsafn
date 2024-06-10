@@ -79,14 +79,14 @@ Samanber :numref:`kodabalkur1`, þá er þetta mjög flottur kóði.
 Header two
 ----------
 
-.. figure:: https://source.unsplash.com/200x200/daily?cute+puppy
+.. figure:: https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg
    :name: litilmynd5
    :height: 200
    :width: 200
 
    Þetta er caption fyrir litla mynd.
 
-.. figure:: https://source.unsplash.com/200x200/daily?cute+puppy
+.. figure:: https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg
    :name: stormynd5
    :height: 400
    :width: 400
