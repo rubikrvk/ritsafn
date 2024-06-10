@@ -24,7 +24,6 @@ Síðan er stærðin á myndunum skilgreint inn í tikz skránum. */
 .bd-sidebar-primary.bd-sidebar {
     overflow-x: hidden; /* Disable horizontal scrolling */
     overflow-y: auto;   /* Enable vertical scrolling */
-    flex-shrink: 1;
 }
 
 /* Setja margin: 0 á tóman rtd-footer-container inn í primary sidebar, sjá: https://github.com/pydata/pydata-sphinx-theme/issues/1794 */

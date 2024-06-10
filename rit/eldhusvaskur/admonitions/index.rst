@@ -2,7 +2,6 @@ Admonitions
 ===========
 
 .. toctree::
-   :caption: Admonitions kaflar
    :maxdepth: 6
 
    admonitions-1/index

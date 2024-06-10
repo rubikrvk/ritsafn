@@ -56,7 +56,6 @@ Samanber :numref:`stormynd2`, þá er þetta mjög flott.
 Samanber :numref:`prufutafla2`, þá er þetta mjög flott tafla.
 
 .. toctree::
-   :caption: Fjármál fyrirtækja
    :numbered:
    :maxdepth: 6
 
