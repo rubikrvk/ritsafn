@@ -1,6 +1,5 @@
-<div class="tocsection sourcelink" data-depth="{{ html_page_depth }}" data-subfolder="{{ html_subfolder }}">
-  <a id="pdf-link" href="#" style="display: inline-block; padding: 0; margin: 0; line-height: 1.5; vertical-align: middle;">
-    <i class="fa-solid fa-file-pdf" style="margin-left: 0px; margin-right: 6px; margin-bottom: 3px; font-size: inherit; line-height: inherit; vertical-align: middle; display: inline-block; width: 1em; height: 1em;"></i>{{ ("Sækja PDF") }}</a>
+<div class="tocsection pdf-link" data-depth="{{ html_page_depth }}" data-subfolder="{{ html_subfolder }}">
+  <a id="pdf-link" href="#" class="link-style"><i class="fa-solid fa-file-pdf icon-style"></i>{{ _("Download PDF") }}</a>
 </div>
 
 <script>
@@ -10,7 +9,7 @@
     if (!linkElement) return;
 
     // Finna elementið sem inniheldur upplýsingar um samhengi
-    const tocSection = document.querySelector('.tocsection.sourcelink');
+    const tocSection = document.querySelector('.tocsection.pdf-link');
     const depth = parseInt(tocSection.getAttribute('data-depth'), 10); // Lesa dýptina úr data-depth eigindinni
     const subfolder = tocSection.getAttribute('data-subfolder'); // Lesa nafnið á undirmöppunni úr data-subfolder eigindinni
     
