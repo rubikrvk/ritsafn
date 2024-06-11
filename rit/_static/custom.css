@@ -213,7 +213,7 @@ html[data-theme="dark"] .bd-content img[src*=".svg"]:not(.only-dark):not(.dark-l
   
   /* Breyta font-size á external link icon í primary sidebar */
   nav.bd-links li > a.reference.external:after {
-    --pst-icon-external-link: " ";
+    --pst-icon-external-link: " \f35d";
     font-size: calc(var(--pst-sidebar-font-size) * 1); /* inherit skilar því sama og --pst-sidebar-font-size */
     margin-left: 0;
   }
