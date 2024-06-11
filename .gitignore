@@ -176,3 +176,4 @@ cython_debug/
 
 # Shell scripts
 makesphinx-local.sh
+makesphinx-local-html.sh
