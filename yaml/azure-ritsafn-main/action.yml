@@ -7,3 +7,8 @@ runs:
       run: |
         mv json/azure-ritsafn-main/staticwebapp.config.json rit/_build/html/
       shell: bash
+
+    - name: MAIN - Add robots.txt
+      run: |
+        mv robots.txt rit/_build/html/
+      shell: bash

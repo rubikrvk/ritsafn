@@ -1,0 +1,13 @@
+# /robots.txt fyrir https://rit.rubik.is/
+
+User-agent: *
+Disallow: /_sources/
+Disallow: /_static/
+Disallow: /.doctrees/
+Disallow: /genindex/
+Disallow: /search/
+Disallow: /objects.inv
+Disallow: /searchindex.js
+Disallow: /*.pdf$
+
+Sitemap: https://rit.rubik.is/sitemap.xml
