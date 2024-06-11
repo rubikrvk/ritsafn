@@ -114,6 +114,11 @@ div.code-block-caption span.caption-number {
   padding-right: 0;
 }
 
+/* Setja sama font-size á "hash tag merki sem inniheldur hlekk" á töflur, eins og í myndum og kóðablokkum */
+caption a.headerlink {
+  font-size: inherit;
+}
+
 /* Setja horizontal bil á milli items í navbar_persistent í 1rem, en ekki auto */
 .navbar-persistent--mobile {
   margin-left: 1rem;
@@ -213,7 +218,7 @@ nav.bd-links li > a {
 
 /* Breyta font-size á external link icon í primary sidebar */
 nav.bd-links li > a.reference.external:after {
-  --pst-icon-external-link: " \f35d";
+  content: " \f35d";
   font-size: calc(var(--pst-sidebar-font-size) * 1); /* inherit skilar því sama og --pst-sidebar-font-size */
   margin-left: 0;
 }

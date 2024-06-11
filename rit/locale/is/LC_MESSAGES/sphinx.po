@@ -161,3 +161,26 @@ msgstr "Atriðaskrá"
 msgid "Download PDF"
 msgstr "Sækja PDF"
 
+msgid "Link to this equation"
+msgstr "Hlekkur á þessa jöfnu"
+
+msgid "Link to this definition"
+msgstr ""
+
+msgid "Link to this term"
+msgstr ""
+
+msgid "Link to this heading"
+msgstr "Hlekkur á þessa fyrirsögn"
+
+msgid "Link to this table"
+msgstr "Hlekkur á þessa töflu"
+
+msgid "Link to this code"
+msgstr "Hlekkur á þessa kóðablokk"
+
+msgid "Link to this image"
+msgstr "Hlekkur á þessa mynd"
+
+msgid "Link to this toctree"
+msgstr ""
