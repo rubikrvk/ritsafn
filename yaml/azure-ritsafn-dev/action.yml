@@ -12,3 +12,8 @@ runs:
       run: |
         find rit/_build/html -name '*.html' -exec sed -i 's/<head>/<head><meta name="robots" content="noindex, nofollow">/' {} +
       shell: bash
+
+    - name: DEV - Delete sitemap.xml
+      run: |
+        rm rit/_build_html/sitemap.xml
+      shell: bash
