@@ -1,18 +1,21 @@
 {
   "routes": [
     {
-      "route": "/**/index.html",
-      "redirect": "/",
-      "statusCode": 301
+      "route": "/*/",
+      "rewrite": "/*/index.html"
     },
     {
-      "route": "/**/",
-      "rewrite": "/index.html"
+      "route": "/*/*/",
+      "rewrite": "/*/*/index.html"
     },
     {
-      "route": "/**",
-      "redirect": "/",
-      "statusCode": 301
+      "route": "/*/*/*/",
+      "rewrite": "/*/*/*/index.html"
+    },
+    {
+      "route": "/*/*/*/*/",
+      "rewrite": "/*/*/*/*/index.html"
     }
+    // Add more rules if you have deeper nested folders
   ]
 }
