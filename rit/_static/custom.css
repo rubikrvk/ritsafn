@@ -272,6 +272,40 @@ li.toctree-l1.current.active {
   display: inline-flex;
 }
 
+/* Stilla uppsetningu á .link-style fyrir rubik-edit-this-page.html, rubik-pdf.html, og rubik-sourcelink.html */
+.link-style {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+
+/* Stilla uppsetningu á .icon-style fyrir rubik-edit-this-page.html, rubik-pdf.html, og rubik-sourcelink.html */
+.icon-style {
+  margin-left: 0px; /* Adjust this value as needed */
+  margin-right: 6px; /* Adjust this value as needed */
+  margin-bottom: 3px;
+  font-size: inherit;
+  line-height: inherit;
+  vertical-align: middle;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+/* Færa fa-icon til vinstri í rubik-sourcelink.html */
+.tocsection.sourcelink .fa-file-lines {
+  margin-left: -1px;
+  margin-right: 7px;
+}
+
+
+
+
+
+
+
 /* Smá lita-test
   
   

@@ -157,3 +157,7 @@ msgstr ""
 
 msgid "Index"
 msgstr "Atriðaskrá"
+
+msgid "Download PDF"
+msgstr "Sækja PDF"
+

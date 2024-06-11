@@ -1,3 +1,4 @@
 {
-  "printWidth": 1000,
+  "printWidth": 200,
+  "bracketSameLine": true
 }
