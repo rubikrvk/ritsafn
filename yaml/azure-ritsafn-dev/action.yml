@@ -15,5 +15,5 @@ runs:
 
     - name: DEV - Delete sitemap.xml
       run: |
-        rm rit/_build_html/sitemap.xml
+        rm rit/_build/html/sitemap.xml
       shell: bash
