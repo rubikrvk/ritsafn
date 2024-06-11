@@ -266,7 +266,7 @@ li.toctree-l1.current.active {
 }
 .license-badge {
   display: flex;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 .license-badge a {
   display: inline-flex;
