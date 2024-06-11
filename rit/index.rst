@@ -1,3 +1,6 @@
+.. meta::
+   :keywords: fjármál, hagfræði, verðtrygging
+
 Velkomin
 ========
 
