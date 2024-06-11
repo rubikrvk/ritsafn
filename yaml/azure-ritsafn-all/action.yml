@@ -20,6 +20,15 @@ runs:
         sudo apt-get install -y texlive texlive-latex-extra latexmk texlive-fonts-recommended dvipng pdf2svg texlive-lang-european
       shell: bash
 
+    - name: ALL - Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: ALL - Install Prettier
+      run: npm install --global prettier
+      shell: bash
+
     - name: ALL - Build Sphinx documentation
       run: |
         ./makesphinx.sh
