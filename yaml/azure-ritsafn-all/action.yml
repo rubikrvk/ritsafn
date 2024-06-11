@@ -24,3 +24,8 @@ runs:
       run: |
         ./makesphinx.sh
       shell: bash
+
+    - name: ALL - Add routes.json
+      run: |
+        mv json/azure-ritsafn-all/routes.json rit/_build/html/
+      shell: bash
