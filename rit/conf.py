@@ -461,3 +461,22 @@ def setup(app):
 
     # Tengja add_data_attributes fallið við 'html-page-context' atburðinn í Sphinx
     app.connect('html-page-context', add_data_attributes)
+
+
+
+
+
+from sphinx.builders.html import StandaloneHTMLBuilder
+
+class CustomHTMLBuilder(StandaloneHTMLBuilder):
+    name = 'html'
+
+    def get_target_uri(self, docname, typ=None):
+        # Change the URL to remove the 'index.html' part
+        if docname.endswith('/index'):
+            return docname[:-6] + '/'
+        return docname + '/'
+
+# Override the default HTML builder with the custom one
+def setup(app):
+    app.add_builder(CustomHTMLBuilder, override=True)
