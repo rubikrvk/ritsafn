@@ -266,7 +266,7 @@ html_sidebars = {
     "index": ["rubik-sidebar-nav-root", "rubik-icon-links"],
     "search": ["rubik-sidebar-nav-root", "rubik-icon-links"],
 }
-html_link_suffix = "/"
+html_link_suffix = ""
 html_show_copyright = False                     # Slökkt á default texta um höfundarrétt í HTML
 html_show_sphinx = False                        # Slökkt á "Created using Sphinx" texta í HTML
 
