@@ -2,7 +2,7 @@
 
 cd rit
 make clean
-make html
+sphinx-build -b dirhtml . _build/html
 make latexpdf
 mv _build/latex/*.pdf _build/html/
 for dir in */ ; do
