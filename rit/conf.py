@@ -461,3 +461,6 @@ def setup(app):
 
     # Tengja add_data_attributes fallið við 'html-page-context' atburðinn í Sphinx
     app.connect('html-page-context', add_data_attributes)
+
+from sphinx.builders.html import StandaloneHTMLBuilder
+

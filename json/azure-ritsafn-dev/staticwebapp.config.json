@@ -20,6 +20,20 @@
         "x-robots-tag": "noindex, nofollow"
       },
       "_comment": "This route applies the X-Robots-Tag header to all files, ensuring they are not indexed by search engines."
+    },
+    {
+      "route": "/fjarmal-einstaklinga",
+      "rewrite": "/fjarmal-einstaklinga/index.html",
+      "_comment": "This route rewrites the URL to remove index.html for the /folder directory."
+    },
+    {
+      "route": "/eldhusvaskur",
+      "rewrite": "/eldhusvaskur/index.html",
+      "_comment": "This route rewrites the URL to remove index.html for the /another-folder directory."
     }
-  ]
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/images/*.{png,jpg,gif}", "/css/*", "/js/*"]
+  }
 }
