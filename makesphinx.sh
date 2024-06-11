@@ -3,7 +3,7 @@
 cd rit
 make clean
 sphinx-build -b dirhtml . _build/html
-find _build/html/ \( -name "*.html" -o -name "*.csss" \) -exec prettier --config .prettierrc --write {} +
+find _build/html/ \( -name "*.html" -o -name "*.css" \) ! -name "all.min.css" -exec prettier --config .prettierrc --write {} +
 make latexpdf
 mv _build/latex/*.pdf _build/html/
 for dir in */ ; do
