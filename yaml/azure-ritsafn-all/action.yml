@@ -29,6 +29,10 @@ runs:
       run: npm install --global prettier
       shell: bash
 
+    - name: Install sed (if needed)
+      run: sudo apt-get install -y sed
+      shell: bash
+
     - name: ALL - Build Sphinx documentation
       run: |
         ./makesphinx.sh
