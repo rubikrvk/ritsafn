@@ -65,4 +65,4 @@
 \contentsline {subsubsection}{\numberline {8.1.1.1}Header four}{16}{subsubsection.8.1.1.1}%
 \contentsline {paragraph}{\numberline {8.1.1.1.1}Header five}{16}{paragraph.8.1.1.1.1}%
 \contentsline {subparagraph}{\numberline {8.1.1.1.1.1}Header six}{16}{subparagraph.8.1.1.1.1.1}%
-\contentsline {chapter}{Atriðaskrá}{17}{section*.18}%
+\contentsline {chapter}{Yfirlit}{17}{section*.18}%

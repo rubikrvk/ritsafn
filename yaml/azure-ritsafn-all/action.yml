@@ -31,5 +31,5 @@ runs:
 
     - name: ALL - Build Sphinx documentation
       run: |
-        ./makesphinx.sh
+        sh/build-dirhtml-latexpdf.sh
       shell: bash

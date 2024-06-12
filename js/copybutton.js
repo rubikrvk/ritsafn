@@ -1,11 +1,5 @@
 // Localization support
 const messages = {
-  'is': {
-    'copy': 'Afrita',
-    'copy_to_clipboard': 'Afrita í klippiborð',
-    'copy_success': 'Afritað!',
-    'copy_failure': 'Tókst ekki að afrita',
-  },
   'en': {
     'copy': 'Copy',
     'copy_to_clipboard': 'Copy to clipboard',
@@ -47,6 +41,12 @@ const messages = {
     'copy_to_clipboard': 'Copiato negli appunti',
     'copy_success': 'Copiato!',
     'copy_failure': 'Errore durante la copia',
+  },
+  'is': {
+    'copy': 'Afrita',
+    'copy_to_clipboard': 'Afrita í klippiborð',
+    'copy_success': 'Afritað!',
+    'copy_failure': 'Tókst ekki að afrita',
   }
 }
 
