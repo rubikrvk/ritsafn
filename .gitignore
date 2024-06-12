@@ -65,9 +65,12 @@ instance/
 .scrapy
 
 # Sphinx documentation
+_build/
+.dirtree/
+.doctrees/
 **/_build/
-.dirtree
-.doctrees
+**/.dirtree/
+**/.doctrees/
 
 # PyBuilder
 .pybuilder/
