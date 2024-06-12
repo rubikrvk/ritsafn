@@ -7,9 +7,21 @@ find _build/html/ -name "*.html" -exec prettier --config ../json/.prettierrc.jso
 TARGET_FILE="_build/html/_static/copybutton.js"
 SOURCE_FILE="../js/copybutton-is.js"
 NEW_CODE=$(cat "$SOURCE_FILE")
-sed -i '' "/const messages = {/r /dev/stdin" "$TARGET_FILE" << EOM
-$NEW_CODE,
-EOM
+
+# Create a temporary file to hold the modified content
+TEMP_FILE=$(mktemp)
+
+# Insert NEW_CODE after the line containing 'const messages = {'
+awk -v new_code="$NEW_CODE" '
+    {print}
+    /const messages = {/ {
+        print new_code ","
+    }
+' "$TARGET_FILE" > "$TEMP_FILE"
+
+# Replace the original file with the modified file
+mv "$TEMP_FILE" "$TARGET_FILE"
+
 make latexpdf
 mv _build/latex/*.pdf _build/html/
 for dir in */ ; do
