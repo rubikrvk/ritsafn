@@ -305,10 +305,18 @@ li.toctree-l1.current.active {
   margin-right: 7px;
 }
 
-
-
-
-
+/* Stilla uppsetningu á sphinx_copybutton */
+button.copybtn.success {
+  border-color: var(--pst-color-primary);
+  color: var(--pst-color-primary);
+}
+.highlight button.copybtn:hover {
+  background-color: var(--pst-color-shadow);
+}
+div.highlight button.copybtn:not(.success),
+div.highlight button.copybtn:hover:not(.success) {
+  color: var(--pst-color-text-muted);
+}
 
 
 /* Smá lita-test

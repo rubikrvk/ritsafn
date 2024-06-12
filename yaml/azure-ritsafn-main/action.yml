@@ -10,5 +10,5 @@ runs:
 
     - name: MAIN - Add robots.txt
       run: |
-        mv robots.txt rit/_build/html/
+        mv txt/robots.txt rit/_build/html/
       shell: bash
