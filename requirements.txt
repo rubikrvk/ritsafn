@@ -14,7 +14,6 @@ pydata-sphinx-theme==0.15.3
 
 
 
-
 # Toggle page content and collapse admonitions in Sphinx
 # PYPI: https://pypi.org/project/sphinx-togglebutton/
 # Docs: https://sphinx-togglebutton.readthedocs.io/

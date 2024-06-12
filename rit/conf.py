@@ -125,7 +125,8 @@ copyright = [
 extensions = [
     'sphinx_togglebutton',
     'sphinxcontrib.tikz',
-    'sphinx_sitemap',                                       # Býr til sitemap.xml skrá
+    'sphinx_copybutton',                                    # Takki til að taka afrit af kóðablokkum
+    'sphinx_sitemap',                                       # Búa til sitemap.xml skrá
 ]
 root_doc = 'index'                                          # Aðal skrá verkefnis
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']     # Útiloka þessar skrár
@@ -197,7 +198,7 @@ html_theme_options = {
     "header_links_before_dropdown": 2,                      # Hversu margar síður birtast í header áður en að "More" takkinn tekur við
     "header_dropdown_text": "Meira",                        # Íslenskur texti fyrir "More" takkann
     "back_to_top_button": False,                            # Fjarlægja "Efst á síðu" takkann
-#    "announcement": "My announcement!",                     # Tilkynning efst á síðunni
+    #"announcement": "My announcement!",                     # Tilkynning efst á síðunni
 
     # Icon og tenglar inn á samfélagsmiðla
     "icon_links": [
@@ -238,36 +239,36 @@ html_theme_options = {
         },
     ],
     "secondary_sidebar_items": {
-        "**": ["rubik-page-toc", "rubik-pdf", "rubik-sourcelink", "rubik-edit-this-page"],
-        "genindex": [],
-        "search": [],
+        "**": ["rubik-page-toc", "rubik-pdf", "rubik-sourcelink", "rubik-edit-this-page"],      # LAYOUT - Sýna þetta á öllum síðum
+        "genindex": [],                                                                         # LAYOUT - Tómt í genindex
+        "search": [],                                                                           # LAYOUT - Tómt í search
     },
-    "show_prev_next": False,
-    "article_header_start": [],
-    "footer_end": [],
-    "navbar_end": ["theme-switcher"],
-    "navbar_persistent": ["search-button-field"],
-    "footer_start": ["rubik-copyright.html"],
+    "show_prev_next": False,                                                                    # Ekki sýna "fyrri síða" og "næsta síða" takka neðst í content
+    "article_header_start": [],                                                                 # LAYOUT - Hér er hægt að hafa t.d. breadcrumbs
+    "footer_end": [],                                                                           # LAYOUT
+    "navbar_end": ["theme-switcher"],                                                           # LAYOUT
+    "navbar_persistent": ["search-button-field"],                                               # LAYOUT - Þetta fer ekki inn í primary sidebar á mobile
+    "footer_start": ["rubik-copyright"],                                                        # LAYOUT
 }
-html_title = project                            # Seinni hlutinn í <title> í HTML sóttur úr "project"
-html_short_title = 'Ritsafn'                    # Stuttur title notaður í tenglum í "header" og í HTML Help Docs
-html_baseurl = 'https://rit.rubik.is/'          # Notað í URLs í sitemap.xml
+html_title = project                                                                            # Seinni hlutinn í <title> í HTML sóttur úr "project"
+html_short_title = 'Ritsafn'                                                                    # Stuttur title notaður í tenglum í "header" og í HTML Help Docs
+html_baseurl = 'https://rit.rubik.is/'                                                          # Notað í URLs í sitemap.xml
 
 html_context = {
-    "github_version": "main",                   # Skilgreining fyrir tengil í "Edit on GitHub" takkanum
-    "github_user": "rubikrvk",                  # Skilgreining fyrir tengil í "Edit on GitHub" takkanum
-    "github_repo": "ritsafn",                   # Skilgreining fyrir tengil í "Edit on GitHub" takkanum
-    "doc_path": "rit",                          # Skilgreining fyrir tengil í "Edit on GitHub" takkanum
+    "github_version": "main",                                                                   # Skilgreining fyrir tengil í "Edit on GitHub" takkanum
+    "github_user": "rubikrvk",                                                                  # Skilgreining fyrir tengil í "Edit on GitHub" takkanum
+    "github_repo": "ritsafn",                                                                   # Skilgreining fyrir tengil í "Edit on GitHub" takkanum
+    "doc_path": "rit",                                                                          # Skilgreining fyrir tengil í "Edit on GitHub" takkanum
 }
-html_css_files = ['custom.css']                 # Slóð á CSS skrár
-html_static_path = ['_static']                  # Slóð á "static" skrár
+html_css_files = ['custom.css']                                                                 # Slóð á CSS skrár
+html_static_path = ['_static']                                                                  # Slóð á "static" skrár
 html_sidebars = {
-    "**": ["rubik-sidebar-nav-section", "rubik-icon-links"],
-    "index": ["rubik-sidebar-nav-root", "rubik-icon-links"],
-    "search": ["rubik-sidebar-nav-root", "rubik-icon-links"],
+    "**": ["rubik-sidebar-nav-section", "rubik-icon-links"],                                    # LAYOUT - Sýna þetta á öllum síðum
+    "index": ["rubik-sidebar-nav-root", "rubik-icon-links"],                                    # LAYOUT - Sýna fyrirsögnina "Yfirlit" í index
+    "search": ["rubik-sidebar-nav-root", "rubik-icon-links"],                                   # LAYOUT - Sýna fyrirsögnina "Yfirlit" í search
 }
-html_show_copyright = False                     # Slökkt á default texta um höfundarrétt í HTML
-html_show_sphinx = False                        # Slökkt á "Created using Sphinx" texta í HTML
+html_show_copyright = False                                                                     # Slökkt á default texta um höfundarrétt í HTML
+html_show_sphinx = False                                                                        # Slökkt á "Created using Sphinx" texta í HTML
 
 
 
@@ -430,7 +431,7 @@ tikz_latex_args = [r"-shell-escape"]
 
 # -- sphinx_sitemap configuration --------------------------------------------
 
-sitemap_url_scheme = "{link}"                               # Fjarlægir "/is" hlutann úr URLs í sitemap.xml
+sitemap_url_scheme = "{link}"                               # Fjarlægja "/is" hlutann úr URLs í sitemap.xml
 
 
 
