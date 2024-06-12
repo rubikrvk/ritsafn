@@ -1,0 +1,44 @@
+{% extends "pydata_sphinx_theme/layout.html" %}
+
+{% block htmltitle %}
+{% if not embedded and docstitle %}
+
+
+
+
+
+{# "docstitle" skipt út fyrir "project", sem override-ar "html_title" í conf.py #}
+
+  {%- set titlesuffix = " | " + project|e %}
+{% else %}
+  {%- set titlesuffix = "" %}
+{% endif %}
+
+
+
+
+
+
+{# Athugar hvort "title" innihaldi </span> tag, sem það gerir bara ef toctree er stillt á :numbered: #}
+
+{%- if '</span>' in title %}
+
+
+
+
+
+{# Ef </span> tag er til staðar, þá er "title" það sem er fyrir aftan </span> (selector [1]) #}
+
+  {%- set cleaned_title = title.split('</span>')[1] %}
+{%- else %}
+
+
+
+
+
+  {# Ef </span> tag er ekki til staðar, þá er "title" óbreyttur (á bara við ef toctree er ekki stillt á :numbered:)  #}
+
+  {%- set cleaned_title = title %}
+{%- endif %}
+<title>{{ cleaned_title|striptags|e }}{{ titlesuffix }}</title>
+{% endblock %}

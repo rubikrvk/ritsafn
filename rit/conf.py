@@ -250,10 +250,7 @@ html_theme_options = {
     "navbar_persistent": ["search-button-field"],                                               # LAYOUT - Þetta fer ekki inn í primary sidebar á mobile
     "footer_start": ["rubik-copyright"],                                                        # LAYOUT
 }
-html_title = project                                                                            # Seinni hlutinn í <title> í HTML sóttur úr "project"
-html_short_title = 'Ritsafn'                                                                    # Stuttur title notaður í tenglum í "header" og í HTML Help Docs
 html_baseurl = 'https://rit.rubik.is/'                                                          # Notað í URLs í sitemap.xml
-
 html_context = {
     "github_version": "main",                                                                   # Skilgreining fyrir tengil í "Edit on GitHub" takkanum
     "github_user": "rubikrvk",                                                                  # Skilgreining fyrir tengil í "Edit on GitHub" takkanum

@@ -1,8 +1,8 @@
 .. meta::
    :keywords: fjármál, hagfræði, verðtrygging
 
-Velkomin test
-=============
+Velkomin
+========
 
 .. index::
    single: index hugtak í rót
