@@ -1,4 +1,4 @@
-{%- set sidebar_nav_html_top = generate_toctree_html(
+{%- set rubik_sidebar_nav_section = generate_toctree_html(
   "sidebar",
   startdepth=0,
   show_nav_level=theme_show_nav_level | int,
@@ -10,6 +10,6 @@
 
 <nav class="bd-docs-nav bd-links" aria-label="{{ _('Section Navigation') }}">
   <div class="bd-toc-item navbar-nav">
-    {{ sidebar_nav_html_top }}
+    {{ rubik_sidebar_nav_section }}
   </div>
 </nav>

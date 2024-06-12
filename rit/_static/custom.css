@@ -34,7 +34,7 @@ html[data-theme="dark"] .bd-content img[src*=".svg"]:not(.only-dark):not(.dark-l
 /* Setja sama style og er í toctree caption á eftirfarandi fyrirsagnir */
 .page-toc.tocsection.onthispage,
 .rubik-social-media-text,
-.rubik-sidebar-nav-section-top {
+.rubik-sidebar-nav-root {
   font-weight: var(--pst-sidebar-header-font-weight);
   margin-bottom: 0.5rem;
 }
@@ -199,7 +199,7 @@ nav.bd-links {
   margin-bottom: 4rem;
 }
 
-/* Slökkva á navbar-nav undir 960px, þar sem rubik-sidebar-nav-section-top.html kemur í staðinn */
+/* Slökkva á navbar-nav undir 960px, þar sem rubik-sidebar-nav-*.html kemur í staðinn */
 @media (max-width: 960px) {
   .bd-navbar-elements.navbar-nav {
     display: none;
@@ -211,7 +211,7 @@ nav.bd-links {
   margin-bottom: -0.5rem;
 }
 
-/* Láta padding í nav.bd-links vera eins og í rubik-sidebar-nav-section-top.html */
+/* Láta padding í nav.bd-links vera eins og í rubik-sidebar-nav-*.html */
 nav.bd-links li > a {
   padding: 0.25rem 1rem;
 }
