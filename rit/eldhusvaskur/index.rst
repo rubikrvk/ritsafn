@@ -1,7 +1,7 @@
 Eldhúsvaskur
 ============
 
-Og svo vil ég indexa þetta :index:`hugtak í eldhúsvaski`.
+Og svo vil ég test indexa þetta :index:`hugtak í eldhúsvaski`.
 
 Setjum :math:`6b_y=-6b_x` inn og fáum:
 

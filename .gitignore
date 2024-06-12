@@ -65,7 +65,7 @@ instance/
 .scrapy
 
 # Sphinx documentation
-rit/_build/
+**/_build/
 .dirtree
 .doctrees
 
