@@ -25,10 +25,10 @@ jobs:
           lfs: false
 
       - name: ALL
-        uses: ./yaml/azure-ritsafn-all
+        uses: ./yml/azure-ritsafn-all
 
       - name: DEV
-        uses: ./yaml/azure-ritsafn-dev
+        uses: ./yml/azure-ritsafn-dev
 
       - name: DEV - Build And Deploy
         id: dev-builddeploy
