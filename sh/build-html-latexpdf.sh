@@ -4,7 +4,7 @@ cd rit
 make clean
 make html
 find _build/html/ -name "*.html" -exec prettier --config ../json/.prettierrc.json --write {} +
-cp -f ../js/copybutton.js _build/html/_static/
+cp -f ../js/copybutton-is.js _build/html/_static/copybutton.js
 make latexpdf
 mv _build/latex/*.pdf _build/html/
 for dir in */ ; do
