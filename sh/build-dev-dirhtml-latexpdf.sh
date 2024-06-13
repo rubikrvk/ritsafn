@@ -3,7 +3,7 @@
 # Búa til HTML skrár með "-b dirhtml" (sem lætur alla hlekki vísa á "<slóð>/", en ekki á "<slóð>/<skrá>.html" eins og "-b html" gerir)
 cd rit
 make clean
-sphinx-build -b dirhtml . _build/html
+sphinx-build -b dirhtml -t dev . _build/html
 
 # Keyra Prettier á allar HTML skrár
 find _build/html/ -name "*.html" -exec prettier --config ../json/.prettierrc.json --write {} +

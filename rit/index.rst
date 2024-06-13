@@ -114,3 +114,16 @@ Samanber :numref:`kodabalkur`, þá er þetta mjög flottur kóði.
    eldhusvaskur/index
    genindex
    Rubik.is <https://www.rubik.is>
+
+.. only:: dev
+
+   .. toctree::
+      :maxdepth: 7
+
+      eldhusvaskur/index
+
+.. toctree::
+   :maxdepth: 7
+
+   genindex
+   Rubik.is <https://www.rubik.is>
