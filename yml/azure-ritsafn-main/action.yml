@@ -3,6 +3,11 @@ runs:
   using: 'composite'
   steps:
 
+    - name: MAIN - Build Sphinx documentation
+      run: |
+        sh/build-main-dirhtml-latexpdf.sh
+      shell: bash
+
     - name: MAIN - Add staticwebapp.config.json
       run: |
         mv json/azure-ritsafn-main/staticwebapp.config.json rit/_build/html/

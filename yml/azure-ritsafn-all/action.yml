@@ -28,8 +28,3 @@ runs:
     - name: ALL - Install Prettier
       run: npm install --global prettier
       shell: bash
-
-    - name: ALL - Build Sphinx documentation
-      run: |
-        sh/build-dirhtml-latexpdf.sh
-      shell: bash

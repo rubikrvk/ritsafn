@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Búa til HTML skrár með "-b dirhtml" (sem lætur alla hlekki vísa á "<slóð>/" í staðinn fyrir "<slóð>/<skrá>.html")
+# Búa til HTML skrár með "-b dirhtml" (sem lætur alla hlekki vísa á "<slóð>/", en ekki á "<slóð>/<skrá>.html" eins og "-b html" gerir)
 cd rit
 make clean
 sphinx-build -b dirhtml . _build/html
