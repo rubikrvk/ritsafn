@@ -129,7 +129,26 @@ extensions = [
     'sphinx_sitemap',                                       # Búa til sitemap.xml skrá
 ]
 root_doc = 'index'                                          # Aðal skrá verkefnis
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']     # Útiloka þessar skrár
+
+
+
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'fjarmal-einstaklinga/*']     # Útiloka þessar skrár
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 templates_path = ['_templates']                             # Slóð á "templates" skrár
 numfig = True                                               # Sjálfvirk tölusetning í HTML á figures, tables og code-blocks
 numfig_format = {
@@ -459,3 +478,6 @@ def setup(app):
 
     # Tengja add_data_attributes fallið við 'html-page-context' atburðinn í Sphinx
     app.connect('html-page-context', add_data_attributes)
+
+
+
