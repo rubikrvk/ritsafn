@@ -128,28 +128,16 @@ extensions = [
     'sphinx_copybutton',                                    # Takki til að taka afrit af kóðablokkum
     'sphinx_sitemap',                                       # Búa til sitemap.xml skrá
 ]
+
 root_doc = 'index'                                          # Aðal skrá verkefnis
 
-
-
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'fjarmal-einstaklinga/*']     # Útiloka þessar skrár
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']     # Útiloka þetta alltaf
+suppress_warnings = ['toc.excluded']                        # Slökkva á viðvörunum um að skrár í excluded_patterns séu ennþá í toctree
+if not tags.has('dev'): # type: ignore[name-defined]        # Slökkva á viðvörunum frá Pylance linter í VS Code
+    exclude_patterns.append('eldhusvaskur/*')               # Útiloka þetta, nema "-t dev" sé notað í "sphinx-build"
 
 templates_path = ['_templates']                             # Slóð á "templates" skrár
+
 numfig = True                                               # Sjálfvirk tölusetning í HTML á figures, tables og code-blocks
 numfig_format = {
     'figure': 'Mynd %s',                                    # Snið fyrir tölusetningu mynda

@@ -106,24 +106,15 @@ Samanber :numref:`kodabalkur`, þá er þetta mjög flottur kóði.
 
 12 Hér er asdf smá texti frá rit/index.rst.
 
+.. only:: dev
+
+   This content is only included in the development version of the documentation.
+
 .. toctree::
-   :maxdepth: 7
+   :maxdepth: 1
 
    fjarmal-einstaklinga/index
    fjarmal-fyrirtaekja/index
    eldhusvaskur/index
-   genindex
-   Rubik.is <https://www.rubik.is>
-
-.. only:: dev
-
-   .. toctree::
-      :maxdepth: 7
-
-      eldhusvaskur/index
-
-.. toctree::
-   :maxdepth: 7
-
    genindex
    Rubik.is <https://www.rubik.is>

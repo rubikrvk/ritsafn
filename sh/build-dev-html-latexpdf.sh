@@ -22,7 +22,7 @@ for dir in */ ; do
   # Athuga hvort undirmappa byrji ekki á "_" (til að útiloka "_build", "_locale", "_static", "_templates", o.s.frv.)
   if [[ "$dir" != _* ]]; then
 
-    # Athuga hvort tiltekin mappa sé til í rit/_build/html (hún er það ekki, ef mappan er t.d. í exclude_patternsí conf.py)
+    # Athuga hvort tiltekin mappa sé til í rit/_build/html (hún á ekki að vera til ef mappan er tilgreind í exclude_patterns í conf.py)
     if [[ -d "_build/html/${dir%/}/" ]]; then
 
       # Fara í undirmöppu og búa til PDF skrár

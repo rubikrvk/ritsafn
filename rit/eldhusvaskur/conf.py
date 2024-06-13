@@ -50,7 +50,7 @@ def setup(app):
     
     def update_config_values(app):
         if app.builder.name in ['latex', 'latexpdf']:
-            app.config.numfig = True                        # UPPFÆRT - Sjálfvirk tölusetning í LaTeX á figures, tables og code-blocks
+            app.config.numfig = True                        # ÓBREYTT - Þarf samt að endurtaka hér fyrir föll
             app.config.numfig_secnum_depth = 1              # UPPFÆRT - Dýpt á sjálfvirkri tölusetning í LaTeX // 0 = tölusetning er frá 1 upp í n // 1 = tölusetning er frá x.1 upp í x.n // 2 = tölusetning er frá x.y.1 upp í x.y.n // o.s.frv.
     
     # ÓBREYTT - Þarf samt að endurtaka hér fyrir föll
@@ -63,8 +63,8 @@ def setup(app):
 # -- Options for internationalization ----------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-internationalization
 
-language = 'is'     # Skráð <html lang="is" ...> í HTML og íslenska notuð þar sem það á við
-locale_dirs = ['../_locale']
+language = 'is'                         # Skráð <html lang="is" ...> í HTML og íslenska notuð þar sem það á við
+locale_dirs = ['../_locale']            # UPPFÆRT - Mappan "_locale" er staðsett í næstu möppu fyrir ofan
 
 
 
@@ -73,7 +73,7 @@ locale_dirs = ['../_locale']
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_static_path = ['../_static']               # UPPFÆRT - Slóð á "static" skrár
+html_static_path = ['../_static']      # UPPFÆRT - Mappan "_static" er staðsett í næstu möppu fyrir ofan
 
 
 
@@ -118,5 +118,5 @@ latex_documents = [
      info,                         # ÓBREYTT - Þarf samt að endurtaka hér fyrir föll
      'manual'),                    # ÓBREYTT - Þarf samt að endurtaka hér fyrir föll
 ]
-latex_logo = '../_static/rubik-cover.png'                           # UPPFÆRT - Mynd á forsíðu
+latex_logo = '../_static/rubik-cover.png'                           # UPPFÆRT - Mappan "_static" er staðsett í næstu möppu fyrir ofan
 latex_toplevel_sectioning = 'chapter'                               # UPPFÆRT - toplevel_sectioning skráð sem Kafli (chapter)
