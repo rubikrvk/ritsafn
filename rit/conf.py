@@ -131,10 +131,30 @@ extensions = [
 
 root_doc = 'index'                                          # Aðal skrá verkefnis
 
+
+
+
+
+
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']     # Útiloka þetta alltaf
 suppress_warnings = ['toc.excluded']                        # Slökkva á viðvörunum um að skrár í excluded_patterns séu ennþá í toctree
-if not tags.has('dev'): # type: ignore[name-defined]        # Slökkva á viðvörunum frá Pylance linter í VS Code
+
+# Ensure the tags variable is defined
+try:
+    tags
+except NameError:
+    tags = None
+
+if tags and not tags.has('dev'):
     exclude_patterns.append('eldhusvaskur/*')               # Útiloka þetta, nema "-t dev" sé notað í "sphinx-build"
+
+
+
+
+
+
+
+
 
 templates_path = ['_templates']                             # Slóð á "templates" skrár
 
