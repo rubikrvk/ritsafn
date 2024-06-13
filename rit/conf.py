@@ -139,14 +139,19 @@ root_doc = 'index'                                          # Aðal skrá verkef
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']     # Útiloka þetta alltaf
 suppress_warnings = ['toc.excluded']                        # Slökkva á viðvörunum um að skrár í excluded_patterns séu ennþá í toctree
 
-# Ensure the tags variable is defined
-try:
-    tags
-except NameError:
-    tags = None
 
-if tags and not tags.has('dev'):
-    exclude_patterns.append('eldhusvaskur/*')               # Útiloka þetta, nema "-t dev" sé notað í "sphinx-build"
+
+
+
+
+# Ensure the tags variable is defined
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']     # Útiloka þetta alltaf
+suppress_warnings = ['toc.excluded']                        # Slökkva á viðvörunum um að skrár í excluded_patterns séu ennþá í toctree
+
+
+# Check if tags is defined and not None
+if 'tags' in globals() and not tags.has('dev'):
+    exclude_patterns.append('eldhusvaskur/*')
 
 
 
