@@ -11,7 +11,7 @@ find _build/html/ -name "*.html" -exec prettier --config ../json/.prettierrc.jso
 # Bæta við íslenskum þýðingum fyrir sphinx_copybutton
 cp -f ../js/copybutton-is.js _build/html/_static/copybutton.js
 
-# Búa til PDF fyrir öll rit, færa í rótarmöppu og eyða út _build/latex/
+# Búa til PDF skrá fyrir "rit/", færa í "_build/html/" og eyða út "_build/latex/"
 make latexpdf
 mv _build/latex/*.pdf _build/html/
 rm -rf _build/latex/
@@ -22,7 +22,7 @@ for dir in */ ; do
   # Athuga hvort undirmappa byrji ekki á "_" (til að útiloka "_build", "_locale", "_static", "_templates", o.s.frv.)
   if [[ "$dir" != _* ]]; then
 
-    # Athuga hvort tiltekin mappa sé til í rit/_build/html (hún á ekki að vera til ef mappan er tilgreind í exclude_patterns í conf.py)
+    # Athuga hvort tiltekin mappa sé til í "rit/_build/html/" (hún á ekki að vera til ef mappan er tilgreind í exclude_patterns í conf.py)
     if [[ -d "_build/html/${dir%/}/" ]]; then
 
       # Fara í undirmöppu og búa til PDF skrár
@@ -30,7 +30,7 @@ for dir in */ ; do
       make clean
       make latexpdf
 
-      # Færa PDF skrár í undirmöppu og eyða út _build/
+      # Færa PDF skrár í undirmöppu og eyða út "_build/"
       mv _build/latex/*.pdf "../_build/html/${dir%/}/"
       rm -rf _build/
       cd ..

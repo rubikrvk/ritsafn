@@ -55,6 +55,10 @@ Samanber :numref:`stormynd3`, þá er þetta mjög flott.
 
 Samanber :numref:`prufutafla3`, þá er þetta mjög flott tafla.
 
+.. only:: dev
+
+   This content is only included in the development version of the documentation.
+
 .. toctree::
    :numbered:
    :maxdepth: 6

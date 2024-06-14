@@ -3,6 +3,10 @@ Fjármál einstaklinga
 
 Og svo vil ég indexa þetta :index:`hugtak í fjarmal einstaklinga`.
 
+.. only:: dev
+
+   This content is only included in the development version of the documentation.
+
 .. toctree::
    :numbered:
    :maxdepth: 6

@@ -123,7 +123,6 @@ copyright = [
 
 # Notaðar viðbætur
 extensions = [
-    'sphinx_togglebutton',
     'sphinxcontrib.tikz',
     'sphinx_copybutton',                                    # Takki til að taka afrit af kóðablokkum
     'sphinx_sitemap',                                       # Búa til sitemap.xml skrá
@@ -131,45 +130,21 @@ extensions = [
 
 root_doc = 'index'                                          # Aðal skrá verkefnis
 
-
-
-
-
-
+# Skrár sem á að útiloka í "build-*.sh"
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']     # Útiloka þetta alltaf
-suppress_warnings = ['toc.excluded']                        # Slökkva á viðvörunum um að skrár í excluded_patterns séu ennþá í toctree
-
-
-
-
-
-
-# Ensure the tags variable is defined
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']     # Útiloka þetta alltaf
-suppress_warnings = ['toc.excluded']                        # Slökkva á viðvörunum um að skrár í excluded_patterns séu ennþá í toctree
-
-
-# Check if tags is defined and not None
-if 'tags' in globals() and not tags.has('dev'):
-    exclude_patterns.append('eldhusvaskur/*')
-
-
-
-
-
-
-
-
+tags = globals().get('tags')                                # Sækja "tags" úr globals() ef það er til staðar, annars skilgreina sem "None" (tags = None)
+if tags and 'dev' not in tags:                              # Athuga hvort "tags" sé ekki "None", og hvort það sé ekki 'dev'
+    exclude_patterns.append('eldhusvaskur/*')               # Útiloka þetta, nema "-t dev" sé notað í "build-*.sh"
+#    exclude_patterns.append('mappa/*')                      # Útiloka þetta, nema "-t dev" sé notað í "build-*.sh"
 
 templates_path = ['_templates']                             # Slóð á "templates" skrár
-
+suppress_warnings = ['toc.excluded']                        # Slökkva á viðvörunum um að skrár (t.d. í "exclude_patterns") séu ennþá í toctree
 numfig = True                                               # Sjálfvirk tölusetning í HTML á figures, tables og code-blocks
 numfig_format = {
     'figure': 'Mynd %s',                                    # Snið fyrir tölusetningu mynda
     'table': 'Tafla %s',                                    # Snið fyrir tölusetningu taflna
     'code-block': 'Kóðablokk %s',                           # Snið fyrir tölusetningu kóðablokka
 }
-
 numfig_secnum_depth = 1                                     # Dýpt á sjálfvirkri tölusetningu í HTML // 0 = tölusetning er frá 1 upp í n // 1 = tölusetning er frá x.1 upp í x.n // 2 = tölusetning er frá x.y.1 upp í x.y.n // o.s.frv.
 
 # Föll til að bæta við mismunandi numfig og numfig_secnum_depth í HTML annars vegar og í LaTeX hins vegar

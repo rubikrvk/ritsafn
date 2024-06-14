@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Búa til HTML skrár með "-b dirhtml" (sem lætur alla hlekki vísa á "<slóð>/", en ekki á "<slóð>/<skrá>.html" eins og "-b html" gerir)
+# Búa til HTML skrár með "-b dirhtml -t dev" (sem lætur alla hlekki vísa á "<slóð>/", en ekki á "<slóð>/<skrá>.html" eins og "-b html" gerir)
 cd rit
 make clean
 sphinx-build -b dirhtml -t dev . _build/html
@@ -11,8 +11,8 @@ find _build/html/ -name "*.html" -exec prettier --config ../json/.prettierrc.jso
 # Bæta við íslenskum þýðingum fyrir sphinx_copybutton
 cp -f ../js/copybutton-is.js _build/html/_static/copybutton.js
 
-# Búa til PDF fyrir öll rit, færa í rótarmöppu og eyða út _build/latex/
-make latexpdf
+# Búa til PDF skrá fyrir "rit/" með "-t dev", færa í "_build/html/" og eyða út "_build/latex/"
+make latexpdf SPHINXOPTS="-t dev"
 mv _build/latex/*.pdf _build/html/
 rm -rf _build/latex/
 
@@ -22,15 +22,15 @@ for dir in */ ; do
   # Athuga hvort undirmappa byrji ekki á "_" (til að útiloka "_build", "_locale", "_static", "_templates", o.s.frv.)
   if [[ "$dir" != _* ]]; then
 
-    # Athuga hvort tiltekin mappa sé til í rit/_build/html (hún á ekki að vera til ef mappan er tilgreind í exclude_patterns í conf.py)
+    # Athuga hvort tiltekin mappa sé til í "rit/_build/html/" (hún á ekki að vera til ef mappan er tilgreind í exclude_patterns í conf.py)
     if [[ -d "_build/html/${dir%/}/" ]]; then
 
-      # Fara í undirmöppu og búa til PDF skrár
+      # Fara í undirmöppu og búa til PDF skrár með "-t dev"
       cd "$dir"
       make clean
-      make latexpdf
+      make latexpdf SPHINXOPTS="-t dev"
 
-      # Færa PDF skrár í undirmöppu og eyða út _build/
+      # Færa PDF skrár í undirmöppu og eyða út "_build/"
       mv _build/latex/*.pdf "../_build/html/${dir%/}/"
       rm -rf _build/
       cd ..
