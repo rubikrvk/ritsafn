@@ -5,6 +5,9 @@ cd rit
 make clean
 sphinx-build -b html -t dev . _build/html
 
+# Bæta "noindex, nofollow" við <head> í öllum HTML skrám
+find _build/html/ -name '*.html' -exec sed -i '' -e 's/<head>/<head>\n<meta name="robots" content="noindex, nofollow">/' {} +
+
 # Keyra Prettier á allar HTML skrár
 find _build/html/ -name "*.html" -exec prettier --config ../json/.prettierrc.json --write {} +
 

@@ -13,11 +13,6 @@ runs:
         mv json/azure-ritsafn-dev/staticwebapp.config.json rit/_build/html/
       shell: bash
 
-    - name: DEV - Add meta tag to HTML
-      run: |
-        find rit/_build/html -name '*.html' -exec sed -i 's/<head>/<head>\n    <meta name="robots" content="noindex, nofollow">/' {} +
-      shell: bash
-
     - name: DEV - Delete sitemap.xml
       run: |
         rm rit/_build/html/sitemap.xml
