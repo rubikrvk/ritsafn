@@ -9,7 +9,8 @@ Og svo vil ég indexa þetta :index:`hugtak í fjarmal einstaklinga`.
 
 .. toctree::
    :numbered:
-   :maxdepth: 6
+   :maxdepth: 3
+   :hidden:
 
    inngangur-ad-fjarmalum/index
    fjarhagsleg-markmid/index

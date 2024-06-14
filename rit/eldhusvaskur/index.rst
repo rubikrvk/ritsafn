@@ -61,7 +61,8 @@ Samanber :numref:`prufutafla3`, þá er þetta mjög flott tafla.
 
 .. toctree::
    :numbered:
-   :maxdepth: 6
+   :maxdepth: 3
+   :hidden:
 
    admonitions/index
    blocks/index

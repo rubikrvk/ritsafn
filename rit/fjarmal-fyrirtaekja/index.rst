@@ -61,7 +61,8 @@ Samanber :numref:`prufutafla2`, þá er þetta mjög flott tafla.
 
 .. toctree::
    :numbered:
-   :maxdepth: 6
+   :maxdepth: 3
+   :hidden:
 
    fjarmalastjornun/index
    vextir/index

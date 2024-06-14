@@ -2,7 +2,8 @@ Admonitions
 ===========
 
 .. toctree::
-   :maxdepth: 6
+   :maxdepth: 1
+   :hidden:
 
    admonitions-1/index
    admonitions-2/index

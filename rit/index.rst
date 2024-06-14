@@ -111,7 +111,8 @@ Samanber :numref:`kodabalkur`, þá er þetta mjög flottur kóði.
    This content is only included in the development version of the documentation.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 4
+   :hidden:
 
    fjarmal-einstaklinga/index
    fjarmal-fyrirtaekja/index
