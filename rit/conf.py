@@ -133,7 +133,7 @@ root_doc = 'index'                                          # Aðal skrá verkef
 # Skrár sem á að útiloka í "build-*.sh"
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']     # Útiloka þetta alltaf
 tags = globals().get('tags')                                # Sækja "tags" úr globals() ef það er til staðar, annars skilgreina sem "None" (tags = None)
-if tags and 'dev' not in tags:                              # Athuga hvort "tags" sé ekki "None", og hvort það sé ekki 'dev'
+if tags and 'dev' not in tags:                              # Athuga hvort "tags" sé ekki "None", og hvort það sé ekki "dev"
     exclude_patterns.append('eldhusvaskur/*')               # Útiloka þetta, nema "-t dev" sé notað í "build-*.sh"
 #    exclude_patterns.append('mappa/*')                      # Útiloka þetta, nema "-t dev" sé notað í "build-*.sh"
 
