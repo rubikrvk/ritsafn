@@ -189,7 +189,7 @@ math_eqref_format = '({number})'                # Snið fyrir tölusetningu fyri
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'pydata_sphinx_theme'                          # Setur <html lang="is" ...> í HTML og notar íslensku þar sem það á við
+html_theme = 'pydata_sphinx_theme'                          # Velja theme
 html_theme_options = {
     "logo": {
         "alt_text": "Ritsafn RÚBIK Reykjavíkur",            # Alt texti fyrir logo
@@ -367,7 +367,7 @@ latex_elements = {
         \titleformat{\subparagraph}
             {\normalfont\normalsize\bfseries\color{black}}{\thesubparagraph}{1em}{}
 
-    % Skrá " endash " í staðinn fyrir ": " á milli numfig_format og caption, og gera numfig_format italic
+    % Skrá " endash " í staðinn fyrir ": " á milli numfig_format og caption, og gera numfig_format bold
         \usepackage{caption}
         \captionsetup{labelsep=endash, labelfont={bf}}
     '''
