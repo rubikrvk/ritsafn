@@ -1,4 +1,4 @@
-# -- Project information -----------------------------------------------------smá aftur
+# -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 projectid = 'RUBIK-oll-rit-sameinud'    # Nafn á .tex og .pdf skrám í LaTeX (verður að vera 'RUBIK-oll-rit-sameinud' fyrir "Sækja PDF" takkann)
