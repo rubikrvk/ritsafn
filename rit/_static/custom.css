@@ -4,7 +4,7 @@
   font-family: "DIN Next";
   font-weight: 200;
   font-style: normal;
-  font-display: swap;
+  /* font-display: swap; */
   src: url('xclusive/dinnext_n2.woff2') format('woff2'),
        url('xclusive/dinnext_n2.woff') format('woff');
 }
@@ -13,7 +13,7 @@
   font-family: "DIN Next";
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
+  /* font-display: swap; */
   src: url('xclusive/dinnext_n3.woff2') format('woff2'),
        url('xclusive/dinnext_n3.woff') format('woff');
 }
@@ -22,7 +22,7 @@
   font-family: "DIN Next";
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  /* font-display: swap; */
   src: url('xclusive/dinnext_n4.woff2') format('woff2'),
        url('xclusive/dinnext_n4.woff') format('woff');
 }
@@ -31,7 +31,7 @@
   font-family: "DIN Next";
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  /* font-display: swap; */
   src: url('xclusive/dinnext_n5.woff2') format('woff2'),
        url('xclusive/dinnext_n5.woff') format('woff');
 }
@@ -40,7 +40,7 @@
   font-family: "DIN Next";
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
+  /* font-display: swap; */
   src: url('xclusive/dinnext_n7.woff2') format('woff2'),
        url('xclusive/dinnext_n7.woff') format('woff');
 }
@@ -49,7 +49,7 @@
   font-family: "DIN Next";
   font-weight: 800;
   font-style: normal;
-  font-display: swap;
+  /* font-display: swap; */
   src: url('xclusive/dinnext_n8.woff2') format('woff2'),
        url('xclusive/dinnext_n8.woff') format('woff');
 }
@@ -58,7 +58,7 @@
   font-family: "DIN Next";
   font-weight: 900;
   font-style: normal;
-  font-display: swap;
+  /* font-display: swap; */
   src: url('xclusive/dinnext_n9.woff2') format('woff2'),
        url('xclusive/dinnext_n9.woff') format('woff');
 }
@@ -69,7 +69,7 @@
   font-family: "Georgia Pro";
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
+  /* font-display: swap; */
   src: url('xclusive/georgiapro_n3.woff2') format('woff2'),
        url('xclusive/georgiapro_n3.woff') format('woff');
 }
@@ -78,7 +78,7 @@
   font-family: "Georgia Pro";
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  /* font-display: swap; */
   src: url('xclusive/georgiapro_n4.woff2') format('woff2'),
        url('xclusive/georgiapro_n4.woff') format('woff');
 }
@@ -87,7 +87,7 @@
   font-family: "Georgia Pro";
   font-weight: 600;
   font-style: normal;
-  font-display: swap;
+  /* font-display: swap; */
   src: url('xclusive/georgiapro_n6.woff2') format('woff2'),
        url('xclusive/georgiapro_n6.woff') format('woff');
 }
@@ -96,7 +96,7 @@
   font-family: "Georgia Pro";
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
+  /* font-display: swap; */
   src: url('xclusive/georgiapro_n7.woff2') format('woff2'),
        url('xclusive/georgiapro_n7.woff') format('woff');
 }
@@ -105,7 +105,7 @@
   font-family: "Georgia Pro";
   font-weight: 900;
   font-style: normal;
-  font-display: swap;
+  /* font-display: swap; */
   src: url('xclusive/georgiapro_n9.woff2') format('woff2'),
        url('xclusive/georgiapro_n9.woff') format('woff');
 }
@@ -114,7 +114,7 @@
   font-family: "Georgia Pro";
   font-weight: 400;
   font-style: italic;
-  font-display: swap;
+  /* font-display: swap; */
   src: url('xclusive/georgiapro_i4.woff2') format('woff2'),
        url('xclusive/georgiapro_i4.woff') format('woff');
 }
@@ -123,7 +123,7 @@
   font-family: "Georgia Pro";
   font-weight: 700;
   font-style: italic;
-  font-display: swap;
+  /* font-display: swap; */
   src: url('xclusive/georgiapro_i7.woff2') format('woff2'),
        url('xclusive/georgiapro_i7.woff') format('woff');
 }
@@ -132,63 +132,418 @@
 
 @font-face {
   font-family: "Xclusive";
-  font-display: swap;
+  /* font-display: swap; */
   src: url('xclusive/xclusive.woff2') format('woff2'),
        url('xclusive/xclusive.woff') format('woff');
 }
 
 
 
+
+
+/* _fonts.scss */
+
 html {
 
   /* base font size - applied at body/html level */
-  --pst-font-size-base: 1rem;
+  /* --pst-font-size-base: 1rem; */
 
   /* heading font sizes based on bootstrap sizing */
-  --pst-font-size-h1: 2.5rem;
-  --pst-font-size-h2: 2rem;
-  --pst-font-size-h3: 1.75rem;
-  --pst-font-size-h4: 1.5rem;
-  --pst-font-size-h5: 1.25rem;
-  --pst-font-size-h6: 1.1rem;
+  /* --pst-font-size-h1: 2.5rem; */
+  /* --pst-font-size-h2: 2rem; */
+  /* --pst-font-size-h3: 1.75rem; */
+  /* --pst-font-size-h4: 1.5rem; */
+  /* --pst-font-size-h5: 1.25rem; */
+  /* --pst-font-size-h6: 1.1rem; */
 
   /* smaller than heading font sizes */
-  --pst-font-size-milli: 0.9rem;
+  /* --pst-font-size-milli: 0.9rem; */
 
   /* Sidebar styles */
-  --pst-sidebar-font-size: 0.9rem;
-  --pst-sidebar-font-size-mobile: 1.1rem;
-  --pst-sidebar-header-font-size: 1.2rem;
-  --pst-sidebar-header-font-weight: 600;
+  /* --pst-sidebar-font-size: 0.9rem; */
+  /* --pst-sidebar-font-size-mobile: 1.1rem; */
+  /* --pst-sidebar-header-font-size: 1.2rem; */
+  /* --pst-sidebar-header-font-weight: 600; */
 
   /* Admonition styles */
-  --pst-admonition-font-weight-heading: 600;
+  /* --pst-admonition-font-weight-heading: 600; */
 
   /* Font weights */
-  --pst-font-weight-caption: 300;
-  --pst-font-weight-heading: 400;
+  /* --pst-font-weight-caption: 300; */
+  --pst-font-weight-heading: 500;
 
   /* Font family
   /* These are adapted from https://systemfontstack.com/ */
   --pst-font-family-base-system: Inter, Noto, 'Noto Sans', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantrell, 'Helvetica Neue', Arial, Helvetica, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  --pst-font-family-monospace-system: "SFMono-Regular", "Menlo", "Consolas", "Monaco", "Liberation Mono", "Lucida Console", monospace;
-  --pst-font-family-base: var(--pst-font-family-base-system);
-  --pst-font-family-heading: var(--pst-font-family-base-system);
-  --pst-font-family-monospace: var(--pst-font-family-monospace-system);
+  /* --pst-font-family-monospace-system: "SFMono-Regular", "Menlo", "Consolas", "Monaco", "Liberation Mono", "Lucida Console", monospace; */
+  --pst-font-family-base: 'DIN Next', var(--pst-font-family-base-system);
+  --pst-font-family-heading: 'DIN Next', var(--pst-font-family-base-system);
+  /* --pst-font-family-monospace: var(--pst-font-family-monospace-system); */
 }
 
 
 
 
 
+/* body og heading style er í samræmi við rubik.is */
+
+body {
+  letter-spacing: -0.02em;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  line-height: 1.05;
+  font-weight: 700;
+}
 
 
 
 
 
+/* _admonitions.scss */
+
+/* html {
+  --pst-icon-admonition-default: var(--pst-icon-bell);
+  --pst-icon-admonition-note: var(--pst-icon-info-circle);
+  --pst-icon-admonition-attention: var(--pst-icon-exclamation-circle);
+  --pst-icon-admonition-caution: var(--pst-icon-exclamation-triangle);
+  --pst-icon-admonition-warning: var(--pst-icon-exclamation-triangle);
+  --pst-icon-admonition-danger: var(--pst-icon-exclamation-triangle);
+  --pst-icon-admonition-error: var(--pst-icon-times-circle);
+  --pst-icon-admonition-hint: var(--pst-icon-lightbulb);
+  --pst-icon-admonition-tip: var(--pst-icon-lightbulb);
+  --pst-icon-admonition-important: var(--pst-icon-exclamation-circle);
+  --pst-icon-admonition-seealso: var(--pst-icon-share);
+  --pst-icon-admonition-todo: var(--pst-icon-pencil);
+} */
 
 
 
+
+
+/* _icons.scss */
+
+/* html { */
+
+  /* Font size across all icons */
+  /* --pst-font-size-icon: 1.5rem; */
+
+  /* Font Awesome default icons */
+  /* --pst-icon-check-circle: "\f058"; // fa-solid fa-circle-check */
+  /* --pst-icon-info-circle: "\f05a"; // fa-solid fa-circle-info */
+  /* --pst-icon-exclamation-triangle: "\f071"; // fa-solid fa-triangle-exclamation */
+  /* --pst-icon-exclamation-circle: "\f06a"; // fa-solid fa-circle-exclamation */
+  /* --pst-icon-times-circle: "\f057"; // fa-solid fa-circle-xmark */
+  /* --pst-icon-lightbulb: "\f0eb"; // fa-solid fa-lightbulb */
+  /* --pst-icon-download: "\f019"; // fa-solid fa-download */
+  /* --pst-icon-angle-left: "\f104"; // fa-solid fa-angle-left */
+  /* --pst-icon-angle-right: "\f105"; // fa-solid fa-angle-right */
+  /* --pst-icon-external-link: "\f35d"; // fa-solid fa-up-right-from-square */
+  /* --pst-icon-search-minus: "\f010"; // fa-solid fa-magnifying-glass-minus */
+  /* --pst-icon-github: "\f09b"; // fa-brands fa-github */
+  /* --pst-icon-gitlab: "\f296"; // fa-brands fa-gitlab */
+  /* --pst-icon-share: "\f064"; // fa-solid fa-share */
+  /* --pst-icon-bell: "\f0f3"; // fa-solid fa-bell */
+  /* --pst-icon-pencil: "\f303"; // fa-solid fa-pencil */
+
+  /* Bootstrap icons */
+  /* --pst-breadcrumb-divider: "\f105"; */
+/* } */
+
+
+
+
+
+/* _color.scss */
+
+/* html:not([data-theme]) {
+  --pst-color-primary:#0a7d91;
+  --pst-color-primary-bg:#d0ecf1;
+  --pst-color-secondary:#8045e5;
+  --pst-color-secondary-bg:#e0c7ff;
+  --pst-color-accent:#c132af;
+  --pst-color-accent-bg:#f8dff5;
+  --pst-color-info:#276be9;
+  --pst-color-info-bg:#dce7fc;
+  --pst-color-warning:#f66a0a;
+  --pst-color-warning-bg:#f8e3d0;
+  --pst-color-success:#00843f;
+  --pst-color-success-bg:#d6ece1;
+  --pst-color-attention:var(--pst-color-warning);
+  --pst-color-attention-bg:var(--pst-color-warning-bg);
+  --pst-color-danger:#d72d47;
+  --pst-color-danger-bg:#f9e1e4;
+  --pst-color-text-base:#222832;
+  --pst-color-text-muted:#48566b;
+  --pst-color-heading-color:#fff;
+  --pst-color-shadow:rgba(0,0,0,.1);
+  --pst-color-border:#d1d5da;
+  --pst-color-border-muted:rgba(23,23,26,.2);
+  --pst-color-blockquote-notch:#677384;
+  --pst-color-inline-code:#912583;
+  --pst-color-inline-code-links:#085d6c;
+  --pst-color-target:#f3cf95;
+  --pst-color-table:#14181e;
+  --pst-color-table-row-hover-bg:#b780ff;
+  --pst-color-table-inner-border:#e5e7ea;
+  --pst-color-background:#fff;
+  --pst-color-on-background:#fff;
+  --pst-color-surface:#f3f4f5;
+  --pst-color-on-surface:#222832;
+  --pst-color-link:var(--pst-color-primary);
+  --pst-color-link-hover:var(--pst-color-secondary);
+  --pst-color-table-outer-border:var(--pst-color-surface);
+  --pst-color-table-heading-bg:var(--pst-color-surface);
+  --pst-color-table-row-zebra-high-bg:var(--pst-color-on-background);
+  --pst-color-table-row-zebra-low-bg:var(--pst-color-surface)
+} */
+
+/* html[data-theme=light] {
+  --pst-color-primary-bg:#d0ecf1;
+  --pst-color-secondary-bg:#e0c7ff;
+  --pst-color-accent:#c132af;
+  --pst-color-accent-bg:#f8dff5;
+  --pst-color-info-bg:#dce7fc;
+  --pst-color-warning-bg:#f8e3d0;
+  --pst-color-success-bg:#d6ece1;
+  --pst-color-attention:var(--pst-color-warning);
+  --pst-color-attention-bg:var(--pst-color-warning-bg);
+  --pst-color-danger-bg:#f9e1e4;
+  --pst-color-text-base:#222832;
+  --pst-color-text-muted:#48566b;
+  --pst-color-heading-color:#fff;
+  --pst-color-shadow:rgba(0,0,0,.1);
+  --pst-color-border:#d1d5da;
+  --pst-color-border-muted:rgba(23,23,26,.2);
+  --pst-color-blockquote-notch:#677384;
+  --pst-color-inline-code:#912583;
+  --pst-color-inline-code-links:#085d6c;
+  --pst-color-target:#f3cf95;
+  --pst-color-table:#14181e;
+  --pst-color-table-row-hover-bg:#b780ff;
+  --pst-color-table-inner-border:#e5e7ea;
+  --pst-color-background:#fff;
+  --pst-color-on-background:#fff;
+  --pst-color-surface:#f3f4f5;
+  --pst-color-on-surface:#222832;
+  --pst-color-link:var(--pst-color-primary);
+  --pst-color-link-hover:var(--pst-color-secondary);
+  --pst-color-table-outer-border:var(--pst-color-surface);
+  --pst-color-table-heading-bg:var(--pst-color-surface);
+  --pst-color-table-row-zebra-high-bg:var(--pst-color-on-background);
+  --pst-color-table-row-zebra-low-bg:var(--pst-color-surface);
+  color-scheme:light
+} */
+
+/* html[data-theme=dark] {
+  --pst-color-primary-bg:#042c33;
+  --pst-color-secondary-bg:#341a61;
+  --pst-color-accent:#e47fd7;
+  --pst-color-accent-bg:#46123f;
+  --pst-color-info-bg:#06245d;
+  --pst-color-warning-bg:#652a02;
+  --pst-color-success-bg:#002f17;
+  --pst-color-attention:var(--pst-color-warning);
+  --pst-color-attention-bg:var(--pst-color-warning-bg);
+  --pst-color-danger-bg:#4e111b;
+  --pst-color-text-base:#ced6dd;
+  --pst-color-text-muted:#9ca4af;
+  --pst-color-heading-color:#14181e;
+  --pst-color-shadow:rgba(0,0,0,.2);
+  --pst-color-border:#48566b;
+  --pst-color-border-muted:#29313d;
+  --pst-color-blockquote-notch:#9ca4af;
+  --pst-color-inline-code:#f3c7ee;
+  --pst-color-inline-code-links:#3fb1c5;
+  --pst-color-target:#675c04;
+  --pst-color-table:#fff;
+  --pst-color-table-row-hover-bg:#6432bd;
+  --pst-color-table-inner-border:#364150;
+  --pst-color-background:#14181e;
+  --pst-color-on-background:#222832;
+  --pst-color-surface:#29313d;
+  --pst-color-on-surface:#f3f4f5;
+  --pst-color-link:var(--pst-color-primary);
+  --pst-color-link-hover:var(--pst-color-secondary);
+  --pst-color-table-outer-border:var(--pst-color-surface);
+  --pst-color-table-heading-bg:var(--pst-color-surface);
+  --pst-color-table-row-zebra-high-bg:var(--pst-color-on-background);
+  --pst-color-table-row-zebra-low-bg:var(--pst-color-surface);
+  color-scheme:dark
+} */
+
+/* html[data-theme=light] {
+  --pst-color-primary:#0a7d91;
+  --pst-color-primary-text:#fff;
+  --pst-color-primary-highlight:#053f49;
+  --sd-color-primary:var(--pst-color-primary);
+  --sd-color-primary-text:var(--pst-color-primary-text);
+  --sd-color-primary-highlight:var(--pst-color-primary-highlight);
+  --sd-color-primary-bg:#d0ecf1;
+  --sd-color-primary-bg-text:#14181e;
+  --pst-color-secondary:#8045e5;
+  --pst-color-secondary-text:#fff;
+  --pst-color-secondary-highlight:#591bc2;
+  --sd-color-secondary:var(--pst-color-secondary);
+  --sd-color-secondary-text:var(--pst-color-secondary-text);
+  --sd-color-secondary-highlight:var(--pst-color-secondary-highlight);
+  --sd-color-secondary-bg:#e0c7ff;
+  --sd-color-secondary-bg-text:#14181e;
+  --pst-color-success:#00843f;
+  --pst-color-success-text:#fff;
+  --pst-color-success-highlight:#00381a;
+  --sd-color-success:var(--pst-color-success);
+  --sd-color-success-text:var(--pst-color-success-text);
+  --sd-color-success-highlight:var(--pst-color-success-highlight);
+  --sd-color-success-bg:#d6ece1;
+  --sd-color-success-bg-text:#14181e;
+  --pst-color-info:#276be9;
+  --pst-color-info-text:#fff;
+  --pst-color-info-highlight:#124ab1;
+  --sd-color-info:var(--pst-color-info);
+  --sd-color-info-text:var(--pst-color-info-text);
+  --sd-color-info-highlight:var(--pst-color-info-highlight);
+  --sd-color-info-bg:#dce7fc;
+  --sd-color-info-bg-text:#14181e;
+  --pst-color-warning:#f66a0a;
+  --pst-color-warning-text:#14181e;
+  --pst-color-warning-highlight:#ad4a06;
+  --sd-color-warning:var(--pst-color-warning);
+  --sd-color-warning-text:var(--pst-color-warning-text);
+  --sd-color-warning-highlight:var(--pst-color-warning-highlight);
+  --sd-color-warning-bg:#f8e3d0;
+  --sd-color-warning-bg-text:#14181e;
+  --pst-color-danger:#d72d47;
+  --pst-color-danger-text:#fff;
+  --pst-color-danger-highlight:#9a1d30;
+  --sd-color-danger:var(--pst-color-danger);
+  --sd-color-danger-text:var(--pst-color-danger-text);
+  --sd-color-danger-highlight:var(--pst-color-danger-highlight);
+  --sd-color-danger-bg:#f9e1e4;
+  --sd-color-danger-bg-text:#14181e;
+  --pst-color-light:#f3f4f5;
+  --pst-color-light-text:#14181e;
+  --pst-color-light-highlight:#c9ced2;
+  --sd-color-light:var(--pst-color-light);
+  --sd-color-light-text:var(--pst-color-light-text);
+  --sd-color-light-highlight:var(--pst-color-light-highlight);
+  --sd-color-light-bg:#f7f7f8;
+  --sd-color-light-bg-text:#14181e;
+  --pst-color-muted:#29313d;
+  --pst-color-muted-text:#fff;
+  --pst-color-muted-highlight:#0a0c0f;
+  --sd-color-muted:var(--pst-color-muted);
+  --sd-color-muted-text:var(--pst-color-muted-text);
+  --sd-color-muted-highlight:var(--pst-color-muted-highlight);
+  --sd-color-muted-bg:#5a6c86;
+  --sd-color-muted-bg-text:#fff;
+  --pst-color-dark:#222832;
+  --pst-color-dark-text:#fff;
+  --pst-color-dark-highlight:#030404;
+  --sd-color-dark:var(--pst-color-dark);
+  --sd-color-dark-text:var(--pst-color-dark-text);
+  --sd-color-dark-highlight:var(--pst-color-dark-highlight);
+  --pst-color-black:#14181e;
+  --pst-color-black-text:#fff;
+  --pst-color-black-highlight:#000;
+  --sd-color-black:var(--pst-color-black);
+  --sd-color-black-text:var(--pst-color-black-text);
+  --sd-color-black-highlight:var(--pst-color-black-highlight);
+  --pst-color-white:#fff;
+  --pst-color-white-text:#14181e;
+  --pst-color-white-highlight:#d9d9d9;
+  --sd-color-white:var(--pst-color-white);
+  --sd-color-white-text:var(--pst-color-white-text);
+  --sd-color-white-highlight:var(--pst-color-white-highlight)
+} */
+
+/* html[data-theme=dark] {
+  --pst-color-primary:#3fb1c5;
+  --pst-color-primary-text:#14181e;
+  --pst-color-primary-highlight:#2b7e8d;
+  --sd-color-primary:var(--pst-color-primary);
+  --sd-color-primary-text:var(--pst-color-primary-text);
+  --sd-color-primary-highlight:var(--pst-color-primary-highlight);
+  --sd-color-primary-bg:#042c33;
+  --sd-color-primary-bg-text:#fff;
+  --pst-color-secondary:#9c5ffd;
+  --pst-color-secondary-text:#14181e;
+  --pst-color-secondary-highlight:#6d13fc;
+  --sd-color-secondary:var(--pst-color-secondary);
+  --sd-color-secondary-text:var(--pst-color-secondary-text);
+  --sd-color-secondary-highlight:var(--pst-color-secondary-highlight);
+  --sd-color-secondary-bg:#341a61;
+  --sd-color-secondary-bg-text:#fff;
+  --pst-color-success:#5fb488;
+  --pst-color-success-text:#14181e;
+  --pst-color-success-highlight:#3f8762;
+  --sd-color-success:var(--pst-color-success);
+  --sd-color-success-text:var(--pst-color-success-text);
+  --sd-color-success-highlight:var(--pst-color-success-highlight);
+  --sd-color-success-bg:#002f17;
+  --sd-color-success-bg-text:#fff;
+  --pst-color-info:#79a3f2;
+  --pst-color-info-text:#14181e;
+  --pst-color-info-highlight:#3373eb;
+  --sd-color-info:var(--pst-color-info);
+  --sd-color-info-text:var(--pst-color-info-text);
+  --sd-color-info-highlight:var(--pst-color-info-highlight);
+  --sd-color-info-bg:#06245d;
+  --sd-color-info-bg-text:#fff;
+  --pst-color-warning:#ff9245;
+  --pst-color-warning-text:#14181e;
+  --pst-color-warning-highlight:#f86600;
+  --sd-color-warning:var(--pst-color-warning);
+  --sd-color-warning-text:var(--pst-color-warning-text);
+  --sd-color-warning-highlight:var(--pst-color-warning-highlight);
+  --sd-color-warning-bg:#652a02;
+  --sd-color-warning-bg-text:#fff;
+  --pst-color-danger:#e78894;
+  --pst-color-danger-text:#14181e;
+  --pst-color-danger-highlight:#da485b;
+  --sd-color-danger:var(--pst-color-danger);
+  --sd-color-danger-text:var(--pst-color-danger-text);
+  --sd-color-danger-highlight:var(--pst-color-danger-highlight);
+  --sd-color-danger-bg:#4e111b;
+  --sd-color-danger-bg-text:#fff;
+  --pst-color-light:#f3f4f5;
+  --pst-color-light-text:#14181e;
+  --pst-color-light-highlight:#c9ced2;
+  --sd-color-light:var(--pst-color-light);
+  --sd-color-light-text:var(--pst-color-light-text);
+  --sd-color-light-highlight:var(--pst-color-light-highlight);
+  --sd-color-light-bg:#a3abb2;
+  --sd-color-light-bg-text:#14181e;
+  --pst-color-muted:#f3f4f5;
+  --pst-color-muted-text:#14181e;
+  --pst-color-muted-highlight:#c9ced2;
+  --sd-color-muted:var(--pst-color-muted);
+  --sd-color-muted-text:var(--pst-color-muted-text);
+  --sd-color-muted-highlight:var(--pst-color-muted-highlight);
+  --sd-color-muted-bg:#1d222b;
+  --sd-color-muted-bg-text:#fff;
+  --pst-color-dark:#222832;
+  --pst-color-dark-text:#fff;
+  --pst-color-dark-highlight:#030404;
+  --sd-color-dark:var(--pst-color-dark);
+  --sd-color-dark-text:var(--pst-color-dark-text);
+  --sd-color-dark-highlight:var(--pst-color-dark-highlight);
+  --pst-color-black:#14181e;
+  --pst-color-black-text:#fff;
+  --pst-color-black-highlight:#000;
+  --sd-color-black:var(--pst-color-black);
+  --sd-color-black-text:var(--pst-color-black-text);
+  --sd-color-black-highlight:var(--pst-color-black-highlight);
+  --pst-color-white:#fff;
+  --pst-color-white-text:#14181e;
+  --pst-color-white-highlight:#d9d9d9;
+  --sd-color-white:var(--pst-color-white);
+  --sd-color-white-text:var(--pst-color-white-text);
+  --sd-color-white-highlight:var(--pst-color-white-highlight)
+} */
 
 
 
@@ -454,7 +809,7 @@ li.toctree-l1.current.active {
   font-size: var(--pst-sidebar-font-size);
   font-weight: 700;
   line-height: 1.25em;
-  padding-bottom: 0.3rem;
+  padding-bottom: 0.2rem;
 }
 .copyright-header .licensed {
   display: inline-block;
