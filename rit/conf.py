@@ -124,8 +124,9 @@ copyright = [
 # Notaðar viðbætur
 extensions = [
     'sphinxcontrib.tikz',
-    'sphinx_copybutton',                                    # Takki til að taka afrit af kóðablokkum
     'sphinx_sitemap',                                       # Búa til sitemap.xml skrá
+    'sphinx_favicon',
+    'sphinx_copybutton',                                    # Takki til að taka afrit af kóðablokkum
 ]
 
 root_doc = 'index'                                          # Aðal skrá verkefnis
@@ -401,7 +402,7 @@ mathjax3_config = {
 
 
 
-# -- sphinxcontrib-tikz configuration ----------------------------------------
+# -- sphinxcontrib.tikz configuration ----------------------------------------
 
 tikz_proc_suite = 'pdf2svg'
 tikz_latex_preamble = r"""
@@ -436,6 +437,19 @@ tikz_latex_args = [r"-shell-escape"]
 # -- sphinx_sitemap configuration --------------------------------------------
 
 sitemap_url_scheme = "{link}"                               # Fjarlægja "/is" hlutann úr URLs í sitemap.xml
+
+
+
+
+
+# -- sphinx_favicon configuration --------------------------------------------
+
+favicons = [
+    {"rel": "icon", "href": "/favicon.ico", "sizes": "32x32"},
+    {"rel": "icon", "href": "/icon.svg", "type": "image/svg+xml"},
+    {"rel": "apple-touch-icon", "href": "/apple-touch-icon.png"},
+    {"rel": "manifest", "href": "/manifest.webmanifest"},
+]
 
 
 

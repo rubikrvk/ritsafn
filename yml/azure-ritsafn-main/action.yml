@@ -17,3 +17,13 @@ runs:
       run: |
         mv txt/robots.txt rit/_build/html/
       shell: bash
+
+    - name: MAIN - Add favicon files
+      run: |
+        mv json/manifest.webmanifest rit/_build/html/
+        mv rit/_static/favicon/favicon.ico rit/_build/html/
+        mv rit/_static/favicon/icon.svg rit/_build/html/
+        mv rit/_static/favicon/apple-touch-icon.png rit/_build/html/
+        mv rit/_static/favicon/icon-192.png rit/_build/html/
+        mv rit/_static/favicon/icon-512.png rit/_build/html/
+      shell: bash
