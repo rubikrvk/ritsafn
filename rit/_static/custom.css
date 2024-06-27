@@ -128,15 +128,6 @@
        url('xclusive/georgiapro_i7.woff') format('woff');
 }
 
-/* Sækja Xclusive og skilgreina */
-
-@font-face {
-  font-family: "Xclusive";
-  /* font-display: swap; */
-  src: url('xclusive/xclusive.woff2') format('woff2'),
-       url('xclusive/xclusive.woff') format('woff');
-}
-
 
 
 
