@@ -9,7 +9,7 @@
 
 {# "docstitle" skipt út fyrir "project", sem override-ar "html_title" í conf.py #}
 
-  {%- set titlesuffix = " &ndash; " + project|e %}
+  {%- set titlesuffix = " &ndash; "|safe + project|e %}
 {% else %}
   {%- set titlesuffix = "" %}
 {% endif %}
