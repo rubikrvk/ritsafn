@@ -13,9 +13,9 @@ runs:
         mv json/azure-ritsafn-dev/staticwebapp.config.json rit/_build/html/
       shell: bash
 
-    - name: MAIN - Add webmanifest.json
+    - name: MAIN - Add manifest.json
       run: |
-        mv json/webmanifest.json rit/_build/html/
+        mv json/manifest.json rit/_build/html/
       shell: bash
 
     - name: DEV - Delete sitemap.xml
