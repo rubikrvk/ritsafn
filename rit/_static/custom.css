@@ -798,7 +798,7 @@ li.toctree-l1.current.active {
 .copyright-header {
   color: var(--pst-color-text-muted);
   font-size: var(--pst-sidebar-font-size);
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.25em;
   padding-bottom: 0.2rem;
 }
@@ -811,12 +811,14 @@ li.toctree-l1.current.active {
 .copyright-subtext {
   color: var(--pst-color-text-muted);
   font-size: calc(var(--pst-sidebar-font-size) * 0.8);
+  font-weight: 300;
   line-height: 1.25em;
-  padding-bottom: 0.3rem;
+  padding-bottom: 0.2rem;
 }
 .license-badge {
   display: flex;
   margin-bottom: 0rem;
+  padding: 5px 0;
 }
 .license-badge a {
   display: inline-flex;
