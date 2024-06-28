@@ -815,8 +815,8 @@ li.toctree-l1.current.active {
   line-height: 1.25em;
   padding-bottom: 0.2rem;
 }
-.copyright-subtext span {
-  display: inline-block;
+.no-break {
+  white-space: nowrap;
 }
 .license-badge {
   display: flex;
