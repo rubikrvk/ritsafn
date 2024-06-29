@@ -17,8 +17,3 @@ runs:
       run: |
         mv txt/robots.txt rit/_build/html/
       shell: bash
-
-    - name: MAIN - Add manifest.json
-      run: |
-        mv json/manifest.json rit/_build/html/
-      shell: bash
