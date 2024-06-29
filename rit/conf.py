@@ -445,9 +445,9 @@ sitemap_url_scheme = "{link}"                               # Fjarlægja "/is" h
 # -- sphinx_favicon configuration --------------------------------------------
 
 favicons = [
-    {"rel": "icon", "href": "favicon/favicon.ico", "sizes": "32x32"},
-    {"rel": "icon", "href": "favicon/icon.svg", "type": "image/svg+xml"},
-    {"rel": "apple-touch-icon", "href": "favicon/apple-touch-icon.png"},
+    {"rel": "icon", "href": "favicon/favicon.ico?v=2", "sizes": "32x32"},
+    {"rel": "icon", "href": "favicon/icon.svg?v=2", "type": "image/svg+xml"},
+    {"rel": "apple-touch-icon", "href": "favicon/apple-touch-icon.png?v=2"},
     {"rel": "manifest", "href": "/webmanifest.json"},
 ]
 
