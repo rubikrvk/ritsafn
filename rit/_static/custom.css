@@ -821,7 +821,7 @@ li.toctree-l1.current.active {
 .license-badge {
   display: flex;
   margin-bottom: 0rem;
-  padding: 3px 0;
+  padding: 4px 0;
 }
 .license-badge a {
   display: inline-flex;
