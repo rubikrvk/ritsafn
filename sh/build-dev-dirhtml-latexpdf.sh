@@ -9,8 +9,8 @@ sphinx-build -b dirhtml -t dev . _build/html
 find _build/html/ -name '*.html' -exec sed -i '' -e 's/<head>/<head>\n<meta name="robots" content="noindex, nofollow">/' {} +
 
 # Fjarlægja "type" úr <link rel="icon" href="/favicon.ico" ... > og <link rel="apple-touch-icon" href="/apple-touch-icon.png" ... >
-find _build/html/ -name '*.html' -exec sed -i '' -e 's#<link rel="icon" href="https://rit-dev.rubik.is/_static/favicon/favicon.ico" sizes="32x32"[^>]*>#<link rel="icon" href="https://rit-dev.rubik.is/_static/favicon/favicon.ico" sizes="32x32">#' {} +
-find _build/html/ -name '*.html' -exec sed -i '' -e 's#<link rel="apple-touch-icon" href="https://rit-dev.rubik.is/_static/favicon/apple-touch-icon.png"[^>]*>#<link rel="apple-touch-icon" href="https://rit-dev.rubik.is/_static/favicon/apple-touch-icon.png">#' {} +
+# find _build/html/ -name '*.html' -exec sed -i '' -e 's#<link rel="icon" href="https://rit-dev.rubik.is/_static/favicon/favicon.ico" sizes="32x32"[^>]*>#<link rel="icon" href="https://rit-dev.rubik.is/_static/favicon/favicon.ico" sizes="32x32">#' {} +
+# find _build/html/ -name '*.html' -exec sed -i '' -e 's#<link rel="apple-touch-icon" href="https://rit-dev.rubik.is/_static/favicon/apple-touch-icon.png"[^>]*>#<link rel="apple-touch-icon" href="https://rit-dev.rubik.is/_static/favicon/apple-touch-icon.png">#' {} +
 
 # Breyta <title> á forsíðu, með því að fjarlægja "* &ndash; "
 sed -i '' -e 's#<title>.* &ndash; Ritsafn RÚBIK Reykjavíkur</title>#<title>Ritsafn RÚBIK Reykjavíkur</title>#' _build/html/index.html
