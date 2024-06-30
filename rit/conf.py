@@ -445,11 +445,10 @@ sitemap_url_scheme = "{link}"                               # Fjarlægja "/is" h
 # -- sphinx_favicon configuration --------------------------------------------
 
 favicons = [
-    {"rel": "icon", "href": "favicon/favicon.ico", "sizes": "32x32"},
-    {"rel": "icon", "href": "favicon/icon.svg", "type": "image/svg+xml"},
-    {"rel": "icon", "href": "favicon/icon.png", "type": "image/png"},
-    {"rel": "apple-touch-icon", "href": "favicon/apple-touch-icon.png"},
-    {"rel": "manifest", "href": "manifest.json"},
+    {"rel": "icon", "href": "https://rit.rubik.is/_static/favicon/favicon.ico", "sizes": "32x32"},
+    {"rel": "icon", "href": "https://rit.rubik.is/_static/favicon/icon.svg", "type": "image/svg+xml"},
+    {"rel": "apple-touch-icon", "href": "https://rit.rubik.is/_static/favicon/apple-touch-icon.png"},
+    {"rel": "manifest", "href": "https://rit.rubik.is/_static/manifest.json"},
 ]
 
 
