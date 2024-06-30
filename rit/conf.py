@@ -447,6 +447,7 @@ sitemap_url_scheme = "{link}"                               # Fjarlægja "/is" h
 favicons = [
     {"rel": "icon", "href": "favicon/favicon.ico", "sizes": "32x32"},
     {"rel": "icon", "href": "favicon/icon.svg", "type": "image/svg+xml"},
+    {"rel": "icon", "href": "favicon/icon.png", "type": "image/png"},
     {"rel": "apple-touch-icon", "href": "favicon/apple-touch-icon.png"},
     {"rel": "manifest", "href": "manifest.json"},
 ]
