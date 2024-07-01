@@ -10,7 +10,7 @@ find _build/html/ -name '*.html' -exec sed -i '' -e 's/<head>/<head>\n<meta name
 
 # Fjarlægja "type" úr favicon.ico og apple-touch-icon.png (sbr. https://dev.to/masakudamatsu/favicon-nightmare-how-to-maintain-sanity-3al7)
 find _build/html/ -name '*.html' -exec sed -i '' -e 's#<link rel="icon" href="https://rit.rubik.is/_static/favicon/favicon.ico" sizes="48x48"[^>]*>#<link rel="icon" href="https://rit.rubik.is/_static/favicon/favicon.ico" sizes="48x48">#' {} +
-find _build/html/ -name '*.html' -exec sed -i '' -e 's#<link rel="apple-touch-icon" href="https://rit.rubik.is/_static/favicon/apple-touch-icon.png"[^>]*>#<link rel="apple-touch-icon" href="https://rit.rubik.is/_static/favicon/apple-touch-icon.png">#' {} +
+find _build/html/ -name '*.html' -exec sed -i '' -e 's#<link rel="apple-touch-icon" href="https://rit.rubik.is/_static/favicon/apple-touch-icon.png"[^>]*>#<link rel="apple-touch-icon" href="https://rit.rubik.is/_static/favicon/apple-touch-icon.png" sizes="180x180">#' {} +
 
 # Breyta slóð á favicon í https://rit-dev.rubik.is/ fyrir DEV
 find _build/html/ -name '*.html' -exec sed -i '' -e 's|href="https://rit.rubik.is/|href="https://rit-dev.rubik.is/|g' {} +
