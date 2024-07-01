@@ -447,6 +447,7 @@ sitemap_url_scheme = "{link}"                               # Fjarlægja "/is" h
 favicons = [ # Sbr. https://dev.to/masakudamatsu/favicon-nightmare-how-to-maintain-sanity-3al7
     {"rel": "icon", "href": "https://rit.rubik.is/_static/favicon/favicon.ico", "sizes": "48x48"},      # Fyrir Safari og gamla IE vafra
     {"rel": "icon", "href": "https://rit.rubik.is/_static/favicon/icon.svg", "sizes": "any"},           # Fyrir flesta aðra vafra
+    {"rel": "icon", "href": "https://rit.rubik.is/_static/favicon/android-icon-192x192.png", "sizes": "192x192"},
     {"rel": "apple-touch-icon", "href": "https://rit.rubik.is/_static/favicon/apple-touch-icon.png"},   # Fyrir "Add to Home Screen" í Apple tækjum
     {"rel": "manifest", "href": "https://rit.rubik.is/_static/site.webmanifest"},                       # JSON skrá fyrir "Home Screen icon" á Android tækjum og með stillingum fyrir Progressive Web App (PWA)
 ]
