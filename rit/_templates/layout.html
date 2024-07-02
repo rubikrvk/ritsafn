@@ -2,43 +2,48 @@
 
 {% block htmltitle %}
 {% if not embedded and docstitle %}
-
-
-
-
-
-{# "docstitle" skipt út fyrir "project", sem override-ar "html_title" í conf.py #}
-
+  {# >>>>> "docstitle" skipt út fyrir "project", sem override-ar "html_title" í conf.py #}
   {%- set titlesuffix = " &ndash; "|safe + project|e %}
 {% else %}
   {%- set titlesuffix = "" %}
 {% endif %}
 
-
-
-
-
-
-{# Athugar hvort "title" innihaldi </span> tag, sem það gerir bara ef toctree er stillt á :numbered: #}
-
+{# >>>>> Athugar hvort "title" innihaldi </span> tag, sem það gerir bara ef toctree er stillt á :numbered: #}
 {%- if '</span>' in title %}
-
-
-
-
-
-{# Ef </span> tag er til staðar, þá er "title" það sem er fyrir aftan </span> (selector [1]) #}
-
+  {# >>>>> Ef </span> tag er til staðar, þá er "title" það sem er fyrir aftan </span> (selector [1]) #}
   {%- set cleaned_title = title.split('</span>')[1] %}
 {%- else %}
-
-
-
-
-
-  {# Ef </span> tag er ekki til staðar, þá er "title" óbreyttur (á bara við ef toctree er ekki stillt á :numbered:)  #}
-
+  {# >>>>> Ef </span> tag er ekki til staðar, þá er "title" óbreyttur (á bara við ef toctree er ekki stillt á :numbered:) #}
   {%- set cleaned_title = title %}
 {%- endif %}
+
+{# >>>>> Setja inn favicon tengla og stillingar fyrir Progressive Web App (PWA), sbr. https://dev.to/masakudamatsu/favicon-nightmare-how-to-maintain-sanity-3al7 #}
+<link rel="icon" href="https://rit.rubik.is/_static/favicon/favicon.ico" sizes="48x48">
+<link rel="icon" href="https://rit.rubik.is/_static/favicon/icon.svg" sizes="any" type="image/svg+xml">
+<link rel="apple-touch-icon" href="https://rit.rubik.is/_static/favicon/apple-touch-icon.png">
+<link rel="manifest" href="https://rit.rubik.is/_static/site.webmanifest">
+
+{# >>>>> Setja inn leiðréttan "title" #}
 <title>{{ cleaned_title|striptags|e }}{{ titlesuffix }}</title>
+
+{# >>>>> Google Tag Manager #}
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PL8JH23F');</script>
+{# >>>>> End Google Tag Manager #}
+
 {% endblock %}
+
+{% block body_tag %}
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="{{ default_mode }}">
+
+  {# >>>>> Google Tag Manager (noscript) #}
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PL8JH23F"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  {# >>>>> End Google Tag Manager (noscript) #}
+
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">{{ _("Skip to main content") }}</a></div>
+
+{%- endblock %}

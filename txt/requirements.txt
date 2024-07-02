@@ -54,14 +54,6 @@ sphinx-copybutton==0.5.2
 
 
 
-# Sphinx Extension adding support for custom favicons
-# PYPI: https://pypi.org/project/sphinx-favicon/
-# Docs: https://sphinx-favicon.readthedocs.io/
-
-sphinx-favicon==1.0.1
-
-
-
 # Sphinx extension for BibTeX style citations
 # PYPI: https://pypi.org/project/sphinxcontrib-bibtex/
 # Docs: https://sphinxcontrib-bibtex.readthedocs.io/
