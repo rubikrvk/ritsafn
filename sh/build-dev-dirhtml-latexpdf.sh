@@ -12,7 +12,7 @@ find _build/html/ -name '*.html' -exec sed -i '' -e 's/<head>/<head>\n<meta name
 find _build/html/ -name '*.html' -exec sed -i '' -e 's|href="https://rit.rubik.is/|href="https://rit-dev.rubik.is/|g' {} +
 
 # Fjarlægja Google Tag Manager kóða fyrir DEV
-find _build/html/ -name '*.html' -exec sed -i '' -e '/<script>(function(w,d,s,l,i){w\[l\]=w\[l\]\|\|\[\];w\[l\]\.push({/,/GTM-PL8JH23F'\''\);<\/script>/d' {} \;
+find _build/html/ -name '*.html' -exec sed -i '' -e '/<script>(function(w,d,s,l,i){w\[l\]=w\[l\]\|\|\[\];w\[l\]\.push({/,/GTM-PL8JH23F\)\);<\/script>/d' {} \;
 find _build/html/ -name '*.html' -exec sed -i '' -e '/  <noscript><iframe src="https:\/\/www.googletagmanager.com\/ns.html?id=GTM-PL8JH23F"/,/<\/noscript>/d' {} \;
 
 # Breyta <title> á forsíðu, með því að fjarlægja "* &ndash; " (sem er skilgreint í "_templates/layout.html")
