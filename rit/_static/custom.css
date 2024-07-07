@@ -918,7 +918,6 @@ Laga cookiebot útlit
 	font-family: var(--pst-font-family-base) !important;
 	font-size: 16px !important;
 	letter-spacing: -0.02em !important;
-  line-height: 19px !important;
 }
 /* Setja sama letur á <h2> og er á <h5> á síðunni */
 #CybotCookiebotDialog h2 {
@@ -969,6 +968,9 @@ Laga cookiebot útlit
 }
 #CybotCookiebotDialog button label {
     display: inline-block !important;
+}
+#CybotCookiebotDialogBodyButtonsWrapper button {
+  line-height: 19px !important;
 }
 /* Setja background-color (og border-buttom í nav) í sama lit og --pst-color-on-background (#222832) á rit.rubik.is */
 #CybotCookiebotDialog,
