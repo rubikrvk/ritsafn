@@ -918,6 +918,7 @@ Laga cookiebot útlit
 	font-family: var(--pst-font-family-base) !important;
 	font-size: 16px !important;
 	letter-spacing: -0.02em !important;
+  line-height: 19px !important;
 }
 /* Setja sama letur á <h2> og er á <h5> á síðunni */
 #CybotCookiebotDialog h2 {
