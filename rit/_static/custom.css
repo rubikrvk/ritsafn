@@ -889,3 +889,134 @@ div.highlight button.copybtn:hover:not(.success) {
   }
   
    */
+
+
+/*
+Laga cookiebot útlit
+*/
+
+/* Fjarlægja logo og "Powered by Cookiebot" */
+#CybotCookiebotDialogHeader,
+#CybotCookiebotDialogPoweredByText,
+#CybotCookiebotDialogDetailFooter,
+.CookiebotWidget-main-logo {
+	display: none !important;
+}
+/* Fjarlægja valin <p> á Cookie Declaration síðunni */
+.CookieDeclarationDialogText,
+.CookieDeclarationIntro,
+.CookieDeclarationLastUpdated {
+	display: none !important;
+}
+/* Laga margin-left sem gerir ráð fyrir að logo sé sýnt */
+#CybotCookiebotDialogTabContent {
+	margin-left: 0 !important;
+}
+/* Setja sama letur og er á restinni á síðunni */
+#CybotCookiebotDialog *,
+#CookiebotWidget * {
+	font-family: var(--pst-font-family-base) !important;
+	font-size: 16px !important;
+	letter-spacing: -0.02em !important;
+}
+/* Setja sama letur á <h2> og er á <h5> á síðunni */
+#CybotCookiebotDialog h2 {
+	font-size: 18px !important;
+	font-weight: 800 !important;
+}
+/* Laga padding og margin á mobile */
+@media (min-width: 1280px) {
+	.CybotCookiebotDialogBodyBottomWrapper,
+	.CybotCookiebotScrollContainer {
+		padding-left: 0 !important;
+	}
+}
+@media (min-width:1280px) {
+	#CybotCookiebotDialog .CookieCard .CybotCookiebotDialogDetailBodyContentCookieTypeIntro {
+		padding-left: 39px !important;
+	}
+	.CybotCookiebotDialogDetailBodyContentCookieTypeTableContainer {
+		margin-left: 39px !important;
+	}
+}
+@media (max-width:600px) {
+	#CybotCookiebotDialogBodyLevelButtonsSelectPane .CybotCookiebotDialogBodyLevelButtonWrapper {
+		padding-bottom: .6em !important;
+		padding-top: .6em !important;
+	}
+}
+/* Setja margin-bottom á <p> í "Um" glugganum */
+#CybotCookiebotDialogDetailBodyContentTextAbout p {
+	margin-bottom: 16px !important;
+}
+/* Gera "Þín núverandi staða" textann bold á Cookie Declaration síðunni */
+#CookieDeclarationUserStatusLabelOff,
+#CookieDeclarationUserStatusLabelOffDoNotSell,
+#CookieDeclarationUserStatusLabelMulti,
+#CookieDeclarationUserStatusLabelOn {
+	font-weight: 700 !important;
+}
+/* Laga button og label stillingar */
+#CybotCookiebotDialog button {
+	min-height: auto !important;
+	float: none !important;
+}
+#CybotCookiebotDialog button:hover,
+.CookiebotWidget-show-consent-details:hover,
+.CookiebotWidget-close:hover {
+	box-shadow: none !important;
+}
+#CybotCookiebotDialog button label {
+    display: inline-block !important;
+}
+/* Setja background-color (og border-buttom í nav) í sama lit og --pst-color-on-background (#222832) á rit.rubik.is */
+#CybotCookiebotDialog,
+#CybotCookiebotDialog .CybotCookiebotScrollContainer .CybotCookiebotScrollbarContainer,
+#CookiebotWidget #CookiebotWidget-widgetContent,
+#CookiebotWidget #CookiebotWidget-buttons #CookiebotWidget-btn-withdraw {
+	background-color: #222832 !important;
+}
+#CybotCookiebotDialog .CybotCookiebotDialogBodyLevelButtonSlider:before {
+	background-color: #222832 !important;
+}
+#CybotCookiebotDialogNav .CybotCookiebotDialogNavItemLink {
+	border-bottom: solid #222832 !important;
+}
+#CybotCookiebotDialog input:checked+.CybotCookiebotDialogBodyLevelButtonSlider:before,
+#CybotCookiebotDialog[dir=rtl] #CybotCookiebotDialogTabContent input+.CybotCookiebotDialogBodyLevelButtonSlider:before {
+background-color: #ffffff !important;
+}
+.CybotCookiebotFader  {
+	background-image: linear-gradient(to top, rgb(34,40,50), rgba(34,40,50,0.8), rgba(34,40,50,0)) !important;
+}
+/* Setja consent-details-box í sama lit og --pst-color-background (#14181e) á rit.rubik.is */
+#CookiebotWidget .CookiebotWidget-consent-details .CookiebotWidget-consent-details-box {
+	background-color: #14181e !important;
+}
+/* Gera border á CookiebotWidget eins og í CybotCookiebotDialog */
+#CookiebotWidget .CookiebotWidget-header {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+#CookiebotWidget #CookiebotWidget-buttons {
+	border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+/* Gera invert á CybotExternalLinkArrow */
+.CybotExternalLinkArrow {
+	filter: invert(100%) !important;
+}
+/* Setja allar :before stillingar á important, til að override-a það sem síðan gerir */
+.CybotCookiebotDialogDetailBodyContentCookieContainerButton:before,
+.CybotCookiebotDialogDetailBodyContentIABv2Tab:before {
+	border-radius: unset !important;
+	border-width: .15em .15em 0 0 !important;
+	display: inline-block !important;
+	transition-duration: 0s !important;
+	background: transparent !important;
+	top: .7em !important;
+	transform: rotate(-45deg) !important;
+}
+.CybotCookiebotDialogDetailBodyContentCookieContainerButton.CybotCookiebotDialogCollapsed:before,
+.CybotCookiebotDialogDetailBodyContentIABv2Tab.CybotCookiebotDialogCollapsed:before {
+	top: .45em !important;
+	transform: rotate(-225deg) !important;
+}
