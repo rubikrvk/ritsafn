@@ -966,6 +966,7 @@ Laga cookiebot útlit
 	min-height: auto !important;
 	float: none !important;
 	line-height: 17px !important;
+	display: inline-block !important;
 }
 #CybotCookiebotDialog button:hover,
 .CookiebotWidget-show-consent-details:hover,
