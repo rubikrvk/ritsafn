@@ -1024,11 +1024,11 @@ Laga cookiebot útlit
 	display: inline-block !important;
 	transition-duration: 0s !important;
 	background: transparent !important;
-	top: .7em !important;
+	top: .5em !important;
 	transform: rotate(-45deg) !important;
 }
 .CybotCookiebotDialogDetailBodyContentCookieContainerButton.CybotCookiebotDialogCollapsed:before,
 .CybotCookiebotDialogDetailBodyContentIABv2Tab.CybotCookiebotDialogCollapsed:before {
-	top: .45em !important;
+	top: .25em !important;
 	transform: rotate(-225deg) !important;
 }
