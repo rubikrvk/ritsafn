@@ -948,6 +948,11 @@ Laga cookiebot útlit
 /* Laga vertical-align á #CybotCookiebotDialog label */
 #CybotCookiebotDialog label {
 	vertical-align: top !important;
+  height: 24.5px !important;
+}
+/* Setja line-height á #CybotCookiebotDialog button */
+#CybotCookiebotDialog button {
+	line-height: 17px !important;
 }
 /* Setja margin-bottom á <p> í "Um" glugganum */
 #CybotCookiebotDialogDetailBodyContentTextAbout p {
