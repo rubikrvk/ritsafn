@@ -961,7 +961,8 @@ Laga cookiebot útlit
 	font-weight: 700 !important;
 }
 /* Laga button og label stillingar */
-#CybotCookiebotDialog button {
+#CybotCookiebotDialog button,
+#CookiebotWidget button {
 	min-height: auto !important;
 	float: none !important;
 	line-height: 17px !important;
