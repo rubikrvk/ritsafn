@@ -945,15 +945,6 @@ Laga cookiebot útlit
 		padding-top: .6em !important;
 	}
 }
-/* Laga vertical-align á #CybotCookiebotDialog label */
-#CybotCookiebotDialog label {
-	vertical-align: top !important;
-  height: 24.5px !important;
-}
-/* Setja line-height á #CybotCookiebotDialog button */
-#CybotCookiebotDialog button {
-	line-height: 17px !important;
-}
 /* Setja margin-bottom á <p> í "Um" glugganum */
 #CybotCookiebotDialogDetailBodyContentTextAbout p {
 	margin-bottom: 16px !important;
@@ -982,8 +973,15 @@ Laga cookiebot útlit
 #CybotCookiebotDialog button label {
   display: inline-block !important;
 }
-#CybotCookiebotDialogBodyButtonsWrapper button {
+/* #CybotCookiebotDialogBodyButtonsWrapper button {
   line-height: 17px !important;
+} */
+#CybotCookiebotDialog label {
+	vertical-align: top !important;
+	height: 24.5px !important;
+}
+#CybotCookiebotDialog button {
+	line-height: 17px !important;
 }
 /* Setja background-color (og border-buttom í nav) í sama lit og --pst-color-on-background (#222832) á rit.rubik.is */
 #CybotCookiebotDialog,
