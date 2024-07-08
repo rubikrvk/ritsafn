@@ -964,6 +964,7 @@ Laga cookiebot útlit
 #CybotCookiebotDialog button {
 	min-height: auto !important;
 	float: none !important;
+	line-height: 22.5px !important;
 }
 #CybotCookiebotDialog button:hover,
 .CookiebotWidget-show-consent-details:hover,
@@ -979,9 +980,6 @@ Laga cookiebot útlit
 #CybotCookiebotDialog label {
 	vertical-align: top !important;
 	height: 24.5px !important;
-}
-#CybotCookiebotDialog button {
-	line-height: 17px !important;
 }
 /* Setja background-color (og border-buttom í nav) í sama lit og --pst-color-on-background (#222832) á rit.rubik.is */
 #CybotCookiebotDialog,
