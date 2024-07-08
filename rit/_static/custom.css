@@ -945,8 +945,8 @@ Laga cookiebot útlit
 		padding-top: .6em !important;
 	}
 }
-/* Laga vertical-align á .CybotCookiebotDialogDetailBodyContentCookieContainerButton */
-#CybotCookiebotDialog .CookieCard .CybotCookiebotDialogDetailBodyContentCookieContainerButton:not(:disabled):not(.disabled), #CybotCookiebotDialog button {
+/* Laga vertical-align á #CybotCookiebotDialog label */
+#CybotCookiebotDialog label {
 	vertical-align: top !important;
 }
 /* Setja margin-bottom á <p> í "Um" glugganum */
