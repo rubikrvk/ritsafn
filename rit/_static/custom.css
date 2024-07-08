@@ -949,6 +949,10 @@ Laga cookiebot útlit
 #CybotCookiebotDialogDetailBodyContentTextAbout p {
 	margin-bottom: 16px !important;
 }
+/* Fjarlægja skrítin <br> sem koma neðst í "General cookie introduction" */
+#CybotCookiebotDialogDetailBodyContentTextAbout br {
+  display: none !important;
+}
 /* Gera "Þín núverandi staða" textann bold á Cookie Declaration síðunni */
 #CookieDeclarationUserStatusLabelOff,
 #CookieDeclarationUserStatusLabelOffDoNotSell,
