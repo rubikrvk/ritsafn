@@ -964,7 +964,7 @@ Laga cookiebot útlit
 #CybotCookiebotDialog button {
 	min-height: auto !important;
 	float: none !important;
-	line-height: 22.5px !important;
+	line-height: 17px !important;
 }
 #CybotCookiebotDialog button:hover,
 .CookiebotWidget-show-consent-details:hover,
