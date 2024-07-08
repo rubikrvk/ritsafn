@@ -975,7 +975,7 @@ Laga cookiebot útlit
   display: inline-block !important;
 }
 #CybotCookiebotDialogBodyButtonsWrapper button {
-  line-height: 19px !important;
+  line-height: 17px !important;
 }
 /* Setja background-color (og border-buttom í nav) í sama lit og --pst-color-on-background (#222832) á rit.rubik.is */
 #CybotCookiebotDialog,
