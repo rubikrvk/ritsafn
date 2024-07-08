@@ -539,9 +539,10 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-
-
-
+/* Setja "antialiased" á allt letur í body */
+body {
+  -webkit-font-smoothing: antialiased;
+}
 
 /* Kóði til að láta transparent hluta af SVG eða PNG myndum í pydata theme-inu verða gegnsæann í dark-mode.
 Þetta er alltaf gegnsætt í light-mode, en í dark-mode þarf þessi kóði að vera til staðar */
