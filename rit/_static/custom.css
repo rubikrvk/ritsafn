@@ -972,7 +972,7 @@ Cookiebot stillingar - bæði rit.rubik.is og rubik.is
 	line-height: 1.5em !important;
 }
 #CybotCookiebotDialog button label {
-	display: inline-block !important;
+	display: unset !important;
 	line-height: 1.5em !important;
 }
 #CybotCookiebotDialog label {
