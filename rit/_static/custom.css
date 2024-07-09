@@ -893,7 +893,7 @@ div.highlight button.copybtn:hover:not(.success) {
 
 
 /*
-Laga cookiebot útlit
+Cookiebot stillingar - bæði rit.rubik.is og rubik.is
 */
 
 /* Fjarlægja logo og "Powered by Cookiebot" */
@@ -924,6 +924,10 @@ Laga cookiebot útlit
 	font-size: 18px !important;
 	font-weight: 800 !important;
 }
+/* Setja border-radius á img í 0px */
+#CybotCookiebotDialog img {
+	border-radius: 0px !important;
+}
 /* Laga padding og margin á mobile */
 @media (min-width: 1280px) {
 	.CybotCookiebotDialogBodyBottomWrapper,
@@ -933,10 +937,10 @@ Laga cookiebot útlit
 }
 @media (min-width:1280px) {
 	#CybotCookiebotDialog .CookieCard .CybotCookiebotDialogDetailBodyContentCookieTypeIntro {
-		padding-left: 39px !important;
+		padding-left: 37px !important;
 	}
 	.CybotCookiebotDialogDetailBodyContentCookieTypeTableContainer {
-		margin-left: 39px !important;
+		margin-left: 37px !important;
 	}
 }
 @media (max-width:600px) {
@@ -975,9 +979,6 @@ Laga cookiebot útlit
 #CybotCookiebotDialog button label {
   display: inline-block !important;
 }
-/* #CybotCookiebotDialogBodyButtonsWrapper button {
-  line-height: 17px !important;
-} */
 #CybotCookiebotDialog label {
 	vertical-align: top !important;
 	height: 24.5px !important;
@@ -1033,3 +1034,9 @@ Laga cookiebot útlit
 	top: .25em !important;
 	transform: rotate(-225deg) !important;
 }
+
+
+
+/* #CybotCookiebotDialogBodyButtonsWrapper button {
+  line-height: 17px !important;
+} */
