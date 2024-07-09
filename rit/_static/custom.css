@@ -1031,11 +1031,11 @@ Cookiebot stillingar - bæði rit.rubik.is og rubik.is
 	display: inline-block !important;
 	transition-duration: 0s !important;
 	background: transparent !important;
-	top: .575em !important;
+	top: .6em !important;
 	transform: rotate(-45deg) !important;
 }
 .CybotCookiebotDialogDetailBodyContentCookieContainerButton.CybotCookiebotDialogCollapsed:before,
 .CybotCookiebotDialogDetailBodyContentIABv2Tab.CybotCookiebotDialogCollapsed:before {
-	top: .325em !important;
+	top: .35em !important;
 	transform: rotate(-225deg) !important;
 }
