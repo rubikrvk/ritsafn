@@ -971,7 +971,8 @@ Cookiebot stillingar - bæði rit.rubik.is og rubik.is
 	float: none !important;
 	line-height: 1.5em !important;
 }
-#CybotCookiebotDialog button label {
+#CybotCookiebotDialog button label,
+#CybotCookiebotDialog button label:after {
 	display: unset !important;
 	line-height: 1.5em !important;
 }
@@ -1031,12 +1032,12 @@ Cookiebot stillingar - bæði rit.rubik.is og rubik.is
 	display: inline-block !important;
 	transition-duration: 0s !important;
 	background: transparent !important;
-	top: .5em !important;
+	top: .625em !important;
 	transform: rotate(-45deg) !important;
 }
 .CybotCookiebotDialogDetailBodyContentCookieContainerButton.CybotCookiebotDialogCollapsed:before,
 .CybotCookiebotDialogDetailBodyContentIABv2Tab.CybotCookiebotDialogCollapsed:before {
-	top: .25em !important;
+	top: .375em !important;
 	transform: rotate(-225deg) !important;
 }
 
