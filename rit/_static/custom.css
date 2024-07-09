@@ -980,8 +980,8 @@ Cookiebot stillingar - bæði rit.rubik.is og rubik.is
   display: inline-block !important;
 }
 #CybotCookiebotDialog label {
-	vertical-align: top !important;
-	height: 24.5px !important;
+	vertical-align: baseline !important;
+/* 	height: 24.5px !important; */
 }
 /* Setja background-color (og border-buttom í nav) í sama lit og --pst-color-on-background (#222832) á rit.rubik.is */
 #CybotCookiebotDialog,
