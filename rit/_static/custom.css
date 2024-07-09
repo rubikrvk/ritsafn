@@ -979,7 +979,6 @@ Cookiebot stillingar - bæði rit.rubik.is og rubik.is
 #CybotCookiebotDialog label {
 	vertical-align: baseline !important;
 	line-height: 1.5em !important;
-/* 	height: 24.5px !important; */
 }
 .CybotCookiebotDialogDetailBulkConsentCount {
 	vertical-align: baseline !important;
@@ -1032,17 +1031,11 @@ Cookiebot stillingar - bæði rit.rubik.is og rubik.is
 	display: inline-block !important;
 	transition-duration: 0s !important;
 	background: transparent !important;
-	top: .625em !important;
+	top: .575em !important;
 	transform: rotate(-45deg) !important;
 }
 .CybotCookiebotDialogDetailBodyContentCookieContainerButton.CybotCookiebotDialogCollapsed:before,
 .CybotCookiebotDialogDetailBodyContentIABv2Tab.CybotCookiebotDialogCollapsed:before {
-	top: .375em !important;
+	top: .325em !important;
 	transform: rotate(-225deg) !important;
 }
-
-
-
-/* #CybotCookiebotDialogBodyButtonsWrapper button {
-  line-height: 17px !important;
-} */
