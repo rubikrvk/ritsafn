@@ -133,7 +133,7 @@ msgstr ""
 
 #: src/pydata_sphinx_theme/theme/pydata_sphinx_theme/components/theme-switcher.html:5
 msgid "light/dark"
-msgstr "ljóst/dökkt"
+msgstr "ljóst/dökkt/sjálfgefið"
 
 #: src/pydata_sphinx_theme/theme/pydata_sphinx_theme/components/theme-version.html:3
 #, python-format
