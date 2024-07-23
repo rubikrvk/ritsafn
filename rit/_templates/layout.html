@@ -1,5 +1,14 @@
 {% extends "pydata_sphinx_theme/layout.html" %}
 
+{% block extrahead %}
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  {%- if last_updated %}
+    <meta name="docbuild:last-update" content="{{ last_updated | e }}"/>
+  {%- endif %}
+  {{ super() | replace('<meta name="viewport" content="width=device-width, initial-scale=1.0" />', '') }}
+{%- endblock extrahead %}
+
+
 {% block htmltitle %}
 {% if not embedded and docstitle %}
   {# >>>>> "docstitle" skipt út fyrir "project", sem override-ar "html_title" í conf.py #}
