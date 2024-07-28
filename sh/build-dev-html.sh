@@ -12,7 +12,11 @@ find _build/html/ -name '*.html' -exec sed -i '' -e 's/<head>/<head>\n<meta name
 find _build/html/ -name '*.html' -exec sed -i '' -e 's|href="https://rit.rubik.is/|href="https://rit-dev.rubik.is/|g' {} +
 
 # Breyta Google Tag Manager kóða fyrir DEV (úr "GTM-PL8JH23F" í "GTM-MLN5L94K")
-find _build/html/ -name '*.html' -exec sed -i '' -e 's|GTM-PL8JH23F|GTM-MLN5L94K|g' {} +
+find _build/html/ -name '*.html' -exec sed -i '' -e 's|PL8JH23F|MLN5L94K|g' {} +
+
+# Hafa bara eitt <meta name="viewport"...> tag í öllum HTML skrám 
+find _build/html/ -name '*.html' -exec sed -i '' '/<meta name="viewport"/d' {} +
+find _build/html/ -name '*.html' -exec sed -i '' -e 's|<meta charset="utf-8" />|<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />|' {} +
 
 # Breyta <title> á forsíðu, með því að fjarlægja "* &ndash; " (sem er skilgreint í "_templates/layout.html")
 sed -i '' -e 's#<title>.* &ndash; Ritsafn RÚBIK Reykjavíkur</title>#<title>Ritsafn RÚBIK Reykjavíkur</title>#' _build/html/index.html
