@@ -13,7 +13,7 @@ find _build/html/ -name '*.html' -exec sed -i '' -e 's|<meta charset="utf-8" />|
 sed -i '' -e 's#<title>.* &ndash; Ritsafn RÚBIK Reykjavíkur</title>#<title>Ritsafn RÚBIK Reykjavíkur</title>#' _build/html/index.html
 
 # Keyra Prettier á allar HTML skrár
-#find _build/html/ -name "*.html" -exec prettier --config ../json/.prettierrc.json --write {} +
+find _build/html/ -name "*.html" -exec prettier --config ../json/.prettierrc.json --write {} +
 
 # Bæta við íslenskum þýðingum fyrir sphinx_copybutton
 cp -f ../js/copybutton-is.js _build/html/_static/copybutton.js
