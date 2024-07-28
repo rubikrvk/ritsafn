@@ -15,7 +15,7 @@ find _build/html/ -name '*.html' -exec sed -i '' -e 's|href="https://rit.rubik.i
 find _build/html/ -name '*.html' -exec sed -i '' -e 's|PL8JH23F|MLN5L94K|g' {} +
 
 # Hafa bara eitt <meta name="viewport"...> tag í öllum HTML skrám 
-find _build/html/ -name '*.html' -exec sed -i '' '/<meta name="viewport" .* /d' {} +
+find _build/html/ -name '*.html' -exec sed -i '' -e 's|<meta name="viewport" .*||' {} +
 find _build/html/ -name '*.html' -exec sed -i '' -e 's|<meta charset="utf-8" />|<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />|' {} +
 
 # Breyta <title> á forsíðu, með því að fjarlægja "* &ndash; " (sem er skilgreint í "_templates/layout.html")
