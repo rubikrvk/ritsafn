@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tesla Model Y — Delivery Inspection Checklist</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+  :root{
+    --paper:#f3f0e8;
+    --card:#fbf9f4;
+    --ink:#15171c;
+    --muted:#74716a;
+    --line:#e3ddd2;
+    --line-strong:#d4cdbf;
+    --go:#1f6b46;
+    --go-soft:#e6f0ea;
+    --red:#bf1322;
+    --red-soft:#fbe8ea;
+    --blue:#0b4f8a;
+    --blue-soft:#e6eef6;
+    --shadow:0 1px 2px rgba(20,20,20,.05), 0 6px 24px rgba(20,20,20,.05);
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(120% 80% at 50% -10%, #fbf9f3 0%, rgba(251,249,243,0) 55%),
+      var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+    font-size:16px;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:0 18px 96px;}
+
+  /* ---------- Cover ---------- */
+  .cover{padding:40px 0 22px; border-bottom:1px solid var(--line);}
+  .kicker{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--muted); display:flex; align-items:center; gap:10px;
+  }
+  .kicker::before{content:""; width:26px; height:2px; background:var(--red); display:inline-block;}
+  h1{
+    font-family:'Bricolage Grotesque', sans-serif;
+    font-weight:800; font-size:clamp(31px, 7vw, 48px);
+    line-height:1.02; letter-spacing:-.02em; margin:16px 0 6px;
+  }
+  h1 .y{color:var(--red);}
+  .sub{font-size:15px; color:var(--muted); max-width:54ch; margin:0 0 18px;}
+  .meta{
+    display:flex; flex-wrap:wrap; gap:8px 10px;
+    font-family:'IBM Plex Mono', monospace; font-size:12px;
+  }
+  .chip{
+    border:1px solid var(--line-strong); background:var(--card);
+    padding:6px 10px; border-radius:999px; color:var(--ink);
+    display:inline-flex; align-items:center; gap:6px;
+  }
+  .chip b{font-weight:600;}
+  .dot{width:6px; height:6px; border-radius:50%; background:var(--go); display:inline-block;}
+
+  /* ---------- The one rule ---------- */
+  .rule{
+    margin-top:22px; background:var(--ink); color:#f5f3ee;
+    border-radius:16px; padding:20px 20px 18px; box-shadow:var(--shadow);
+  }
+  .rule .tag{
+    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.2em;
+    text-transform:uppercase; color:#e7b6ba;
+  }
+  .rule h2{font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:20px; margin:8px 0 8px; letter-spacing:-.01em;}
+  .rule p{margin:0 0 10px; font-size:14.5px; color:#d9d6cf;}
+  .rule p:last-child{margin-bottom:0;}
+  .rule strong{color:#fff;}
+
+  /* ---------- Toolbar / progress ---------- */
+  .bar-wrap{
+    position:sticky; top:0; z-index:20;
+    background:rgba(243,240,232,.86); backdrop-filter:blur(8px);
+    margin:26px -18px 0; padding:12px 18px 14px;
+    border-bottom:1px solid var(--line);
+  }
+  .bar-top{display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:9px;}
+  .bar-count{font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--ink);}
+  .bar-count b{font-size:16px; font-weight:600;}
+  .bar-count .pct{color:var(--muted);}
+  .controls{display:flex; gap:8px;}
+  .btn{
+    font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.04em;
+    border:1px solid var(--line-strong); background:var(--card); color:var(--ink);
+    padding:7px 11px; border-radius:9px; cursor:pointer; text-transform:uppercase;
+    transition:.15s;
+  }
+  .btn:hover{border-color:var(--ink);}
+  .btn.active{background:var(--ink); color:#f5f3ee; border-color:var(--ink);}
+  .track{height:7px; background:#e6e0d5; border-radius:99px; overflow:hidden;}
+  .fill{height:100%; width:0%; background:linear-gradient(90deg,var(--go),#2f8a5e); border-radius:99px; transition:width .35s ease;}
+
+  /* ---------- Sections ---------- */
+  .section{margin-top:30px; opacity:0; transform:translateY(8px); animation:rise .5s ease forwards;}
+  @keyframes rise{to{opacity:1; transform:none;}}
+  .sec-head{display:flex; align-items:flex-end; gap:12px; margin-bottom:12px;}
+  .sec-num{
+    font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600;
+    color:var(--red); border:1px solid var(--red); border-radius:7px;
+    padding:3px 7px; line-height:1;
+  }
+  .sec-title{font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:21px; letter-spacing:-.01em; flex:1;}
+  .sec-count{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted); white-space:nowrap;}
+  .sec-note{
+    font-size:13.5px; color:var(--muted); margin:-4px 0 12px;
+    border-left:2px solid var(--line-strong); padding-left:12px;
+  }
+
+  /* ---------- Items ---------- */
+  .item{
+    display:flex; gap:13px; align-items:flex-start;
+    background:var(--card); border:1px solid var(--line);
+    border-radius:13px; padding:14px 15px; margin-bottom:9px;
+    cursor:pointer; transition:border-color .15s, background .15s, opacity .2s;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .item:hover{border-color:var(--line-strong);}
+  .item:active{background:#f6f3ec;}
+  .box{
+    flex:0 0 auto; width:23px; height:23px; margin-top:1px;
+    border:2px solid var(--line-strong); border-radius:7px; background:#fff;
+    display:flex; align-items:center; justify-content:center; transition:.15s;
+  }
+  .box svg{width:13px; height:13px; opacity:0; transform:scale(.5); transition:.15s;}
+  .item .body{flex:1; min-width:0;}
+  .item .t{font-weight:600; font-size:15px; line-height:1.35; letter-spacing:-.005em;}
+  .item .d{font-size:13.7px; color:var(--muted); margin-top:3px; line-height:1.48;}
+  .badges{display:flex; flex-wrap:wrap; gap:5px; margin-top:8px;}
+  .b{
+    font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.06em;
+    text-transform:uppercase; padding:3px 7px; border-radius:6px; font-weight:500;
+  }
+  .b-crit{background:var(--red-soft); color:var(--red);}
+  .b-is{background:var(--blue-soft); color:var(--blue);}
+  .b-cfg{background:#f0ece2; color:#6b6457;}
+
+  .item.done{background:var(--go-soft); border-color:#cfe3d7;}
+  .item.done .box{background:var(--go); border-color:var(--go);}
+  .item.done .box svg{opacity:1; transform:scale(1);}
+  .item.done .t{text-decoration:line-through; text-decoration-color:#abc6b5; color:#5f7a6b;}
+  .item.done .d{color:#86998c;}
+  body.hide-done .item.done{display:none;}
+
+  /* ---------- Footer ---------- */
+  .foot{margin-top:40px; padding-top:18px; border-top:1px solid var(--line); font-size:12.5px; color:var(--muted);}
+  .foot h3{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink); margin:0 0 8px;}
+  .foot p{margin:0 0 9px;}
+  .done-banner{
+    text-align:center; padding:18px; margin-top:18px; border-radius:14px;
+    background:var(--go-soft); border:1px solid #cfe3d7; color:var(--go);
+    font-weight:600; display:none;
+  }
+  .done-banner.show{display:block;}
+
+  @media print{
+    .bar-wrap, .controls, .done-banner{display:none !important;}
+    body{background:#fff;}
+    .item, .rule, .section{break-inside:avoid; animation:none; opacity:1; transform:none;}
+    .item.done .t{text-decoration:none;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- COVER -->
+  <header class="cover">
+    <div class="kicker">Pre-acceptance inspection · v1</div>
+    <h1>Tesla Model <span class="y">Y</span><br>Delivery Checklist</h1>
+    <p class="sub">A walk-through for taking delivery of your 2026 Model Y in Iceland — written for a first-time owner, with how-to notes for every check.</p>
+    <div class="meta">
+      <span class="chip"><span class="dot"></span><b>Fri 5 June 2026 · 11:00</b></span>
+      <span class="chip">Reykjavík · Vatnagarðar</span>
+      <span class="chip">Premium LR · AWD</span>
+      <span class="chip">Quicksilver · 19″ Crossflow</span>
+      <span class="chip">Black interior · 5-seat</span>
+    </div>
+
+    <div class="rule">
+      <div class="tag">The one rule that matters most</div>
+      <h2>Don't tap "Accept Delivery" until you're happy.</h2>
+      <p>You inspect the car <strong>before</strong> you press <strong>Accept Delivery</strong> in the Tesla app. Once you accept, the car is yours and getting issues fixed becomes slower and less flexible.</p>
+      <p>For anything you find — a scratch, an uneven gap, a loose trim piece — <strong>take photos and log it on-site</strong> before you leave. You're also allowed to reject the car if something is seriously wrong. Take your time; the staff are there to help, and no question is too basic.</p>
+    </div>
+  </header>
+
+  <!-- TOOLBAR -->
+  <div class="bar-wrap">
+    <div class="bar-top">
+      <div class="bar-count"><b><span id="count">0</span></b> / <span id="countTotal">0</span> checked &nbsp;<span class="pct">(<span id="pct">0%</span>)</span></div>
+      <div class="controls">
+        <button class="btn" id="hideBtn">Hide done</button>
+        <button class="btn" id="resetBtn">Reset</button>
+      </div>
+    </div>
+    <div class="track"><div class="fill" id="fill"></div></div>
+  </div>
+
+  <!-- SECTION 01 -->
+  <section class="section" style="animation-delay:.02s">
+    <div class="sec-head"><span class="sec-num">01</span><span class="sec-title">Before you go — paperwork & app</span><span class="sec-count" data-count></span></div>
+    <p class="sec-note">Sort these out the night before or first thing, so nothing holds up the handover.</p>
+
+    <div class="item" data-id="s1-insurance"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Active insurance in place</div><div class="d">In Iceland you must at least have mandatory liability cover (ábyrgðartrygging) active before you drive away. Confirm with your insurer that the policy is live from today and covers this car's VIN, and keep proof on your phone.</div><div class="badges"><span class="b b-is">Iceland</span><span class="b b-crit">Before you sign</span></div></div></div>
+
+    <div class="item" data-id="s1-app"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Tesla app installed & signed in</div><div class="d">Use the same email you placed the order with. The "Accept Delivery" button lives here. Have Bluetooth switched on — your phone will become a key later.</div></div></div>
+
+    <div class="item" data-id="s1-payment"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Payment / financing settled</div><div class="d">Confirm the balance is paid or your loan is finalised. Bring a payment method just in case something needs settling on the day.</div></div></div>
+
+    <div class="item" data-id="s1-docs"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Bring your licence & ID — check the names</div><div class="d">You'll sign documents in your (or your company's) name. Double-check the buyer name and address are correct on every page before signing.</div></div></div>
+
+    <div class="item" data-id="s1-vinpaper"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">VIN matches the paperwork</div><div class="d">The 17-character VIN (vehicle ID number) on your contract must match the car. You'll re-check it on the windscreen and on the screen during the inspection.</div></div></div>
+
+    <div class="item" data-id="s1-options"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Build matches your order</div><div class="d">On the spec sheet, confirm every option you ordered: Model Y Premium (Long Range) AWD, Quicksilver paint, 19″ Crossflow wheels, black premium interior, 5 seats, Autopilot, and the Nokian studded winter-tyre option.</div><div class="badges"><span class="b b-cfg">Your config</span></div></div></div>
+
+    <div class="item" data-id="s1-reg"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Registration documents</div><div class="d">Tesla registers the car with Samgöngustofa. Confirm you'll receive the registration certificate (skráningarskírteini) and that the car is registered to the correct owner (you or your company).</div><div class="badges"><span class="b b-is">Iceland</span></div></div></div>
+  </section>
+
+  <!-- SECTION 02 -->
+  <section class="section" style="animation-delay:.05s">
+    <div class="sec-head"><span class="sec-num">02</span><span class="sec-title">Exterior walkaround</span><span class="sec-count" data-count></span></div>
+    <p class="sec-note">Ask the specialist to unlock the car so you can inspect it before accepting. Do this in good light — and use your phone's torch held at a low, shallow angle to catch flaws in the paint.</p>
+
+    <div class="item" data-id="s2-vin"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">VIN on the windscreen</div><div class="d">There's a small VIN plate at the base of the windscreen on the driver's side. Confirm it matches your paperwork.</div></div></div>
+
+    <div class="item" data-id="s2-paint"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Paint condition (Quicksilver)</div><div class="d">Walk slowly all the way around. Look for scratches, chips, dull patches, swirl marks or specks trapped under the clear coat. Quicksilver is a lighter metallic, so pay attention where light reflects off the panels.</div><div class="badges"><span class="b b-crit">Before you sign</span></div></div></div>
+
+    <div class="item" data-id="s2-gaps"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Panel gaps — even & symmetrical</div><div class="d">Look at the gaps around the doors, the front boot (frunk) and the rear hatch. Each gap should be roughly the same width along its length, and match the same gap on the opposite side of the car. Large or uneven gaps are the single most common Tesla build issue.</div><div class="badges"><span class="b b-crit">Before you sign</span></div></div></div>
+
+    <div class="item" data-id="s2-doorflush"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Doors sit flush with the body</div><div class="d">Stand at each rear corner and sight along the side of the car toward the front. No door should stick out past the bodywork or sink in. A door that visibly sticks out ("proud") is worth flagging before you sign — it's not always fixable afterwards.</div><div class="badges"><span class="b b-crit">Before you sign</span></div></div></div>
+
+    <div class="item" data-id="s2-frontlight"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Front light bar & headlights</div><div class="d">Your car has the full-width light strip across the front. Check the gaps between the lights and the body are even, and look inside the lenses for any moisture or condensation.</div></div></div>
+
+    <div class="item" data-id="s2-taillight"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Rear light bar & tail-lights</div><div class="d">Check the gap around each tail-light is equal on the left and right (one side shouldn't be visibly wider than the other), and that there's no condensation inside the lenses.</div></div></div>
+
+    <div class="item" data-id="s2-applique"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Rear "TESLA" trim strip</div><div class="d">Gently press the top and bottom edges of the black strip running across the hatch. It should be firmly attached, not lifting, and shouldn't creak or squeak.</div></div></div>
+
+    <div class="item" data-id="s2-mirrors"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Wing mirrors</div><div class="d">Lightly squeeze the black plastic arm of each mirror — it shouldn't creak or feel loose. Check the mirror glass for cracks.</div></div></div>
+
+    <div class="item" data-id="s2-trim"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Black window & door trim</div><div class="d">Run your eye and a finger along the black trim around the windows and doors. It should be evenly fitted, fully attached, and free of scratches or discolouration.</div></div></div>
+
+    <div class="item" data-id="s2-cameras"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Exterior cameras</div><div class="d">There are small camera housings on the front wings, above the front grille, and near the hatch button. Give each a very gentle wiggle — they should be firmly seated, not loose.</div></div></div>
+
+    <div class="item" data-id="s2-wheels"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Wheels & tyres (19″ Crossflow)</div><div class="d">Check each of the four alloy wheels for scuffs, scratches or "curb rash" on the rim edges. Scan the tyres for any stuck screws, nails or damage. (Note which tyres are fitted — see the winter-tyre item in section 06.)</div><div class="badges"><span class="b b-cfg">Your config</span></div></div></div>
+
+    <div class="item" data-id="s2-wheelwells"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Wheel-arch liners</div><div class="d">Look up inside each wheel arch. The plastic liner shouldn't sag, and the push-pins holding it in place should be fully seated.</div></div></div>
+
+    <div class="item" data-id="s2-undercarriage"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Lower bumpers & underside</div><div class="d">Look along the bottom of the front and rear bumpers and the side sills for scrapes, scuffs, or anything hanging down underneath.</div></div></div>
+
+    <div class="item" data-id="s2-chargeport"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Charge-port flap (rear left)</div><div class="d">Check the gap around the flap is even all the way round. You'll test that it opens electrically in the next section.</div></div></div>
+
+    <div class="item" data-id="s2-handles"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Door handles sit flush</div><div class="d">The new Model Y's handles sit almost flush with the body. Check each one is level — not sunken in or popped out — and feels solid when you use it.</div></div></div>
+  </section>
+
+  <!-- SECTION 03 -->
+  <section class="section" style="animation-delay:.08s">
+    <div class="sec-head"><span class="sec-num">03</span><span class="sec-title">Functions — car unlocked & on</span><span class="sec-count" data-count></span></div>
+    <p class="sec-note">A few of these need the car switched on; ask the specialist to help and to confirm it's fine to test before acceptance.</p>
+
+    <div class="item" data-id="s3-lights"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Test every exterior light</div><div class="d">With the staff's help, run through: low and high beam, the front light bar, indicators front and rear, brake lights, reversing light, and the side indicators on the mirror housings.</div></div></div>
+
+    <div class="item" data-id="s3-wipers"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Wipers & washer fluid</div><div class="d">Run the wipers through their speeds. Use the wash/clean button on the left steering stalk to spray washer fluid and confirm it sprays evenly across the glass.</div></div></div>
+
+    <div class="item" data-id="s3-doorsfunc"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Open & close every door</div><div class="d">Each door should open and shut smoothly with a solid, even sound — no rattles or grinding. Test both the outside button and the inside handle on all four doors.</div></div></div>
+
+    <div class="item" data-id="s3-doorseals"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Door rubber seals</div><div class="d">Look around each door's rubber seal for bubbles, gaps, or rubber that's lifting away from the frame.</div></div></div>
+
+    <div class="item" data-id="s3-doorpanels"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Inner door panels & speakers</div><div class="d">With a door open, gently pull up on the inside grab handle — the panel should be firmly attached, not loose. Check the trim and the speaker grille for marks, dents or rips.</div></div></div>
+
+    <div class="item" data-id="s3-windows"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">All four windows up & down</div><div class="d">Lower and raise each window fully, with the door both open and closed. The front windows have one-touch up/down. The windows should also dip slightly on their own when you open a door and re-seal when you close it.</div></div></div>
+
+    <div class="item" data-id="s3-glass"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Glass clarity & distortion</div><div class="d">Sit inside and look out through the windscreen, the large glass roof, and each window. Check for cracks, chips and scratches — and for any wavy, "fun-house mirror" distortion in the glass.</div></div></div>
+
+    <div class="item" data-id="s3-hatch"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Powered tailgate</div><div class="d">Open and close the rear hatch from the outside button (under the trim strip) and the inside button. It should glide smoothly — not slam or make a loud "pop". Watch that the open hatch doesn't rub against the paint at the rear corners, and that the seals sit evenly on both sides.</div></div></div>
+
+    <div class="item" data-id="s3-chargeportopen"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Charge-port opens</div><div class="d">Press the rear edge of the charge-port flap (or open it from the screen). It should pop open and, a little later, close on its own. This confirms you'll be able to plug in.</div></div></div>
+  </section>
+
+  <!-- SECTION 04 -->
+  <section class="section" style="animation-delay:.11s">
+    <div class="sec-head"><span class="sec-num">04</span><span class="sec-title">Interior</span><span class="sec-count" data-count></span></div>
+
+    <div class="item" data-id="s4-pillars"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Pillar & headliner trim (black)</div><div class="d">Check the trim panels along the windscreen pillars, the door pillars, and the roof lining for marks, scratches and gaps. Press them gently to confirm they're firmly fixed and don't creak.</div><div class="badges"><span class="b b-cfg">Your config</span></div></div></div>
+
+    <div class="item" data-id="s4-seatsfront"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Front seats move fully</div><div class="d">Slide each front seat fully forward and back, up and down, and recline it — listen for any grinding. Check the seat material for scratches, deep creases or blemishes.</div></div></div>
+
+    <div class="item" data-id="s4-seatbelts"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Every seatbelt</div><div class="d">Pull each belt fully out and clip it into its buckle — front and rear. They should latch securely and retract smoothly.</div></div></div>
+
+    <div class="item" data-id="s4-seatsrear"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Rear seats & power folding</div><div class="d">Check the rear seats sit flush and level. Fold them using the buttons on the seats and again using the buttons in the boot — they should drop and return fully. Lift the rear seat bases to confirm they're secured, and tug the seat-back pockets to check they're attached.</div></div></div>
+
+    <div class="item" data-id="s4-console"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Centre console</div><div class="d">Open and close both armrest compartments — they should move smoothly with no creaks. Press the sides of the console to check it's solid. (Tip: record a short video of the front cubby as it closes to confirm its light switches off.)</div></div></div>
+
+    <div class="item" data-id="s4-wireless"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Wireless phone chargers</div><div class="d">Place your phone on each of the two charging pads under the screen and confirm both start charging. You may need to remove a thick case.</div></div></div>
+
+    <div class="item" data-id="s4-mats"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Floor mats present</div><div class="d">Confirm carpet floor mats are included for both the front and rear.</div></div></div>
+
+    <div class="item" data-id="s4-visors"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Sun visors</div><div class="d">Fold both front visors down; check the vanity mirror, its light, and that the visors move without odd noises.</div></div></div>
+
+    <div class="item" data-id="s4-hookslights"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Coat hooks & cabin lights</div><div class="d">Press the rear coat hooks (they should move smoothly and close properly) and test the interior dome lights on and off.</div></div></div>
+
+    <div class="item" data-id="s4-glovebox"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Glovebox + the Tesla SSD</div><div class="d">The glovebox opens via the screen: tap the car icon → Controls → Glovebox. It should open smoothly with a working light. Inside, look for a small Tesla USB stick (SSD) — it's used to store Sentry Mode and dashcam footage.</div></div></div>
+
+    <div class="item" data-id="s4-steering"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Steering wheel & horn</div><div class="d">Check the wheel rim for marks or tears, and press the centre to test the horn.</div></div></div>
+
+    <div class="item" data-id="s4-rearview"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Rear-view mirror</div><div class="d">It should feel secure and move without rattling.</div></div></div>
+
+    <div class="item" data-id="s4-stalk"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Indicator stalk</div><div class="d">The new Model Y has a proper indicator stalk again — push down for the left indicator, up for the right. As you signal, the relevant side-camera view should pop up on the screen.</div></div></div>
+  </section>
+
+  <!-- SECTION 05 -->
+  <section class="section" style="animation-delay:.14s">
+    <div class="sec-head"><span class="sec-num">05</span><span class="sec-title">Screen & software</span><span class="sec-count" data-count></span></div>
+    <p class="sec-note">In a Tesla, the central touchscreen controls almost everything — climate, gears, mirrors, lights. Take your time here.</p>
+
+    <div class="item" data-id="s5-screencond"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Screen condition & mounting</div><div class="d">Check the central screen for scratches, marks or discolouration. Place a flat palm on each side and confirm it's firmly mounted, with no wobble.</div></div></div>
+
+    <div class="item" data-id="s5-sketch"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Dead-pixel & "phantom touch" test</div><div class="d">Open Toybox → Sketchpad and leave a blank drawing on screen for a minute or two. Watch closely: no lines should appear on their own (those are "phantom touches"), and there should be no stuck/dead pixels or discoloured patches.</div><div class="badges"><span class="b b-crit">Before you sign</span></div></div></div>
+
+    <div class="item" data-id="s5-errors"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">No error messages / not in transport mode</div><div class="d">Check there are no warning messages (usually a yellow box in the lower-left). Confirm the car isn't still in "Transport Mode" (a factory setting that limits speed) — if it is, ask the staff to take it out.</div></div></div>
+
+    <div class="item" data-id="s5-menus"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Menus feel responsive</div><div class="d">Tap through the various menus — everything should feel quick and smooth, not laggy or stuttering.</div></div></div>
+
+    <div class="item" data-id="s5-hvac"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Heating & cooling</div><div class="d">Open the climate controls (tap the temperature, bottom-left). Turn the fan to maximum and confirm it blows genuinely cold on A/C, then switches to genuinely hot on heat. Try changing the vent direction and the recirculation setting.</div></div></div>
+
+    <div class="item" data-id="s5-seatsclimate"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Heated AND ventilated seats</div><div class="d">Worth checking carefully in Iceland. In the climate menu, turn the heated seats on (and off) for both driver and passenger, then switch to the cooled/ventilated setting and confirm that works too.</div><div class="badges"><span class="b b-is">Iceland</span></div></div></div>
+
+    <div class="item" data-id="s5-heatedwheel"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Heated steering wheel</div><div class="d">From the climate menu, turn on the heated steering wheel and confirm the rim warms up. You'll use this a lot through Icelandic winters.</div><div class="badges"><span class="b b-is">Iceland</span></div></div></div>
+
+    <div class="item" data-id="s5-steeringadjust"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Powered steering-wheel adjust</div><div class="d">Car icon → Controls → Steering. Move the wheel fully in/out and up/down using the left scroll button on the wheel — it should move smoothly and not creak.</div></div></div>
+
+    <div class="item" data-id="s5-mirroradjust"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Powered mirror adjust & fold</div><div class="d">Car icon → Controls → Mirrors. Adjust each mirror using the left scroll button, then test the fold/unfold function.</div></div></div>
+
+    <div class="item" data-id="s5-cameras"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Camera feeds</div><div class="d">Open the camera view on the screen and confirm clear, sharp images from the front, rear and side cameras — no black screens or blur.</div></div></div>
+
+    <div class="item" data-id="s5-drive"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Drive / Reverse / Park (with staff)</div><div class="d">With your foot on the brake, use the on-screen swipe selector (and the backup controls in the roof console) to select Drive, Reverse, Neutral and Park. This confirms the new screen-based gear selector works. Only do this with the staff's go-ahead.</div></div></div>
+
+    <div class="item" data-id="s5-nav"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Navigation</div><div class="d">Type any destination into the map search. It should calculate a route and estimate the battery % you'll arrive with.</div></div></div>
+
+    <div class="item" data-id="s5-sound"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Sound system & every speaker</div><div class="d">Play some audio (radio or an app). Open the audio settings (the bars icon), nudge the bass and treble, then use the "balance" control to drag the sound to each corner of the cabin — this lets you confirm every speaker works without crackle or rattle.</div></div></div>
+
+    <div class="item" data-id="s5-vinscreen"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">VIN shown on screen</div><div class="d">Car icon → Software. Confirm the VIN displayed matches your paperwork and the windscreen.</div></div></div>
+
+    <div class="item" data-id="s5-ambient"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Ambient lighting</div><div class="d">Car icon → Lights → Accent Lights. Try changing the colours and brightness to confirm the interior light strip works.</div></div></div>
+
+    <div class="item" data-id="s5-autopilot"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Autopilot is present</div><div class="d">Open the Autopilot settings on the screen and confirm the Autopilot features you paid for are listed and switched on. (Actually trying them out safely happens later, on the road.)</div><div class="badges"><span class="b b-cfg">Your config</span></div></div></div>
+  </section>
+
+  <!-- SECTION 06 -->
+  <section class="section" style="animation-delay:.17s">
+    <div class="sec-head"><span class="sec-num">06</span><span class="sec-title">What's included + winter tyres</span><span class="sec-count" data-count></span></div>
+
+    <div class="item" data-id="s6-keycards"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Two key cards (test one)</div><div class="d">You should receive two card "keys" in a small sleeve. Test one: tap it just below the driver's-side door-pillar camera to lock/unlock, and place it on the console behind the cupholders to confirm it lets the car be driven.</div></div></div>
+
+    <div class="item" data-id="s6-phonekey"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Phone set up as a key</div><div class="d">Have the specialist help you pair your phone so the car unlocks as you approach (through the Tesla app over Bluetooth). This becomes your everyday "key".</div></div></div>
+
+    <div class="item" data-id="s6-charging"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Charging equipment (Europe = CCS2 / Type 2)</div><div class="d">Your European car uses a CCS2 / Type 2 charge port — the same standard as Icelandic public chargers and Tesla Superchargers here, so there's no US-style "J1772 adapter". Check the boot / rear sub-trunk for the included charging gear — typically a Tesla Mobile Connector for a normal 230 V wall socket — and ask whether a Type 2 cable (for public AC chargers or a home wallbox) is included, since Tesla's inclusions vary. Inspect any cable for damage.</div><div class="badges"><span class="b b-is">Iceland</span><span class="b b-crit">Before you sign</span></div></div></div>
+
+    <div class="item" data-id="s6-plate"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Number plates — front & rear</div><div class="d">Iceland requires plates on both the front and the rear. Confirm both plates are fitted, or that you've been given the black front plate holder to mount it.</div><div class="badges"><span class="b b-is">Iceland</span></div></div></div>
+
+    <div class="item" data-id="s6-towhitch"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Tow hitch — only if you ordered it</div><div class="d">If a tow hitch was part of your order, uncover the panel and confirm it's installed and not loose. (Skip if you didn't order one.)</div></div></div>
+
+    <div class="item" data-id="s6-winter"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Your Nokian studded winter tyres — read this carefully</div><div class="d">Studded tyres (nagladekk) are only legal in Iceland from <strong>1 November to 15 April</strong> — driving on them now (June) risks a fine of about 20,000 ISK <em>per tyre</em>. So your car will be handed over on its standard (non-studded) tyres, and the 19″ Nokian studded set is a <strong>second set you keep for winter</strong>. Before you leave: (1) confirm which tyres are actually fitted to the car today; (2) confirm you receive the Nokian set, and ask where it is (loose, boxed, or on a separate set of rims); (3) check they're 19″ and that every stud is present and undamaged; (4) ask Tesla how/where the set will be stored and how to book the seasonal swap before 1 November.</div><div class="badges"><span class="b b-is">Iceland</span><span class="b b-crit">Before you sign</span></div></div></div>
+  </section>
+
+  <!-- SECTION 07 -->
+  <section class="section" style="animation-delay:.20s">
+    <div class="sec-head"><span class="sec-num">07</span><span class="sec-title">Accepting (or rejecting)</span><span class="sec-count" data-count></span></div>
+    <p class="sec-note">This is the decision point. Everything above happens before you reach it.</p>
+
+    <div class="item" data-id="s7-decide"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Only tap "Accept Delivery" when you're happy</div><div class="d">The "Accept Delivery" button is in the Tesla app. The moment you tap it, the car is yours and fixing issues becomes slower and less flexible. Don't rush this.</div><div class="badges"><span class="b b-crit">Before you sign</span></div></div></div>
+
+    <div class="item" data-id="s7-logissues"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Photograph & log any issues on-site</div><div class="d">For anything you found — a scratch, an uneven gap, a loose trim piece — take clear photos and open a service request in the app (Menu → Service), noting "found on delivery". Doing this before you leave protects you, so Tesla can't later claim you caused the damage on the way home.</div><div class="badges"><span class="b b-crit">Before you sign</span></div></div></div>
+
+    <div class="item" data-id="s7-reject"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">You're allowed to reject it</div><div class="d">If there are problems you're not willing to live with, tell the delivery team you want to reject the car before tapping Accept. Don't let anyone pressure you into accepting a car you're unhappy with — some issues (like a misaligned door) can't easily be fixed afterwards.</div></div></div>
+
+    <div class="item" data-id="s7-ask"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Ask anything — that's what they're for</div><div class="d">As a first-time Tesla owner, it's completely normal to ask the specialist to show you how things work — the key card, the screen, charging, getting in and out of Drive. There are no silly questions.</div></div></div>
+  </section>
+
+  <!-- SECTION 08 -->
+  <section class="section" style="animation-delay:.23s">
+    <div class="sec-head"><span class="sec-num">08</span><span class="sec-title">After you drive away (same day)</span><span class="sec-count" data-count></span></div>
+
+    <div class="item" data-id="s8-charge"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Charge it soon — easy win</div><div class="d">There's a Tesla Supercharger right at the Vatnagarðar store, plus others in Reykjavík (e.g. Fossvogur and Álfabakki). A 10–15 minute stop confirms fast-charging works — check the charge port glows green while charging.</div><div class="badges"><span class="b b-is">Iceland</span></div></div></div>
+
+    <div class="item" data-id="s8-noises"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Listen for rattles & wind noise</div><div class="d">On a quiet stretch of road, with the windows up and audio off, listen for rattles, squeaks, or excessive wind noise. A light "clunk" from the suspension over bumps is normal; persistent squeaks are not.</div></div></div>
+
+    <div class="item" data-id="s8-alignment"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Does it drive straight?</div><div class="d">On a flat, straight road the car should track straight with the steering wheel centred — no pulling to one side and no shaking through the wheel.</div></div></div>
+
+    <div class="item" data-id="s8-brakes"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Brakes</div><div class="d">When it's safe, brake firmly once or twice and check the car stops smoothly and quietly, with no grinding or pulling.</div></div></div>
+
+    <div class="item" data-id="s8-connectivity"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Premium Connectivity</div><div class="d">New cars include 30 days of Premium Connectivity (it works in Iceland). Try streaming media or live traffic to confirm it's active.</div></div></div>
+
+    <div class="item" data-id="s8-ports"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">USB-C ports & 12 V socket</div><div class="d">Plug your phone into the USB-C ports (one in the console cubby, two below the rear screen) to confirm they charge. Test the 12 V socket in the front console cubby if you'll use it.</div></div></div>
+
+    <div class="item" data-id="s8-night"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Re-check lights in the dark</div><div class="d">Confirm all exterior lights, the interior dome lights, footwell lights and boot lights work, and that the adaptive high-beam dips for oncoming cars. Tip: in June, Iceland barely gets dark — use a garage to test, or just confirm each light comes on, and do a proper night-time check once the evenings darken.</div></div></div>
+
+    <div class="item" data-id="s8-followup"><div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div><div class="body"><div class="t">Report anything new quickly</div><div class="d">If you notice something on the drive home, add it to your service request promptly — Tesla generally expects build/quality issues to be reported within about 24 hours of delivery.</div></div></div>
+  </section>
+
+  <div class="done-banner" id="doneBanner">✓ Every item checked. Enjoy your new Model Y — and drive safe.</div>
+
+  <!-- FOOTER -->
+  <footer class="foot">
+    <h3>A note on sources</h3>
+    <p>Tesla doesn't publish its own customer-facing inspection checklist — their official delivery pages only cover paperwork and the app flow. This checklist is a synthesis of the most thorough and recent owner and community guides (including Tesla Motors Club, EV Help Hub's 2026 Juniper walk-through, and Tesla Model Guy), tailored to your exact configuration and adapted for Iceland (studded-tyre law, the European CCS2 charge port, front-and-rear plates, and the Reykjavík Tesla store and Superchargers).</p>
+    <p>It's a guide, not a guarantee — when in doubt on the day, ask the Tesla delivery specialist directly. Your progress is saved on this device automatically.</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var STORAGE_KEY = 'tesla_modely_delivery_checklist_v1';
+  var items = Array.prototype.slice.call(document.querySelectorAll('.item'));
+  var total = items.length;
+  var state = {};
+  var hasPersistence = (typeof window !== 'undefined' && window.storage && typeof window.storage.get === 'function');
+
+  var elCount = document.getElementById('count');
+  var elTotal = document.getElementById('countTotal');
+  var elPct   = document.getElementById('pct');
+  var elFill  = document.getElementById('fill');
+  var elBanner= document.getElementById('doneBanner');
+
+  elTotal.textContent = total;
+
+  function save(){
+    if(!hasPersistence) return;
+    try { window.storage.set(STORAGE_KEY, JSON.stringify(state)); } catch(e){ /* non-blocking */ }
+  }
+
+  function load(done){
+    if(!hasPersistence){ done(); return; }
+    var settled = false;
+    var finish = function(){ if(settled) return; settled = true; done(); };
+    try {
+      var p = window.storage.get(STORAGE_KEY);
+      if(p && typeof p.then === 'function'){
+        p.then(function(res){
+          try { if(res && res.value){ state = JSON.parse(res.value) || {}; } } catch(e){}
+          finish();
+        }).catch(function(){ finish(); });
+        setTimeout(finish, 1500); // safety: never hang
+      } else {
+        try { if(p && p.value){ state = JSON.parse(p.value) || {}; } } catch(e){}
+        finish();
+      }
+    } catch(e){ finish(); }
+  }
+
+  function applyAll(){
+    items.forEach(function(it){
+      var done = !!state[it.getAttribute('data-id')];
+      it.classList.toggle('done', done);
+      it.setAttribute('aria-checked', done ? 'true' : 'false');
+    });
+    update();
+  }
+
+  function update(){
+    var done = 0;
+    items.forEach(function(it){ if(it.classList.contains('done')) done++; });
+    elCount.textContent = done;
+    var pct = total ? Math.round(done/total*100) : 0;
+    elPct.textContent = pct + '%';
+    elFill.style.width = pct + '%';
+
+    // per-section counters
+    document.querySelectorAll('.section').forEach(function(sec){
+      var secItems = sec.querySelectorAll('.item');
+      var d = 0;
+      secItems.forEach(function(i){ if(i.classList.contains('done')) d++; });
+      var c = sec.querySelector('[data-count]');
+      if(c) c.textContent = d + '/' + secItems.length;
+    });
+
+    if(elBanner){ elBanner.classList.toggle('show', done === total && total > 0); }
+  }
+
+  function toggle(it){
+    var id = it.getAttribute('data-id');
+    state[id] = !state[id];
+    it.classList.toggle('done', state[id]);
+    it.setAttribute('aria-checked', state[id] ? 'true' : 'false');
+    update();
+    save();
+  }
+
+  items.forEach(function(it){
+    it.setAttribute('role', 'checkbox');
+    it.setAttribute('tabindex', '0');
+    it.addEventListener('click', function(){ toggle(it); });
+    it.addEventListener('keydown', function(e){
+      if(e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); toggle(it); }
+    });
+  });
+
+  // Hide-done toggle
+  var hideBtn = document.getElementById('hideBtn');
+  hideBtn.addEventListener('click', function(){
+    var on = document.body.classList.toggle('hide-done');
+    hideBtn.classList.toggle('active', on);
+    hideBtn.textContent = on ? 'Show all' : 'Hide done';
+  });
+
+  // Reset
+  document.getElementById('resetBtn').addEventListener('click', function(){
+    if(window.confirm('Clear all ticks and start fresh?')){
+      state = {};
+      applyAll();
+      save();
+    }
+  });
+
+  load(applyAll);
+})();
+</script>
+</body>
+</html>
